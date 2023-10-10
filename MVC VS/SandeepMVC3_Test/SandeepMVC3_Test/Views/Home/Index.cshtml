@@ -1,0 +1,110 @@
+﻿@model IEnumerable<SandeepMVC3_Test.Models.DbContext.Registration>
+
+@{
+    ViewBag.Title = "index";
+}
+
+<h2>index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StateId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CityId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfilePic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttachmentDoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hobbies)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CityId)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.ProfilePic)*@
+            <img src="@Url.Content(item.ProfilePic)" />
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.AttachmentDoc)*@
+            <button class="btn btn-primary"><a href="@Url.Content(item.AttachmentDoc)" target="_blank" style="color:white">Link of File</a></button>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hobbies)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", "AuthController", new { id = item.id }) |*@
+            <a href='@Url.Action("Edit", "Auth", new { id = item.id })'>Edit</a>
+            @*@Html.ActionLink("Details", "index", "AuthController", new { id = item.id }) |*@
+            <a href='@Url.Action("index", "Auth", new { id = item.id })'>Details</a>
+            @*@Html.ActionLink("Delete", "Delete","Auth" ,new { id=item.id })*@
+            <a href='@Url.Action("Delete", "Auth", new { id = item.id })'>Delete</a>
+        </td>
+    </tr>
+}
+
+</table>

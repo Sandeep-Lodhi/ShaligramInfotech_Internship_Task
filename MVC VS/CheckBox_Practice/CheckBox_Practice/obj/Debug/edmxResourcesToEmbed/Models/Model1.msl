@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SandeepMVCModelStoreContainer" CdmEntityContainer="SandeepMVCEntities">
+    <EntitySetMapping Name="Hobbies">
+      <EntityTypeMapping TypeName="SandeepMVCModel.Hobbies">
+        <MappingFragment StoreEntitySet="Hobbies">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Hobby" ColumnName="Hobby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="SandeepMVCModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="hobbies" ColumnName="hobbies" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

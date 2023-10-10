@@ -1,0 +1,60 @@
+﻿@model StudentManagement.Models.Models.StateModel
+
+@{
+    ViewBag.Title = "CreateState";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="mdl-grid mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
+    <div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--7-col-tablet mdl-cell--4-col-phone">
+        <div class="mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h5 class="mdl-card__title-text text-color--white">Create New Country</h5>
+            </div>
+            <div class="mdl-card__supporting-text">
+
+                @using (Html.BeginForm())
+                {
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone form__article">
+                            <h3 class="text-color--smooth-gray">Enter Country Name</h3>
+                            <h6 class="text-danger">@ViewBag.error</h6>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                                @Html.LabelFor(model => model.StateName, htmlAttributes: new { @class = "mdl-textfield__label" })
+                                @Html.EditorFor(model => model.StateName, new { htmlAttributes = new { @class = "mdl-textfield__input" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.StateName, "", new { @class = "text-danger" })
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                                @Html.LabelFor(model => model.CountryId, htmlAttributes: new { @class = "mdl-textfield__label" })
+                                @Html.DropDownListFor(model => model.CountryId, new SelectList(ViewBag.CountryList, "CountryId", "CountryName"), new { @class = "mdl-textfield__input" })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.CountryId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone form__article">
+                            <input type="submit" id="submit_button" value="@ViewBag.Action" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var sectionName = urlParams.get('StateId');
+
+    if (!sectionName) {
+        $("#CountryId").prepend("<option selected disabled>-- Select Country --</option>")
+    } else {
+        $("#CountryId").prepend("<option disabled>-- Select Country --</option>")
+    }
+    $("#CountryId>option").addClass("bg-dark")
+</script>

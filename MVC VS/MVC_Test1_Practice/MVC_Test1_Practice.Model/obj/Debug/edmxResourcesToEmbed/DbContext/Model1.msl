@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SandeepTestDBModelStoreContainer" CdmEntityContainer="SandeepTestDBEntities">
+    <EntitySetMapping Name="CouponCodeMaster">
+      <EntityTypeMapping TypeName="SandeepTestDBModel.CouponCodeMaster">
+        <MappingFragment StoreEntitySet="CouponCodeMaster">
+          <ScalarProperty Name="CouponId" ColumnName="CouponId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FlatAmount" ColumnName="FlatAmount" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="Expirydate" ColumnName="Expirydate" />
+          <ScalarProperty Name="UsageLimit" ColumnName="UsageLimit" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemDetails">
+      <EntityTypeMapping TypeName="SandeepTestDBModel.ItemDetails">
+        <MappingFragment StoreEntitySet="ItemDetails">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemQty" ColumnName="ItemQty" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemMaster">
+      <EntityTypeMapping TypeName="SandeepTestDBModel.ItemMaster">
+        <MappingFragment StoreEntitySet="ItemMaster">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="SandeepTestDBModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="TotalItems" ColumnName="TotalItems" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Cgst" ColumnName="Cgst" />
+          <ScalarProperty Name="Sgst" ColumnName="Sgst" />
+          <ScalarProperty Name="PaybleAmount" ColumnName="PaybleAmount" />
+          <ScalarProperty Name="NetPaybleAmount" ColumnName="NetPaybleAmount" />
+          <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="SandeepTestDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserContact" ColumnName="UserContact" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_AddEditUser" FunctionName="SandeepTestDBModel.Store.SP_AddEditUser" />
+    <FunctionImportMapping FunctionImportName="SP_CreateItemDetail" FunctionName="SandeepTestDBModel.Store.SP_CreateItemDetail" />
+    <FunctionImportMapping FunctionImportName="SP_CreateOrder" FunctionName="SandeepTestDBModel.Store.SP_CreateOrder" />
+    <FunctionImportMapping FunctionImportName="SP_GetAllCoupons" FunctionName="SandeepTestDBModel.Store.SP_GetAllCoupons">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SandeepTestDBModel.SP_GetAllCoupons_Result">
+          <ScalarProperty Name="CouponId" ColumnName="CouponId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FlatAmount" ColumnName="FlatAmount" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="Expirydate" ColumnName="Expirydate" />
+          <ScalarProperty Name="UsageLimit" ColumnName="UsageLimit" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetAllItems" FunctionName="SandeepTestDBModel.Store.SP_GetAllItems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SandeepTestDBModel.SP_GetAllItems_Result">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

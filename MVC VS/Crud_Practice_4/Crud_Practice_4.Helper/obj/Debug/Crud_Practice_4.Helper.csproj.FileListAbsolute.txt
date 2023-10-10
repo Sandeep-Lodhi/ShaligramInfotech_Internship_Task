@@ -1,0 +1,15 @@
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\bin\Debug\Crud_Practice_4.Helper.dll.config
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\bin\Debug\Crud_Practice_4.Helper.dll
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\bin\Debug\Crud_Practice_4.Helper.pdb
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\bin\Debug\Crud_Practice_4.Model.dll
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\bin\Debug\EntityFramework.dll
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\bin\Debug\Crud_Practice_4.Model.pdb
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\bin\Debug\Crud_Practice_4.Model.dll.config
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\bin\Debug\EntityFramework.xml
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\obj\Debug\Crud_Practice_4.Helper.csproj.AssemblyReference.cache
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\obj\Debug\Crud_Practice_4.Helper.csproj.CoreCompileInputs.cache
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\obj\Debug\Crud_Practice_4.Helper.csproj.CopyComplete
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\obj\Debug\Crud_Practice_4.Helper.dll
+C:\Users\sit348\source\repos\Crud_Practice_4\Crud_Practice_4.Helper\obj\Debug\Crud_Practice_4.Helper.pdb

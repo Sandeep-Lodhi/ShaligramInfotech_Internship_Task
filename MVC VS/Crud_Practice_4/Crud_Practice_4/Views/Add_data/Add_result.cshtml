@@ -1,0 +1,72 @@
+﻿@model List<Crud_Practice_4.Model.DB.Context.student>
+
+
+@{
+    ViewBag.Title = "Add_result";
+}
+<h1>@TempData[""]</h1>
+
+<h2>Add_result</h2>
+
+<p>
+    @Html.ActionLink("Create New", "add_new_data")
+</p>
+<table class="table">
+    <tr>
+        <th>
+
+        </th>
+        <th>
+            FirstName
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            mobile Number
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            password
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.HiddenFor(modelItem => item.stu_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pass_word)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.stu_id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.stu_id }) |
+                @Html.ActionLink("Delete", "DeleteUser", new { id = item.stu_id })
+            </td>
+        </tr>
+    }
+
+</table>

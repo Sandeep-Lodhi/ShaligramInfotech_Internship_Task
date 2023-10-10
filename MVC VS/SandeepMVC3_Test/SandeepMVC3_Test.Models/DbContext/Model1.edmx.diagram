@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bd981fc57e9e4da3bfe5579bf95d39e2" Name="Diagram1">
+        <EntityTypeShape EntityType="SandeepTestDBModel.City" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandeepTestDBModel.Country" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandeepTestDBModel.Gender" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandeepTestDBModel.Hobbies" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandeepTestDBModel.Registration" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SandeepTestDBModel.State" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="SandeepTestDBModel.FK__City__Cid__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="SandeepTestDBModel.FK__City__Sid__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="SandeepTestDBModel.FK__Registrat__CityI__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="SandeepTestDBModel.FK__Registrat__Count__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="SandeepTestDBModel.FK__State__Cid__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="SandeepTestDBModel.FK__Registrat__State__4AB81AF0" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

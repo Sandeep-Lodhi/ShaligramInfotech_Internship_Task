@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SP_355MvcTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CouponCodeMaster">
+          <Key>
+            <PropertyRef Name="CouponId" />
+          </Key>
+          <Property Name="CouponId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="250" />
+          <Property Name="Type" Type="varchar" MaxLength="100" />
+          <Property Name="FlatAmount" Type="int" />
+          <Property Name="Percentage" Type="int" />
+          <Property Name="Expirydate" Type="date" />
+          <Property Name="UsageLimit" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="ItemDetails">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemName" Type="varchar" MaxLength="250" />
+          <Property Name="ItemQty" Type="int" />
+          <Property Name="ItemAmount" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="OrderId" Type="int" />
+        </EntityType>
+        <EntityType Name="ItemMaster">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemName" Type="varchar" MaxLength="250" />
+          <Property Name="ItemAmount" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TotalItems" Type="int" />
+          <Property Name="TotalAmount" Type="decimal" Precision="15" Scale="2" />
+          <Property Name="Cgst" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Sgst" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="PaybleAmount" Type="decimal" Precision="25" Scale="2" />
+          <Property Name="NetPaybleAmount" Type="decimal" Precision="25" Scale="2" />
+          <Property Name="PromoCode" Type="varchar" MaxLength="250" />
+          <Property Name="OrderDate" Type="date" />
+          <Property Name="UserId" Type="int" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="250" />
+          <Property Name="UserEmail" Type="varchar" MaxLength="250" />
+          <Property Name="UserContact" Type="varchar" MaxLength="50" />
+          <Property Name="UserPassword" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__ItemDetai__Order__5629CD9C">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+          <End Role="ItemDetails" Type="Self.ItemDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="ItemDetails">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Orders__UserId__534D60F1">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="SP_AddEditUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="UserName" Type="varchar" Mode="In" />
+          <Parameter Name="UserEmail" Type="varchar" Mode="In" />
+          <Parameter Name="UserContact" Type="varchar" Mode="In" />
+          <Parameter Name="UserPassword" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SP_CreateItemDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ItemName" Type="varchar" Mode="In" />
+          <Parameter Name="ItemQty" Type="int" Mode="In" />
+          <Parameter Name="ItemAmount" Type="decimal" Mode="In" />
+          <Parameter Name="OrderId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_CreateOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TotalItems" Type="int" Mode="In" />
+          <Parameter Name="TotalAmount" Type="decimal" Mode="In" />
+          <Parameter Name="Cgst" Type="decimal" Mode="In" />
+          <Parameter Name="Sgst" Type="decimal" Mode="In" />
+          <Parameter Name="PaybleAmount" Type="decimal" Mode="In" />
+          <Parameter Name="NetPaybleAmount" Type="decimal" Mode="In" />
+          <Parameter Name="PromoCode" Type="varchar" Mode="In" />
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_GetAllCoupons" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_GetAllItems" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="SP_355MvcTestModelStoreContainer">
+          <EntitySet Name="CouponCodeMaster" EntityType="Self.CouponCodeMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ItemDetails" EntityType="Self.ItemDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ItemMaster" EntityType="Self.ItemMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__ItemDetai__Order__5629CD9C" Association="Self.FK__ItemDetai__Order__5629CD9C">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="ItemDetails" EntitySet="ItemDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Orders__UserId__534D60F1" Association="Self.FK__Orders__UserId__534D60F1">
+            <End Role="User" EntitySet="User" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SP_355MvcTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="UserEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="UserContact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Orders" Relationship="SP_355MvcTestModel.FK__Orders__UserId__4F7CD00D" FromRole="User" ToRole="Orders" />
+        </EntityType>
+        <EntityContainer Name="SP_355MvcTestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="User" EntityType="Self.User" />
+          <FunctionImport Name="SP_AddEditUser">
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="UserEmail" Mode="In" Type="String" />
+            <Parameter Name="UserContact" Mode="In" Type="String" />
+            <Parameter Name="UserPassword" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="CouponCodeMaster" EntityType="SP_355MvcTestModel.CouponCodeMaster" />
+          <EntitySet Name="ItemMaster" EntityType="SP_355MvcTestModel.ItemMaster" />
+          <FunctionImport Name="SP_GetAllCoupons" ReturnType="Collection(SP_355MvcTestModel.SP_GetAllCoupons_Result)" />
+          <FunctionImport Name="SP_GetAllItems" ReturnType="Collection(SP_355MvcTestModel.SP_GetAllItems_Result)" />
+          <EntitySet Name="ItemDetails" EntityType="SP_355MvcTestModel.ItemDetails" />
+          <EntitySet Name="Orders" EntityType="SP_355MvcTestModel.Orders" />
+          <AssociationSet Name="FK__ItemDetai__Order__4CA06362" Association="SP_355MvcTestModel.FK__ItemDetai__Order__4CA06362">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="ItemDetails" EntitySet="ItemDetails" />
+          </AssociationSet>
+          <FunctionImport Name="SP_CreateItemDetail">
+            <Parameter Name="ItemName" Mode="In" Type="String" />
+            <Parameter Name="ItemQty" Mode="In" Type="Int32" />
+            <Parameter Name="ItemAmount" Mode="In" Type="Decimal" />
+            <Parameter Name="OrderId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <AssociationSet Name="FK__Orders__UserId__4F7CD00D" Association="SP_355MvcTestModel.FK__Orders__UserId__4F7CD00D">
+            <End Role="User" EntitySet="User" />
+            <End Role="Orders" EntitySet="Orders" />
+          </AssociationSet>
+          <FunctionImport Name="SP_CreateOrder" ReturnType="Collection(Int32)">
+            <Parameter Name="TotalItems" Mode="In" Type="Int32" />
+            <Parameter Name="TotalAmount" Mode="In" Type="Decimal" />
+            <Parameter Name="Cgst" Mode="In" Type="Decimal" />
+            <Parameter Name="Sgst" Mode="In" Type="Decimal" />
+            <Parameter Name="PaybleAmount" Mode="In" Type="Decimal" />
+            <Parameter Name="NetPaybleAmount" Mode="In" Type="Decimal" />
+            <Parameter Name="PromoCode" Mode="In" Type="String" />
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="CouponCodeMaster">
+          <Key>
+            <PropertyRef Name="CouponId" />
+          </Key>
+          <Property Name="CouponId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FlatAmount" Type="Int32" />
+          <Property Name="Percentage" Type="Int32" />
+          <Property Name="Expirydate" Type="DateTime" Precision="0" />
+          <Property Name="UsageLimit" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ItemMaster">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="ItemAmount" Type="Decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <ComplexType Name="SP_GetAllCoupons_Result">
+          <Property Type="Int32" Name="CouponId" Nullable="false" />
+          <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="FlatAmount" Nullable="true" />
+          <Property Type="Int32" Name="Percentage" Nullable="true" />
+          <Property Type="DateTime" Name="Expirydate" Nullable="true" />
+          <Property Type="Int32" Name="UsageLimit" Nullable="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_GetAllItems_Result">
+          <Property Type="Int32" Name="ItemId" Nullable="false" />
+          <Property Type="String" Name="ItemName" Nullable="true" MaxLength="250" />
+          <Property Type="Decimal" Name="ItemAmount" Nullable="true" Precision="10" Scale="2" />
+        </ComplexType>
+        <EntityType Name="ItemDetails">
+          <Key>
+            <PropertyRef Name="ItemId" />
+          </Key>
+          <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="ItemQty" Type="Int32" />
+          <Property Name="ItemAmount" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="OrderId" Type="Int32" />
+          <NavigationProperty Name="Orders" Relationship="SP_355MvcTestModel.FK__ItemDetai__Order__4CA06362" FromRole="ItemDetails" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TotalItems" Type="Int32" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="Cgst" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Sgst" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="PaybleAmount" Type="Decimal" Precision="25" Scale="2" />
+          <Property Name="NetPaybleAmount" Type="Decimal" Precision="25" Scale="2" />
+          <Property Name="PromoCode" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="OrderDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="ItemDetails" Relationship="SP_355MvcTestModel.FK__ItemDetai__Order__4CA06362" FromRole="Orders" ToRole="ItemDetails" />
+          <Property Name="UserId" Type="Int32" />
+          <NavigationProperty Name="User" Relationship="SP_355MvcTestModel.FK__Orders__UserId__4F7CD00D" FromRole="Orders" ToRole="User" />
+        </EntityType>
+        <Association Name="FK__ItemDetai__Order__4CA06362">
+          <End Type="SP_355MvcTestModel.Orders" Role="Orders" Multiplicity="0..1" />
+          <End Type="SP_355MvcTestModel.ItemDetails" Role="ItemDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="ItemDetails">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Orders__UserId__4F7CD00D">
+          <End Type="SP_355MvcTestModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="SP_355MvcTestModel.Orders" Role="Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SP_355MvcTestModelStoreContainer" CdmEntityContainer="SP_355MvcTestEntities">
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="SP_355MvcTestModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+                <ScalarProperty Name="UserContact" ColumnName="UserContact" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_AddEditUser" FunctionName="SP_355MvcTestModel.Store.SP_AddEditUser" />
+          <EntitySetMapping Name="CouponCodeMaster">
+            <EntityTypeMapping TypeName="SP_355MvcTestModel.CouponCodeMaster">
+              <MappingFragment StoreEntitySet="CouponCodeMaster">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="UsageLimit" ColumnName="UsageLimit" />
+                <ScalarProperty Name="Expirydate" ColumnName="Expirydate" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="FlatAmount" ColumnName="FlatAmount" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="CouponId" ColumnName="CouponId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ItemMaster">
+            <EntityTypeMapping TypeName="SP_355MvcTestModel.ItemMaster">
+              <MappingFragment StoreEntitySet="ItemMaster">
+                <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_GetAllCoupons" FunctionName="SP_355MvcTestModel.Store.SP_GetAllCoupons">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SP_355MvcTestModel.SP_GetAllCoupons_Result">
+                <ScalarProperty Name="CouponId" ColumnName="CouponId" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="FlatAmount" ColumnName="FlatAmount" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="Expirydate" ColumnName="Expirydate" />
+                <ScalarProperty Name="UsageLimit" ColumnName="UsageLimit" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_GetAllItems" FunctionName="SP_355MvcTestModel.Store.SP_GetAllItems">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SP_355MvcTestModel.SP_GetAllItems_Result">
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="ItemDetails">
+            <EntityTypeMapping TypeName="SP_355MvcTestModel.ItemDetails">
+              <MappingFragment StoreEntitySet="ItemDetails">
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+                <ScalarProperty Name="ItemQty" ColumnName="ItemQty" />
+                <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+                <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="SP_355MvcTestModel.Orders">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+                <ScalarProperty Name="NetPaybleAmount" ColumnName="NetPaybleAmount" />
+                <ScalarProperty Name="PaybleAmount" ColumnName="PaybleAmount" />
+                <ScalarProperty Name="Sgst" ColumnName="Sgst" />
+                <ScalarProperty Name="Cgst" ColumnName="Cgst" />
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="TotalItems" ColumnName="TotalItems" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_CreateItemDetail" FunctionName="SP_355MvcTestModel.Store.SP_CreateItemDetail" />
+          <FunctionImportMapping FunctionImportName="SP_CreateOrder" FunctionName="SP_355MvcTestModel.Store.SP_CreateOrder" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

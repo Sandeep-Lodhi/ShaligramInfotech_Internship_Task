@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDusingAJAX", "CRUDusingAJAX\CRUDusingAJAX.csproj", "{545831DA-3D0F-4F64-91E1-1A7BA27E1C66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDusingAJAX.Models", "CRUDusingAJAX.Models\CRUDusingAJAX.Models.csproj", "{7C2C8796-D7AE-4233-B5BD-2D8004B6DB18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDusingAJAX.Repository", "CRUDusingAJAX.Repository\CRUDusingAJAX.Repository.csproj", "{FF198B37-E88D-4F14-8360-C84D62F8C61F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDusingAJAX.Helpers", "CRUDusingAJAX.Helpers\CRUDusingAJAX.Helpers.csproj", "{09B04FA6-3A68-4710-9C27-0D1208C8E882}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{545831DA-3D0F-4F64-91E1-1A7BA27E1C66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{545831DA-3D0F-4F64-91E1-1A7BA27E1C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{545831DA-3D0F-4F64-91E1-1A7BA27E1C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{545831DA-3D0F-4F64-91E1-1A7BA27E1C66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C2C8796-D7AE-4233-B5BD-2D8004B6DB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2C8796-D7AE-4233-B5BD-2D8004B6DB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2C8796-D7AE-4233-B5BD-2D8004B6DB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2C8796-D7AE-4233-B5BD-2D8004B6DB18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF198B37-E88D-4F14-8360-C84D62F8C61F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF198B37-E88D-4F14-8360-C84D62F8C61F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF198B37-E88D-4F14-8360-C84D62F8C61F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF198B37-E88D-4F14-8360-C84D62F8C61F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09B04FA6-3A68-4710-9C27-0D1208C8E882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B04FA6-3A68-4710-9C27-0D1208C8E882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B04FA6-3A68-4710-9C27-0D1208C8E882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B04FA6-3A68-4710-9C27-0D1208C8E882}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76C19EE5-DE77-4B25-A25B-BCF6FB3F86B5}
+	EndGlobalSection
+EndGlobal

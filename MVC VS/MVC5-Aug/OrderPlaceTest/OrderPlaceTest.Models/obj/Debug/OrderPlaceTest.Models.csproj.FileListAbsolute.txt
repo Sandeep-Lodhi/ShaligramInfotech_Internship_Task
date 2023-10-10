@@ -1,0 +1,12 @@
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\bin\Debug\OrderPlaceTest.Models.dll.config
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\bin\Debug\OrderPlaceTest.Models.dll
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\bin\Debug\OrderPlaceTest.Models.pdb
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\obj\Debug\OrderPlaceTest.Models.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\obj\Debug\OrderPlaceTest.Models.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\obj\Debug\OrderPlaceTest.Models.csproj.CopyComplete
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\obj\Debug\OrderPlaceTest.Models.dll
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Models\obj\Debug\OrderPlaceTest.Models.pdb

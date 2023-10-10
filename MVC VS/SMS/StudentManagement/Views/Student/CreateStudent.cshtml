@@ -1,0 +1,255 @@
+﻿@model StudentManagement.Models.StudentModel
+@using StudentManagement.Models
+@using StudentManagement.Models.Context
+
+@{
+    ViewBag.Title = "CreateStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="mdl-card mdl-shadow--2dp employer-form" action="#">
+    <div class="mdl-card__title">
+        <h2>Create New Student</h2>
+        <div class="mdl-card__subtitle">Please complete the form</div>
+    </div>
+
+    <div class="mdl-card__supporting-text">
+        @using (Html.BeginForm())
+        {
+            <div class="form__article">
+                <h3>Personal Details</h3>
+
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        @Html.LabelFor(model => model.StudentFirstName, new { @class = "mdl-textfield__label" })
+                        @Html.EditorFor(model => model.StudentFirstName, new { htmlAttributes = new { @class = "mdl-textfield__input" } })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentFirstName, "", new { @class = "text-danger" })
+
+                    <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        @Html.LabelFor(model => model.StudentLastName, new { @class = "mdl-textfield__label" })
+                        @Html.EditorFor(model => model.StudentLastName, new { htmlAttributes = new { @class = "mdl-textfield__input" } })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentLastName, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        @Html.LabelFor(model => model.StudentEmail, new { @class = "mdl-textfield__label" })
+                        @Html.EditorFor(model => model.StudentEmail, new { htmlAttributes = new { @class = "mdl-textfield__input" } })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentEmail, "", new { @class = "text-danger" })
+
+                    <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                        @Html.LabelFor(model => model.StudentGenderId, new { @class = "mdl-textfield__label" })
+                        @Html.DropDownListFor(model => model.StudentGenderId, EnumHelper.GetSelectList(typeof(Gender)), new { @class = "mdl-textfield__input w_100" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentGenderId, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        @Html.LabelFor(model => model.StudentMobileNo, new { @class = "mdl-textfield__label" })
+                        @Html.EditorFor(model => model.StudentMobileNo, new { htmlAttributes = new { @class = "mdl-textfield__input" } })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentMobileNo, "", new { @class = "text-danger" })
+
+                    <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                        @Html.LabelFor(model => model.StudentDOB, new { @class = "mdl-textfield__label" })
+                        @Html.EditorFor(model => model.StudentDOB, new { htmlAttributes = new { @class = "mdl-textfield__input", @type = "date", @Value = "2001-10-28" } })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentDOB, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form__article">
+                <h3>School Details</h3>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--7-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        @Html.LabelFor(model => model.StudentStandardId, new { @class = "mdl-textfield__label" })
+                        @Html.DropDownListFor(model => model.StudentStandardId, new SelectList(ViewBag.StandardList, "StandardId", "StandardName"), new { @class = "mdl-textfield__input w_100" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentStandardId, "", new { @class = "text-danger" })
+
+                    <div class="mdl-cell mdl-cell--7-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        @Html.LabelFor(model => model.StudentSubjectId, new { @class = "" })
+                        @Html.DropDownListFor(model => model.StudentSubjectId, new SelectList(ViewBag.SubjectList ?? new List<(int SubjectId, string SubjectName)>(), "SubjectId", "SubjectName"), new { @class = "mdl-textfield__input w_100", @multiple = "multiple" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentSubjectId, "", new { @class = "text-danger" })
+
+                    <div class="mdl-cell mdl-cell--7-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        @Html.LabelFor(model => model.StudentTeacherId, new { @class = "" })
+                        @Html.DropDownListFor(model => model.StudentTeacherId, new SelectList(ViewBag.TeacherList ?? new List<Sp_GetTeacherBySubjectId_Result>(), "TeacherId", "TeacherName"), new { @class = "mdl-textfield__input w_100", @multiple = "multiple" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentTeacherId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form__article employer-form__general_skills">
+                <h3>Address</h3>
+
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        @Html.LabelFor(model => model.StudentCountryId, new { @class = "" })
+                        @Html.DropDownListFor(model => model.StudentCountryId, new SelectList(ViewBag.CountryList, "CountryId", "CountryName"), " ", new { @class = "mdl-textfield__input w_100" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentCountryId, "", new { @class = "text-danger" })
+
+                    <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                        @Html.LabelFor(model => model.StudentStateId, new { @class = "" })
+                        @Html.DropDownListFor(model => model.StudentStateId, new SelectList(ViewBag.StateList ?? new List<Sp_GetStateByCountry_Result>(), "StateId", "StateName"), "", new { @class = "mdl-textfield__input w_100" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentStateId, "", new { @class = "text-danger" })
+
+                    <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                        @Html.LabelFor(model => model.StudentCityId, new { @class = "" })
+                        @Html.DropDownListFor(model => model.StudentCityId, new SelectList(ViewBag.CityList ?? new List<Sp_GetCityByStateId_Result>(), "id", "text"), "", new { @class = "mdl-textfield__input w_100" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentCityId, "", new { @class = "text-danger" })
+                    <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                        @Html.LabelFor(model => model.StudentAddress, new { @class = "mdl-textfield__label" })
+                        @Html.EditorFor(model => model.StudentAddress, new { htmlAttributes = new { @class = "mdl-textfield__input" } })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.StudentAddress, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form__action">
+                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="isInfoReliable">
+                    <input type="checkbox" id="isInfoReliable" class="mdl-checkbox__input" required />
+                    <span class="mdl-checkbox__label">Entered information is reliable</span>
+                </label>
+                <input type="submit" id="submit_button" value="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+            </div>
+        }
+    </div>
+</div>
+
+
+<script>
+    $(() => {
+        setStudentSubject();
+        $("#StudentCountryId").select2({
+            placeholder: "-- please select --",
+            allowClear: true
+        });
+        $("#StudentStateId").select2({
+            placeholder: "-- please select --",
+            allowClear: true
+        });
+        $("#StudentCityId").select2({
+            placeholder: "-- please select --",
+            allowClear: true
+        });
+
+
+        $('#StudentTeacherId').select2();
+
+        $('#StudentStandardId').change((e) => {
+            setStudentSubject();
+        })
+
+        $('#StudentSubjectId').change((e) => {
+            setStudentTeacher();
+        })
+
+        $('#StudentCountryId').change((e) => {
+            setStateByCountryId();
+        })
+
+        $('#StudentStateId').change((e) => {
+            setCityByStateId();
+        })
+
+        setValueOnUpdate()
+    });
+
+
+
+
+    function setStudentSubject() {
+        $.get(`/Student/GetSubjectsByStandardId?StandardId=${parseInt($("#StudentStandardId").val())}`, (data) => {
+            selectData = data.reduce((acc, item) => {
+                acc.push({
+                    id: item.SubjectId,
+                    text: item.SubjectName
+                })
+                return acc
+            }, []);
+            //console.log(selectData)
+            $('#StudentSubjectId').empty();
+            $('#StudentSubjectId').select2({
+                data: selectData,
+                placeholder: "-- Select Multiple --"
+            });
+        })
+    }
+
+    function setStudentTeacher() {
+        $.get(`/Student/GetTeacherBySubjectId?SubjectId=${$("#StudentSubjectId").val()}`, (data) => {
+            selectData = data.reduce((acc, item) => {
+                acc.push({
+                    id: item.TeacherId,
+                    text: item.TeacherName
+                })
+                return acc
+            }, []);
+            $('#StudentTeacherId').empty();
+            $('#StudentTeacherId').select2({
+                data: selectData,
+                placeholder: "-- Select Multiple--"
+            });
+        });
+
+
+        $.get(`/Student/GetUpdateStudent?StudentId=@Model.StudentId`, (data) => {
+            //console.log(data);
+            if (data.length != 0) {
+                console.log(data[0].StudentStateId.toString())
+                $('#StudentTeacherId').val(data[0].StudentTeacherId).trigger('change');
+                }
+        })
+    }
+
+
+    function setStateByCountryId() {
+        $.get(`/Student/GetStateByCountryId?CountryId=${$("#StudentCountryId").val()}`, (data) => {
+            selectData = data.reduce((acc, item) => {
+                acc.push({
+                    id: item.StateId,
+                    text: item.StateName
+                })
+                return acc
+            }, []);
+            $('#StudentStateId').empty();
+            $('#StudentStateId').select2({
+                data: selectData,
+                placeholder: "-- Select --"
+            }).trigger('change');
+        })
+    }
+
+    function setCityByStateId() {
+        $.get(`/Student/GetCityByStateId?StateId=${$("#StudentStateId").val()}`, (data) => {
+            $('#StudentCityId').empty();
+            $('#StudentCityId').select2({
+                data: data,
+                placeholder: "--Select--"
+            });
+        })
+    }
+
+    function setValueOnUpdate() {
+        $.get(`/Student/GetUpdateStudent?StudentId=@Model.StudentId`, (data) => {
+            //console.log(data);
+            if (data.length != 0) {
+                console.log(data[0].StudentStateId.toString())
+                $('#StudentSubjectId').val(data[0].StudentSubjectId).trigger('change');
+                }
+        })
+    }
+
+</script>
+

@@ -1,0 +1,19 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,300&display=swap');
+
+ /*Google fonts link */
+ * {
+      margin: 0%;
+      padding: 0%;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      /*use poppins font in task. */
+
+ }
+
+ body {
+      background-color: #8EC5FC;
+      background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+      /*  linear gradient add in body background. */
+
+ }
+

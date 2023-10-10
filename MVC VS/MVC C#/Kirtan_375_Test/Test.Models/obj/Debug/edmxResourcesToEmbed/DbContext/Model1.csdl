@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Kirtan_test_375Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Kirtan_test_375Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="user" EntityType="Kirtan_test_375Model.user" />
+    <FunctionImport Name="sp_orderDetails" ReturnType="Collection(Kirtan_test_375Model.sp_orderDetails_Result)" />
+    <EntitySet Name="order" EntityType="Kirtan_test_375Model.order" />
+    <AssociationSet Name="FK__order__userid__2F10007B" Association="Kirtan_test_375Model.FK__order__userid__2F10007B">
+      <End Role="user" EntitySet="user" />
+      <End Role="order" EntitySet="order" />
+    </AssociationSet>
+    <EntitySet Name="Items" EntityType="Kirtan_test_375Model.Items" />
+    <AssociationSet Name="FK__order__productId__2E1BDC42" Association="Kirtan_test_375Model.FK__order__productId__2E1BDC42">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="order" EntitySet="order" />
+    </AssociationSet>
+    <EntitySet Name="CouponCodeMaster" EntityType="Kirtan_test_375Model.CouponCodeMaster" />
+  </EntityContainer>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="order" Relationship="Kirtan_test_375Model.FK__order__userid__2F10007B" FromRole="user" ToRole="order" />
+  </EntityType>
+  <ComplexType Name="sp_orderDetails_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="productId" Nullable="true" />
+    <Property Type="Int32" Name="quantity" Nullable="true" />
+    <Property Type="Int32" Name="total" Nullable="true" />
+    <Property Type="Int32" Name="userid" Nullable="true" />
+    <Property Type="String" Name="itemname" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="itemprice" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productId" Type="Int32" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="total" Type="Int32" />
+    <Property Name="userid" Type="Int32" />
+    <NavigationProperty Name="user" Relationship="Kirtan_test_375Model.FK__order__userid__2F10007B" FromRole="order" ToRole="user" />
+    <NavigationProperty Name="Items" Relationship="Kirtan_test_375Model.FK__order__productId__2E1BDC42" FromRole="order" ToRole="Items" />
+    <Property Name="price" Type="Int32" />
+  </EntityType>
+  <Association Name="FK__order__userid__2F10007B">
+    <End Type="Kirtan_test_375Model.user" Role="user" Multiplicity="0..1" />
+    <End Type="Kirtan_test_375Model.order" Role="order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="order">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="itemname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="itemprice" Type="Int32" />
+    <NavigationProperty Name="order" Relationship="Kirtan_test_375Model.FK__order__productId__2E1BDC42" FromRole="Items" ToRole="order" />
+  </EntityType>
+  <Association Name="FK__order__productId__2E1BDC42">
+    <End Type="Kirtan_test_375Model.Items" Role="Items" Multiplicity="0..1" />
+    <End Type="Kirtan_test_375Model.order" Role="order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="order">
+        <PropertyRef Name="productId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CouponCodeMaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="type" Type="Int32" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="limit" Type="Int32" />
+    <Property Name="isActive" Type="Boolean" />
+  </EntityType>
+</Schema>

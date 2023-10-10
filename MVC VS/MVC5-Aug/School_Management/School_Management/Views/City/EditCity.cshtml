@@ -1,0 +1,92 @@
+﻿@model School_Management.Models.Model.CityCustomModel
+
+@{
+    ViewBag.Title = "EditCity";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditCity</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-control bg-info">
+        <h4>CityCustomModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.CityId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CityId, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CityId, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+
+
+        @Html.HiddenFor(x => x.CityId)
+        <div class="text-danger">@ViewBag.error </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CountryName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.CountryId, ViewBag.countrylist as SelectList, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CountryId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StateName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.StateId, ViewBag.statelist as SelectList, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.StateId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CityName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CityName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CityName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="pt-3">
+                <button type="submit" value="" class="btn btn-success">Save Changes</button>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "DisplayCity","City")
+</div>
+
+@*<script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#CountryId").change(function () {
+                var countryId = $(this).val();
+
+                $.ajax({
+                    method: 'GET',
+                    url: "/State/GetStatesByCountryId/" + countryId,
+                    success: function (response)
+                    {
+                        $("#StateId").empty();
+                        $("#StateId").html("<option value=''> -- Select State -- </option>");
+                        var data = JSON.parse(response);
+                        data.forEach(ele => {
+                            $('#StateId').append(`<option value=${ele.StateId}>${ele.StateName}</option>`);
+                        });
+                    }
+
+                });
+            });
+
+        });
+
+    </script>*@

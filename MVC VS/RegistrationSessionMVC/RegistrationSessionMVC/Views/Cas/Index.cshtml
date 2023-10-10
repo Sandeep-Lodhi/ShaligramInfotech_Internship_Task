@@ -1,0 +1,50 @@
+﻿@model RegistrationSessionMVC.Models.CascadingClass
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>MVC Cascading DropdownList</h2>
+
+@if (ViewBag.CountryList != null)
+{
+    @Html.DropDownListFor(m => m.Cid, ViewBag.CountryList as SelectList, "--Slect Country Name--", new { @class = "form-Control" })
+}
+@Html.DropDownListFor(m => m.Sid, new SelectList(""), "--Slect States --", new { @class = "form-Control" })
+
+@Html.DropDownListFor(m => m.Cityid, new SelectList(""), "--Slect Cities --", new { @class = "form-Control" })
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#Sid").change(function () {
+            var countryId = $(this).val();
+            debugger
+            $.ajax({
+                type: "post",
+                url: "/Cas/GetStateList?Cid=" + countryId,
+                contentType: "html",
+                success: function (response) {
+                    debugger
+                    $("#Sid").empty();
+                    $("#Sid").append(response);
+                }
+            })
+        })
+
+
+        $("#Cid").change(function () {
+            var StateId = $(this).val();
+            debugger
+            $.ajax({
+                type: "post",
+                url: "/Cas/GetCityList?Sid=" + StateId,
+                contentType: "html",
+                success: function (response) {
+                    debugger
+                    $("#Cityid").empty();
+                    $("#Cityid").append(response);
+                }
+            })
+        })
+    })
+</script>

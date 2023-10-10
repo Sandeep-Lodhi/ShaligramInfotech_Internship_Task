@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "PlaceOrder";
+}
+
+<h2>PlaceOrder</h2>
+
+<div  id="">
+    <div class="row">
+        <div class="col-6">
+            <label for="Item">Item: </label>
+            <input type="text" name="Item" class="form-control" id="item">
+            <p id="itemrr"></p>
+        </div>
+        <div class="col-6">
+            <label for="Qty">Qty: </label>
+            <input type="number" name="Qty" class="form-control" id="qty">
+            <p id="qty"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label for="number">Price: </label>
+            <input type="number" name="price" class="form-control" id="price" min="0" max="1000" step="10" value="0">
+            <p id="pricerr"></p>
+        </div>
+    <div class="text-center">
+
+        <input type="submit" name="submit" id="order" onclick="placeOrder()" class="btn btn-primary">
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+
+</div>
+<div>
+    <table id="example" class="table-bordered display " style="width:100%">
+        <thead>
+            <tr>
+                <th class="col">Item</th>
+                <th class="col">Qty</th>
+                <th class="col">Price</th>
+                <th class="col">Total</th>
+           
+
+            </tr>
+        </thead>
+        <tbody id="body">
+         
+        </tbody>
+    </table>
+</div>
+<br />
+<br />
+<br />
+<br />
+<div class="text-center">
+    <button type="button" id="orderplace" class="btn btn-success">Place Order</button>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+<script>
+    var obj = {};
+    var arry = [];
+    var total = 0;
+    function placeOrder() {
+
+        var item = document.getElementById("item").value;
+        var qty = document.getElementById("qty").value;
+        var price = document.getElementById("price").value;
+        let sum = qty * price
+         total = sum;
+
+        obj = {
+            item: item,
+            qty: qty,
+            price: price,
+            total : total
+        }
+        console.log(obj);
+        arry.push(obj);
+        console.log(arry);
+
+        let Html = "";
+        for (let i = 0; i < arry.length; i++) {
+            Html += `
+                        <tr>
+                            <td>${arry[i].item}</td>
+                            <td>${arry[i].qty}</td>
+                            <td>${arry[i].price}</td>
+                            <td>${arry[i].total}</td>
+                        </tr>
+                    `
+        }
+
+        document.getElementById("body").innerHTML = Html;
+
+    }
+
+
+    $(document).ready(function () {
+
+   
+        //function will be called on button click having id btnsave
+        $("#orderplace").click(function () {debugger
+            let ItemArray = [];
+            const items = (arry)
+            const itemNames = items.map(item => item.item).toString();
+            var Order =
+            {
+
+                Details: itemNames,
+                Amount: total,
+                Status: "Pending",
+                Cust_Id: "2"
+             };
+            ItemArray.push(Order);
+            $.ajax(
+                {
+                    type: "POST", //HTTP POST Method
+                    url: "@Url.Action("PlaceOrder", "Order")", // Controller/View
+                    data: JSON.stringify(Order),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    error: function (response) {
+                    alert("Order Unsuccessfull");
+                },
+                success: function (response) {
+                    alert("Order Sucessfull");
+                    window.location.href = "/Order/Index/" ;//@*+@ViewBag.Customer*@
+                }
+
+                });
+
+        });
+    });
+
+
+
+</script>

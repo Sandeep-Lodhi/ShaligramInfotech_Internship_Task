@@ -1,0 +1,34 @@
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Repositories.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Repositories.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\obj\Debug\Exam.Repositories.csproj.AssemblyReference.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\obj\Debug\Exam.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\obj\Debug\Exam.Repositories.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\obj\Debug\Exam.Repositories.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Repositories.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\EntityFramework.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Helpers.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Models.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Helpers.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Models.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Models.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\EntityFramework.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Repositories\obj\Debug\Exam.Repositories.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Repositories.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Repositories.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Repositories.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Helpers.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Helpers.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Models.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\Exam.Models.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\obj\Debug\Exam.Repositories.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\obj\Debug\Exam.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\obj\Debug\Exam.Repositories.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\obj\Debug\Exam.Repositories.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Repositories\obj\Debug\Exam.Repositories.pdb

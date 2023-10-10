@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KrunalDhote351ModelStoreContainer" CdmEntityContainer="KrunalDhote351Entities">
+    <EntitySetMapping Name="CoupenCodeMaster">
+      <EntityTypeMapping TypeName="KrunalDhote351Model.CoupenCodeMaster">
+        <MappingFragment StoreEntitySet="CoupenCodeMaster">
+          <ScalarProperty Name="CoupenId" ColumnName="CoupenId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FlatAmount" ColumnName="FlatAmount" />
+          <ScalarProperty Name="PercentageAmount" ColumnName="PercentageAmount" />
+          <ScalarProperty Name="Expiry" ColumnName="Expiry" />
+          <ScalarProperty Name="Limit" ColumnName="Limit" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CustomerMaster">
+      <EntityTypeMapping TypeName="KrunalDhote351Model.CustomerMaster">
+        <MappingFragment StoreEntitySet="CustomerMaster">
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemMaster">
+      <EntityTypeMapping TypeName="KrunalDhote351Model.ItemMaster">
+        <MappingFragment StoreEntitySet="ItemMaster">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdersMaster">
+      <EntityTypeMapping TypeName="KrunalDhote351Model.OrdersMaster">
+        <MappingFragment StoreEntitySet="OrdersMaster">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AfterGST" ColumnName="AfterGST" />
+          <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+          <ScalarProperty Name="PayingAmount" ColumnName="PayingAmount" />
+          <ScalarProperty Name="CGST" ColumnName="CGST" />
+          <ScalarProperty Name="SGST" ColumnName="SGST" />
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetOrdersByDate" FunctionName="KrunalDhote351Model.Store.sp_GetOrdersByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KrunalDhote351Model.sp_GetOrdersByDate_Result">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AfterGST" ColumnName="AfterGST" />
+          <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+          <ScalarProperty Name="PayingAmount" ColumnName="PayingAmount" />
+          <ScalarProperty Name="CGST" ColumnName="CGST" />
+          <ScalarProperty Name="SGST" ColumnName="SGST" />
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

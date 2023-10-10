@@ -1,0 +1,146 @@
+﻿@model SandeepMVC3_Test.Models.Models.RegistrationModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>RegistrationModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfilePic)
+        </dt>
+
+        <dd>
+            @*@Html.DisplayFor(model => model.ProfilePic)*@
+            <img src="@Url.Content(Model.ProfilePic)" width="50" height="50" />
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RePassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RePassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CountryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CountryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CityId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CityId)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttachmentDoc)
+        </dt>
+
+        <dd>
+            @*@Html.DisplayFor(model => model.AttachmentDoc)*@
+            <button class="btn btn-primary"><a href="@Url.Content(Model.AttachmentDoc)" target="_blank" style="color:white">Link of File</a></button>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hobbies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hobbies)
+        </dd>
+
+    </dl>
+</div>
+<p>
+<p>
+    @*@Html.ActionLink("Delete", "Delete", new { id = Model.id }) | &nbsp;&nbsp;&nbsp;&nbsp;*@
+    <div class="d-flex">
+        <button type="button" class="btn btn-success">
+            <a href="@Url.Action("Edit","Auth",new { id = Model.id})" style="color:white">Edit</a>
+        </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <button type="button" class="btn btn-outline-danger"><a href="@Url.Action("Delete","Auth",new { id = Model.id})">Delete</a></button>
+        <button type="button" class="btn btn-secondary"><a href="@Url.Action("Index","Home",new { id = Model.id})">Back to List</a></button>
+
+
+    </div>
+
+    @*@Html.ActionLink("Back to List", "Index", "Home")*@
+
+</p>
+</p>

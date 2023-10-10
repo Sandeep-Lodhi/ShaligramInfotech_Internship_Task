@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KrunalDhote351Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CoupenCodeMaster">
+    <Key>
+      <PropertyRef Name="CoupenId" />
+    </Key>
+    <Property Name="CoupenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Type" Type="Boolean" Nullable="false" />
+    <Property Name="FlatAmount" Type="Int32" />
+    <Property Name="PercentageAmount" Type="Int32" />
+    <Property Name="Expiry" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Limit" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerMaster">
+    <Key>
+      <PropertyRef Name="CustId" />
+    </Key>
+    <Property Name="CustId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="OrdersMaster" Relationship="Self.FK__OrdersMas__CustI__690797E6" FromRole="CustomerMaster" ToRole="OrdersMaster" />
+  </EntityType>
+  <EntityType Name="ItemMaster">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Item" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdersMaster">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="AfterGST" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PromoCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PayingAmount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CGST" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="SGST" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CustId" Type="Int32" />
+    <NavigationProperty Name="CustomerMaster" Relationship="Self.FK__OrdersMas__CustI__690797E6" FromRole="OrdersMaster" ToRole="CustomerMaster" />
+  </EntityType>
+  <Association Name="FK__OrdersMas__CustI__690797E6">
+    <End Role="CustomerMaster" Type="Self.CustomerMaster" Multiplicity="0..1" />
+    <End Role="OrdersMaster" Type="Self.OrdersMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerMaster">
+        <PropertyRef Name="CustId" />
+      </Principal>
+      <Dependent Role="OrdersMaster">
+        <PropertyRef Name="CustId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KrunalDhote351Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CoupenCodeMaster" EntityType="Self.CoupenCodeMaster" />
+    <EntitySet Name="CustomerMaster" EntityType="Self.CustomerMaster" />
+    <EntitySet Name="ItemMaster" EntityType="Self.ItemMaster" />
+    <EntitySet Name="OrdersMaster" EntityType="Self.OrdersMaster" />
+    <AssociationSet Name="FK__OrdersMas__CustI__690797E6" Association="Self.FK__OrdersMas__CustI__690797E6">
+      <End Role="CustomerMaster" EntitySet="CustomerMaster" />
+      <End Role="OrdersMaster" EntitySet="OrdersMaster" />
+    </AssociationSet>
+    <FunctionImport Name="sp_GetOrdersByDate" ReturnType="Collection(KrunalDhote351Model.sp_GetOrdersByDate_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="from" Mode="In" Type="DateTime" />
+      <Parameter Name="to" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_GetOrdersByDate_Result">
+    <Property Type="Int32" Name="OrderId" Nullable="false" />
+    <Property Type="DateTime" Name="OrderDate" Nullable="false" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="AfterGST" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="String" Name="PromoCode" Nullable="true" MaxLength="20" />
+    <Property Type="Decimal" Name="PayingAmount" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="CGST" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="SGST" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="CustId" Nullable="true" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SP_355MvcTestModelStoreContainer" CdmEntityContainer="SP_355MvcTestEntities">
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="SP_355MvcTestModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserContact" ColumnName="UserContact" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_AddEditUser" FunctionName="SP_355MvcTestModel.Store.SP_AddEditUser" />
+    <EntitySetMapping Name="CouponCodeMaster">
+      <EntityTypeMapping TypeName="SP_355MvcTestModel.CouponCodeMaster">
+        <MappingFragment StoreEntitySet="CouponCodeMaster">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="UsageLimit" ColumnName="UsageLimit" />
+          <ScalarProperty Name="Expirydate" ColumnName="Expirydate" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="FlatAmount" ColumnName="FlatAmount" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CouponId" ColumnName="CouponId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemMaster">
+      <EntityTypeMapping TypeName="SP_355MvcTestModel.ItemMaster">
+        <MappingFragment StoreEntitySet="ItemMaster">
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetAllCoupons" FunctionName="SP_355MvcTestModel.Store.SP_GetAllCoupons">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SP_355MvcTestModel.SP_GetAllCoupons_Result">
+          <ScalarProperty Name="CouponId" ColumnName="CouponId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FlatAmount" ColumnName="FlatAmount" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="Expirydate" ColumnName="Expirydate" />
+          <ScalarProperty Name="UsageLimit" ColumnName="UsageLimit" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetAllItems" FunctionName="SP_355MvcTestModel.Store.SP_GetAllItems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SP_355MvcTestModel.SP_GetAllItems_Result">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ItemDetails">
+      <EntityTypeMapping TypeName="SP_355MvcTestModel.ItemDetails">
+        <MappingFragment StoreEntitySet="ItemDetails">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+          <ScalarProperty Name="ItemQty" ColumnName="ItemQty" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="SP_355MvcTestModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+          <ScalarProperty Name="NetPaybleAmount" ColumnName="NetPaybleAmount" />
+          <ScalarProperty Name="PaybleAmount" ColumnName="PaybleAmount" />
+          <ScalarProperty Name="Sgst" ColumnName="Sgst" />
+          <ScalarProperty Name="Cgst" ColumnName="Cgst" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TotalItems" ColumnName="TotalItems" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_CreateItemDetail" FunctionName="SP_355MvcTestModel.Store.SP_CreateItemDetail" />
+    <FunctionImportMapping FunctionImportName="SP_CreateOrder" FunctionName="SP_355MvcTestModel.Store.SP_CreateOrder" />
+  </EntityContainerMapping>
+</Mapping>

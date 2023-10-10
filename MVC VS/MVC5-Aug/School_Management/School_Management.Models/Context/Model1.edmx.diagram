@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e63f9642fb884005a3d7c4380b3a805c" Name="Diagram1">
+        <EntityTypeShape EntityType="Ram_School_Management_352Model.City" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ram_School_Management_352Model.Country" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ram_School_Management_352Model.State" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ram_School_Management_352Model.User" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Ram_School_Management_352Model.FK__City__CountryId__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="Ram_School_Management_352Model.FK__City__StateId__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="Ram_School_Management_352Model.FK__State__CountryId__48CFD27E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SP355_SanjayMvcTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Answers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="questionId" Type="int" />
+          <Property Name="title" Type="varchar" MaxLength="500" />
+          <Property Name="isactive" Type="bit" />
+          <Property Name="isCorrect" Type="bit" />
+        </EntityType>
+        <EntityType Name="Questions">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="500" />
+          <Property Name="isactive" Type="bit" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="250" />
+          <Property Name="UserPassword" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <Association Name="FK__Answers__questio__2B3F6F97">
+          <End Role="Questions" Type="Self.Questions" Multiplicity="0..1" />
+          <End Role="Answers" Type="Self.Answers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questions">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Answers">
+              <PropertyRef Name="questionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="SP_GetQuestionsAndAnswers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="SP355_SanjayMvcTestModelStoreContainer">
+          <EntitySet Name="Answers" EntityType="Self.Answers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Answers__questio__2B3F6F97" Association="Self.FK__Answers__questio__2B3F6F97">
+            <End Role="Questions" EntitySet="Questions" />
+            <End Role="Answers" EntitySet="Answers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SP355_SanjayMvcTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="SP355_SanjayMvcTestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="User" EntityType="Self.User" />
+          <FunctionImport Name="SP_GetQuestionsAndAnswers" ReturnType="Collection(SP355_SanjayMvcTestModel.SP_GetQuestionsAndAnswers_Result)" />
+          <EntitySet Name="Answers" EntityType="SP355_SanjayMvcTestModel.Answers" />
+          <EntitySet Name="Questions" EntityType="SP355_SanjayMvcTestModel.Questions" />
+          <AssociationSet Name="FK__Answers__questio__2B3F6F97" Association="SP355_SanjayMvcTestModel.FK__Answers__questio__2B3F6F97">
+            <End Role="Questions" EntitySet="Questions" />
+            <End Role="Answers" EntitySet="Answers" />
+          </AssociationSet>
+        </EntityContainer>
+        <ComplexType Name="SP_GetQuestionsAndAnswers_Result">
+          <Property Type="Int32" Name="QId" Nullable="false" />
+          <Property Type="String" Name="QTitle" Nullable="true" MaxLength="500" />
+          <Property Type="Int32" Name="AId" Nullable="false" />
+          <Property Type="Boolean" Name="AIsCorrect" Nullable="true" />
+          <Property Type="String" Name="ATitle" Nullable="true" MaxLength="500" />
+        </ComplexType>
+        <EntityType Name="Answers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="questionId" Type="Int32" />
+          <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="isactive" Type="Boolean" />
+          <Property Name="isCorrect" Type="Boolean" />
+          <NavigationProperty Name="Questions" Relationship="SP355_SanjayMvcTestModel.FK__Answers__questio__2B3F6F97" FromRole="Answers" ToRole="Questions" />
+        </EntityType>
+        <EntityType Name="Questions">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="isactive" Type="Boolean" />
+          <NavigationProperty Name="Answers" Relationship="SP355_SanjayMvcTestModel.FK__Answers__questio__2B3F6F97" FromRole="Questions" ToRole="Answers" />
+        </EntityType>
+        <Association Name="FK__Answers__questio__2B3F6F97">
+          <End Type="SP355_SanjayMvcTestModel.Questions" Role="Questions" Multiplicity="0..1" />
+          <End Type="SP355_SanjayMvcTestModel.Answers" Role="Answers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Questions">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Answers">
+              <PropertyRef Name="questionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SP355_SanjayMvcTestModelStoreContainer" CdmEntityContainer="SP355_SanjayMvcTestEntities">
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="SP355_SanjayMvcTestModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_GetQuestionsAndAnswers" FunctionName="SP355_SanjayMvcTestModel.Store.SP_GetQuestionsAndAnswers">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SP355_SanjayMvcTestModel.SP_GetQuestionsAndAnswers_Result">
+                <ScalarProperty Name="QId" ColumnName="QId" />
+                <ScalarProperty Name="QTitle" ColumnName="QTitle" />
+                <ScalarProperty Name="AId" ColumnName="AId" />
+                <ScalarProperty Name="AIsCorrect" ColumnName="AIsCorrect" />
+                <ScalarProperty Name="ATitle" ColumnName="ATitle" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Answers">
+            <EntityTypeMapping TypeName="SP355_SanjayMvcTestModel.Answers">
+              <MappingFragment StoreEntitySet="Answers">
+                <ScalarProperty Name="isCorrect" ColumnName="isCorrect" />
+                <ScalarProperty Name="isactive" ColumnName="isactive" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="questionId" ColumnName="questionId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="SP355_SanjayMvcTestModel.Questions">
+              <MappingFragment StoreEntitySet="Questions">
+                <ScalarProperty Name="isactive" ColumnName="isactive" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

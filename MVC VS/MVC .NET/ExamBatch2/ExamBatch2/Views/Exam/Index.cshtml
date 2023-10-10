@@ -1,0 +1,198 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    table,
+    th,
+    td {
+        border: 0px solid black;
+        border-collapse: collapse;
+        padding: 6px;
+    }
+</style>
+<h1>
+    Quiz
+</h1>
+<br />
+<div><button class="btn bg-success" style="padding:10px; border-radius:10px" id="StartQuiz" type="button">Start Quiz</button></div>
+<br />
+
+<div id="QuizSection">
+    <div><strong id="quiz"></strong></div><br />
+    <div class="row" style="margin-left:20px">
+        <div class="form-check col-md-3">
+            <input class="form-check-input" type="radio" name="Option" id="Radio1">
+            <label class="form-check-label" id="RadioLabel1">
+
+            </label>
+        </div>
+        <div class="form-check col-md-3">
+            <input class="form-check-input" type="radio" name="Option" id="Radio2">
+            <label class="form-check-label" id="RadioLabel2">
+
+            </label>
+        </div>
+        <div class="form-check col-md-3">
+            <input class="form-check-input" type="radio" name="Option" id="Radio3">
+            <label class="form-check-label" id="RadioLabel3">
+
+            </label>
+        </div>
+        <div class="form-check col-md-3">
+            <input class="form-check-input" type="radio" name="Option" id="Radio4">
+            <label class="form-check-label" id="RadioLabel4">
+
+            </label>
+        </div>
+    </div>
+    <br />
+    <div class="text-center" style="display: flex; justify-items: center; justify-content: center; gap: 30px; ">
+        <div><button style="padding:10px 20px; border-radius:10px" id="nextQuestion" type="button" class="btn bg-success">Next</button></div>
+        <div><button style="padding:10px 20px; border-radius:10px" id="skipQuestion" type="button" class="btn bg-info">Skip</button></div>
+        <div><button style="padding:10px 20px; border-radius:10px" id="submitQuestion" type="button" class="btn bg-success">Submit</button></div>
+    </div>
+
+    <br />
+</div>
+    <div id="resultShow">
+        <h2 class="text-center">Result</h2>
+        <hr style="width: 100%; color: black; border: 3px solid black; border-radius:10px;" />
+        <br />
+        <div class="container">
+            <table style="width:30%; margin-left:33%">
+                <tr>
+                    <th>Total Question</th>
+                    <td id="totalQuestion"></td>
+                </tr>
+                <tr>
+                    <th>Attempt</th>
+                    <td id="attempt"></td>
+                </tr>
+                <tr>
+                    <th>Skip</th>
+                    <td id="skip"></td>
+                </tr>
+                <tr>
+                    <th>Right Answer</th>
+                    <td id="rightAns">dfd</td>
+                </tr>
+                <tr>
+                    <th>Wrong Answer</th>
+                    <td id="wrongAns">dfd</td>
+                </tr>
+                <tr>
+                    <th>Result</th>
+                    <td id="result">sd</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+<script>
+    var Quiz = [];
+    var Solved = {
+        TotalQuestions: 10,
+        Attempt: 0,
+        get Skip() {
+            return this.TotalQuestions - this.Attempt;
+        },
+        RightAnswer: 0,
+        get WrongAnswer() {
+            return this.Attempt - this.RightAnswer;
+        },
+        get Marks() {
+            return this.RightAnswer * 10 - this.WrongAnswer * 5;
+        },
+        get Result() {
+            return this.Marks >= 40 ? "Pass" : "Fail";
+        }
+    };
+    $(document).ready(function () {
+        $("#QuizSection").hide();
+        $("#submitQuestion").hide();
+        $("#resultShow").hide();
+        $("#StartQuiz").click(function () {
+            $.get("/Exam/GetQuestions", function (data) {
+                Quiz = data;
+                PlaceQuestion()
+            })
+            $("#StartQuiz").hide();
+            $("#QuizSection").show();
+        })
+
+        $("#nextQuestion").click(function () {
+            if ($("input[type=radio]:checked").length > 0) {
+                Solved.Attempt += 1;
+                if ($("#Radio1").is(":checked") && Quiz[counterOption - 3].isCorrect || $("#Radio2").is(":checked") && Quiz[counterOption - 2].isCorrect || $("#Radio3").is(":checked") && Quiz[counterOption - 1].isCorrect || $("#Radio4").is(":checked") && Quiz[counterOption].isCorrect) {
+                    Solved.RightAnswer += 1;
+                }
+                counterQuestion += 3;
+                counterOption += 1;
+                $("#Radio1,#Radio2,#Radio3,#Radio4").prop('checked', false);
+                PlaceQuestion()
+            } else {
+                alert("Please select an option or click on skip!")
+            }
+
+            if (counterQuestion == 37) {
+                $("#submitQuestion").show();
+                $("#skipQuestion").hide();
+                $("#nextQuestion").hide();
+            }
+        })
+
+        $("#skipQuestion").click(function () {
+            if (counterQuestion == 33) {
+                $("#submitQuestion").show();
+                $("#skipQuestion").hide();
+                $("#nextQuestion").hide();
+            }
+            counterQuestion += 3;
+            counterOption += 1;
+            $("#Radio1,#Radio2,#Radio3,#Radio4").prop('checked', false);
+            PlaceQuestion();
+        })
+
+        $("#submitQuestion").click(function () {
+            if ($("input[type=radio]:checked").length > 0) {
+                Solved.Attempt += 1;
+                if ($("#Radio1").is(":checked") && Quiz[counterOption - 3].isCorrect || $("#Radio2").is(":checked") && Quiz[counterOption - 2].isCorrect || $("#Radio3").is(":checked") && Quiz[counterOption - 1].isCorrect || $("#Radio4").is(":checked") && Quiz[counterOption].isCorrect) {
+                    Solved.RightAnswer += 1;
+                }
+                $("#nextQuestion").hide();
+
+
+                $("#QuizSection").hide();
+                $("#resultShow").show();
+
+                $("#totalQuestion").text(Solved.TotalQuestions);
+                $("#attempt").text(Solved.Attempt)
+                $("#skip").text(Solved.Skip)
+                $("#rightAns").text(Solved.RightAnswer)
+                $("#wrongAns").text(Solved.WrongAnswer)
+                $("#result").text(Solved.Result)
+
+            } else {
+                alert("Please select an option then submit!")
+            }
+        })
+    })
+
+    let counterQuestion = 0;
+    let counterOption = 0;
+    function PlaceQuestion() {
+        $("#quiz").text(Quiz[counterQuestion].QuestionId + ") " + Quiz[counterQuestion].Qustion);
+        counterQuestion += 1;
+        $("#RadioLabel1").text(Quiz[counterOption].Options);
+        counterOption += 1;
+        $("#RadioLabel2").text(Quiz[counterOption].Options);
+        counterOption += 1;
+        $("#RadioLabel3").text(Quiz[counterOption].Options);
+        counterOption += 1;
+        $("#RadioLabel4").text(Quiz[counterOption].Options);
+    }
+</script>
+
+<br />

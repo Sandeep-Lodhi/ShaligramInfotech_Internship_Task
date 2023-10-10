@@ -1,0 +1,24 @@
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\Exam.Models.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\Exam.Models.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\Exam.Models.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\EntityFramework.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\EntityFramework.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\obj\Debug\Exam.Models.csproj.AssemblyReference.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\obj\Debug\Exam.Models.csproj.CoreCompileInputs.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\obj\Debug\Exam.Models.csproj.CopyComplete
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\obj\Debug\Exam.Models.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Models\obj\Debug\Exam.Models.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\Exam.Models.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\Exam.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\Exam.Models.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\obj\Debug\Exam.Models.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\obj\Debug\Exam.Models.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\obj\Debug\Exam.Models.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\obj\Debug\Exam.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC .NET\ExamBatch1\Exam.Models\obj\Debug\Exam.Models.pdb

@@ -1,0 +1,128 @@
+﻿
+@{
+    Layout = "~/Views/Shared/EmployeeLayout.cshtml";
+
+    var page = Page;
+    var str = Page[0];
+    var num = Page[1];
+}
+@using MVCPractice1.Models  @*No Need To Specify w+999999999999999999999999999999999999999999999999999999hich model is used*@
+
+@* Need To Specify which model is used *@
+@model MVCPractice1.Models.Employee
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>
+            Employee View
+        </h1>
+
+    </div>
+
+    <div>
+        <a href="../Home/Index">Home</a>
+    </div>
+
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Address</td>
+                </tr>
+                <tr>
+                    <td>@Model.Id</td>
+                    <td>@Model.Name</td>
+                    <td>@Model.Address</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        @if (Model.Name == "Krunal")
+        {
+            <p>Krunal</p>
+        }
+        else
+        {
+            <p>@Model.Name is correct</p>
+        }
+    </div>
+    <br />
+    <div>
+        @(Model.Id==2?Model.Name:Model.Address)
+    </div>
+    <br />
+    <div>
+        @for (int i = 10; i >= 1; i--)
+        {
+            <span>@i </span>
+        }
+    </div>
+    <br />
+    <div>
+        @{
+            var MyList = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
+        }
+        @foreach (var ml in MyList)
+        {
+            <span>@ml</span>
+        }
+    </div>
+    <br />
+    <div>
+        @{
+            Employee emp = new Employee() { Id = 2, Name = "Piyush", Address = "Bihar" };
+        }
+        Using used here to create object <br />
+
+        @emp.Id , @emp.Name , @emp.Address
+    </div>
+    <br />
+
+    <div>
+        Inline HTML HELPER
+        @helper MyHelper(string[] str)
+        {
+            if (str.Length == 0)
+            {
+                <span>No Data Found</span>
+            }
+            else
+            {
+                <ul>
+                    @foreach (var i in str)
+                    {
+                        <li>@i</li>
+                    }
+                </ul>
+            }
+
+        }
+        <br />
+        Calling the helper<br />
+        @MyHelper(new string[] { "Krunal", "Piyush", "Shuvam" })
+        @MyHelper(new string[] { "Saurabh", "Balaji", "Kunal" })
+        @MyHelper(new string[] { })
+    </div>
+
+    @section renderCode{
+        <h1>
+            Krunal
+        </h1>
+    }
+
+    <h1>Render page</h1>
+    Variable <p>@str , @num</p>  @* The Code will not shown on this page it only reflect on Rendering Page *@
+</body>         
+</html>

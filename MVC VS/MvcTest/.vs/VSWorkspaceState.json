@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MvcTest",
+    "\\MvcTest.Repository\\Repositories",
+    "\\MvcTest.Repository\\Services",
+    "\\MvcTest\\AuthFilter",
+    "\\MvcTest\\Controllers",
+    "\\MvcTest\\Views",
+    "\\MvcTest\\Views\\Auth",
+    "\\MvcTest\\Views\\Home",
+    "\\MvcTest\\Views\\Shared"
+  ],
+  "SelectedNode": "\\MvcTest\\Views\\Home\\CreateOrder.cshtml",
+  "PreviewInSolutionExplorer": false
+}

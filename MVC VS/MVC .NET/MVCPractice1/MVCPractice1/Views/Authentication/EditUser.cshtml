@@ -1,0 +1,79 @@
+﻿
+@model DBModels.CreateAccount
+@{
+    ViewBag.Title = "EditUser";
+    Layout = "~/Views/Shared/ThemeIntegration.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+    <div class="col-lg-7">
+        <div class="p-5">
+            <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+            </div>
+            @using (Html.BeginForm("CreateAccount", "Authentication", FormMethod.Post, new { @class = "user" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" value=@Model.fname class="form-control form-control-user" id="FirstName" name="fname" placeholder="First Name">
+                        @Html.ValidationMessageFor(model => model.fname, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" value=@Model.lname class="form-control form-control-user" id="LastName" name="lname" placeholder="Last Name">
+                        @Html.ValidationMessageFor(model => model.lname, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="email" value=@Model.email class="form-control form-control-user" id="Email" name="email" placeholder="Email Address">
+                        @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="tel" value=@Model.contact class="form-control form-control-user" id="contact" name="contact" placeholder="Contact Number">
+                        @Html.ValidationMessageFor(model => model.contact, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <input type="text" value=@Model.UserName class="form-control form-control-user" id="username" name="UserName" placeholder="UserName">
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" value=@Model.address class="form-control form-control-user" id="address" name="address" placeholder="Address">
+                        @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        @Html.DropDownListFor(x => x.Country.Id, ViewBag.country as SelectList, "---Select---", new { @class = "form-control-user dropdown2" })
+                        @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DropDownListFor(x => x.State.Id, new SelectList(""), "---Select---", new { @class = "form-control-user dropdown2" })
+                        @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        @Html.DropDownListFor(x => x.City.Id, new SelectList(""), "---Select---", new { @class = "form-control-user dropdown2" })
+                        @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-user btn-block">Update Details</button>
+            }
+            <hr>
+            <div class="text-center">
+                <a class="small" href="forgot-password.html">Forgot Password?</a>
+            </div>
+            <div class="text-center">
+                @Html.ActionLink("Already have an account? Login!", "Login", "Authentication", new { @class = "small" })
+            </div>
+        </div>
+    </div>
+</div>

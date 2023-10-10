@@ -1,0 +1,47 @@
+﻿@model List<StudentManagement.Models.UserModel>
+@using StudentManagement.Models
+
+@{
+    ViewBag.Title = "RetriveAllUsers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="mdl-grid ui-tables">
+    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+        <div class="mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h1 class="mdl-card__title-text">All Users</h1>
+            </div>
+            <div class="mdl-card__supporting-text no-padding">
+                <table class="mdl-data-table mdl-js-data-table bordered-table" data-upgraded=",MaterialDataTable">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Id</th>
+                            <th class="mdl-data-table__cell--non-numeric">First Name</th>
+                            <th class="mdl-data-table__cell--non-numeric">Last Name</th>
+                            <th class="mdl-data-table__cell--non-numeric">User Name</th>
+                            <th class="mdl-data-table__cell--non-numeric">Email</th>
+                            <th class="mdl-data-table__cell--non-numeric">Password</th>
+                            <th class="mdl-data-table__cell--non-numeric">User Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (UserModel user in Model)
+                        {
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">@user.UserId</td>
+                                <td class="mdl-data-table__cell--non-numeric">@user.UserFirstName</td>
+                                <td class="mdl-data-table__cell--non-numeric">@user.UserLastName</td>
+                                <td class="mdl-data-table__cell--non-numeric">@user.UserName</td>
+                                <td class="mdl-data-table__cell--non-numeric">@user.UserEmail</td>
+                                <td class="mdl-data-table__cell--non-numeric">@user.UserPassWord</td>
+                                <td class="mdl-data-table__cell--non-numeric">@{string str = ""; user.UserRoleName.ForEach(x => str += x + ",");}@str</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

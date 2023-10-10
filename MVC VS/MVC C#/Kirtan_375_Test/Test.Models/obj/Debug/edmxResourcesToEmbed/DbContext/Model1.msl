@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Kirtan_test_375ModelStoreContainer" CdmEntityContainer="Kirtan_test_375Entities">
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="Kirtan_test_375Model.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_orderDetails" FunctionName="Kirtan_test_375Model.Store.sp_orderDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Kirtan_test_375Model.sp_orderDetails_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="itemname" ColumnName="itemname" />
+          <ScalarProperty Name="itemprice" ColumnName="itemprice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="order">
+      <EntityTypeMapping TypeName="Kirtan_test_375Model.order">
+        <MappingFragment StoreEntitySet="order">
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="productId" ColumnName="productId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="Kirtan_test_375Model.Items">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="itemprice" ColumnName="itemprice" />
+          <ScalarProperty Name="itemname" ColumnName="itemname" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CouponCodeMaster">
+      <EntityTypeMapping TypeName="Kirtan_test_375Model.CouponCodeMaster">
+        <MappingFragment StoreEntitySet="CouponCodeMaster">
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="limit" ColumnName="limit" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

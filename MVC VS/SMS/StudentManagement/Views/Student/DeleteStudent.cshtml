@@ -1,0 +1,86 @@
+﻿
+@model StudentManagement.Models.StudentModel
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="mdl-grid ui-tables">
+    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+        <div class="mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h1 class="mdl-card__title-text">Are you sure to want to delete this record?</h1>
+            </div>
+            <div class="mdl-card__supporting-text no-padding">
+                <table class="mdl-data-table mdl-js-data-table bordered-table" data-upgraded=",MaterialDataTable">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Id</th>
+                            <th class="mdl-data-table__cell--non-numeric">FirstName</th>
+                            <th class="mdl-data-table__cell--non-numeric">LastName</th>
+                            <th class="mdl-data-table__cell--non-numeric">StandardName</th>
+                            <th class="mdl-data-table__cell--non-numeric">Address</th>
+                            <th class="mdl-data-table__cell--non-numeric">MobileNo</th>
+                            <th class="mdl-data-table__cell--non-numeric">Email</th>
+                            <th class="mdl-data-table__cell--non-numeric">GenderName</th>
+                            <th class="mdl-data-table__cell--non-numeric">DOB</th>
+                            <th class="mdl-data-table__cell--non-numeric">StandardName</th>
+                            <th class="mdl-data-table__cell--non-numeric">Subjects</th>
+                            <th class="mdl-data-table__cell--non-numeric">Teachers</th>
+                            <th class="mdl-data-table__cell--non-numeric">CountryName</th>
+                            <th class="mdl-data-table__cell--non-numeric">StateName</th>
+                            <th class="mdl-data-table__cell--non-numeric">CityName</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentId</td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentFirstName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentLastName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentStandardName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentAddress</td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentMobileNo</td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentEmail</td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentGenderName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentDOB</td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentStandardName</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                @foreach (string x in @Model.StudentSubjectName)
+                                {
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-orange" data-upgraded=",MaterialButton,MaterialRipple">
+                                        @x
+                                        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                    </button>
+                                }
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                @foreach (string x in @Model.StudentTeacherName)
+                                {
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal" data-upgraded=",MaterialButton,MaterialRipple">
+                                        @x
+                                        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                    </button>
+                                }
+                            </td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentCountryName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentStateName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@Model.StudentCityName</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mdl-card__supporting-text no-padding">
+                @using (Html.BeginForm("ConformDeleteStudent", "Student", FormMethod.Post))
+                {
+                    @Html.HiddenFor(m => m.StudentId)
+                    <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-red" type="submit" value="Delete" />
+                }
+            </div>
+            <div class="mdl-card__supporting-text no-padding">
+                @Html.ActionLink("Back to List","RetriveStudents","Student")
+            </div>
+        </div>
+    </div>
+</div>
+

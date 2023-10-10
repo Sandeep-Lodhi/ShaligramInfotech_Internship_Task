@@ -1,0 +1,221 @@
+﻿@model School.Models.Models.StudentModel
+
+@{
+    ViewBag.Title = "Register";
+}
+<br />
+<br />
+
+@section Style{
+    <style>
+
+        body {
+            background-image: url('../../Content/Theme/assets/img/the-climate-reality-project-Hb6uWq0i4MI-unsplash.jpg');
+            background-size: cover;
+        }
+
+        .card-body {
+            background: linear-gradient(0deg, #000 0%, #fff 100%);
+            padding: 50px 20px;
+            border-radius: 20px;
+            border: 1px solid #fff;
+            /* filter: blur(8px); */
+            backdrop-filter: blur(4px);
+        }
+
+        .myBtn {
+            padding-left: 26px !important;
+            color: white !important;
+            background: #002181 !important;
+            border-radius: 30px !important;
+            padding-right: 25px !important;
+            border-color: blanchedalmond !important;
+        }
+        .field-validation-error{
+            color:red;
+            margin-left:5px;
+        }
+    </style>
+}
+
+
+<section class=" gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-7">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+                        @*<form action="/Student/Register" method="post">*@
+                            @using (Html.BeginForm())
+                            {
+
+                             <div class="row">
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        @Html.EditorFor(x => x.FirstName, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "First Name" } })
+                                        @Html.ValidationMessageFor(x => x.FirstName)
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        @Html.EditorFor(x=>x.LastName, new { htmlAttributes= new {@class= "form-control form-control-lg", placeholder = "Last Name" } }) 
+                                        @Html.ValidationMessageFor(x => x.LastName)
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4 d-flex align-items-center">
+                                    <div class="form-outline datepicker w-100">
+                                        <h6 class="mb-2 pb-1 form-control-lg">Date Of Birth </h6>
+                                        @Html.EditorFor(x => x.DateOfBirth, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "Birthday",type="Date" } })
+                                        @Html.ValidationMessageFor(x => x.DateOfBirth)
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <h6 class="mb-2 pb-1 form-control-lg">Gender </h6>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButtonFor(x => x.Gender,"Male", new { htmlAttributes = new { @class = "form-check-input" } })
+                                        <label class="form-check-label" for="maleGender">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButtonFor(x=>x.Gender,"Female", new { htmlAttributes = new { @class = "form-check-input"} })
+                                        <label class="form-check-label" for="femaleGender">Female</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        @Html.RadioButtonFor(x => x.Gender,"Other", new { htmlAttributes = new { @class = "form-check-input" } })
+                                        <label class="form-check-label" for="otherGender">Other</label>
+                                    </div><br />
+                                    @Html.ValidationMessageFor(x => x.Gender)
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4 pb-2">
+                                    <div class="form-outline">
+                                        @Html.EditorFor(x => x.Email, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "Email" } })
+                                        @Html.ValidationMessageFor(x => x.Email)
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4 pb-2">
+
+                                    <div class="form-outline">
+                                        @Html.EditorFor(x => x.Contact, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "Phone Number" } })
+                                        @Html.ValidationMessageFor(x => x.Contact)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        @Html.EditorFor(x => x.Address, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "Address" } })
+                                        @Html.ValidationMessageFor(x => x.Address)
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 mb-4">
+
+                                    <div class="form-outline">
+                                        @Html.DropDownListFor(x=>x.DepartmentId,new SelectList(""), "Select-Department", new { @class = "form-control form-control-lg" })
+                                        @Html.ValidationMessageFor(x => x.DepartmentId)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            @Html.DropDownListFor(x => x.CountryId, new SelectList(""), "Select-Country", new { @class = "form-control form-control-lg" })
+                                            @Html.ValidationMessageFor(x => x.CountryId)
+                                        </div>
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            @Html.DropDownListFor(x => x.StateId, new SelectList(""), "Select-State", new { @class = "form-control form-control-lg" })
+                                            @Html.ValidationMessageFor(x => x.StateId)
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            @Html.DropDownListFor(x=>x.CityId, new SelectList(""), "Select-City", new { @class = "form-control form-control-lg" })
+                                            @Html.ValidationMessageFor(x => x.CityId)
+                                        </div>
+                                        <div class="col-md-6 mb-4 pb-2">
+                                            <div class="form-outline">
+                                                @Html.EditorFor(x => x.Password, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "Password", type="password"} })
+                                                @Html.ValidationMessageFor(x => x.Password)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4 pb-2">
+                                    <div class="form-outline">
+                                        @Html.EditorFor(x => x.RepeatPassword, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "Repeat Password", type="password"} })
+                                        @Html.ValidationMessageFor(x => x.RepeatPassword)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4 pt-2 text-center">
+                                <button class="btn btn-primary btn-lg myBtn" type="submit">Submit</button>
+                            </div>
+                            }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Script{
+    <script>
+        $(document).ready(function () {
+        
+            $.get('/Ajax/GetDepartment', function (data) {
+            //    $("#DepartmentId").empty();
+                $("#DepartmentId").append("<option value='" + 0 + "'>Select-Department</option>");
+                $.each(data, function (index, row) {
+                    $("#DepartmentId").append("<option value='" + row.Id + "'>" + row.Name + "</option>");
+                })
+            })
+
+            $.get('/Ajax/GetCountry', function (data) {
+               // $("#CountryId").empty();
+                $("#CountryId").append("<option value='" + 0 + "'>Select-Country</option>");
+                $.each(data, function (index, row) {
+                    $("#CountryId").append("<option value='" + row.id + "'>" + row.CountryName + "</option>");
+                })
+            })
+
+            $("#CountryId").on("change", function () {
+                $.get('/Ajax/GetState?id=' + $("#CountryId").val(), function (data) {
+                    $("#StateId").empty();
+                    $("#StateId").append("<option value='" + 0 + "'>Select-State</option>");
+                    $("#CityId").empty();
+                    $("#CityId").append("<option value='" + 0 + "'>Select-City</option>");
+                    $.each(data, function (index, row) {
+                        $("#StateId").append("<option value='" + row.id + "'>" + row.StateName + "</option>");
+                    })
+                })
+            })
+
+            $("#StateId").on("change", function () {
+                $.get('/Ajax/GetCity?id=' + $("#StateId").val(), function (data) {
+                    $("#CityId").empty();
+                    $("#CityId").append("<option value='" + 0 + "'>Select-City</option>");
+                    $.each(data, function (index, row) {
+                        $("#CityId").append("<option value='" + row.id + "'>" + row.CityName + "</option>");
+                    })
+                })
+            })
+        })
+    </script>
+    
+}

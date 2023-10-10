@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Sandeep_QuizAppModelStoreContainer" CdmEntityContainer="Sandeep_QuizAppEntities">
+    <EntitySetMapping Name="Answers">
+      <EntityTypeMapping TypeName="Sandeep_QuizAppModel.Answer">
+        <MappingFragment StoreEntitySet="Answers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="questionId" ColumnName="questionId" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="isCorrect" ColumnName="isCorrect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="Sandeep_QuizAppModel.Question">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="Sandeep_QuizAppModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

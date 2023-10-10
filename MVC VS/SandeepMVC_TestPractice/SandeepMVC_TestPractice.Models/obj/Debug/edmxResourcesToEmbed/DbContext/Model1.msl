@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Sandeep_Phase3ModelStoreContainer" CdmEntityContainer="Sandeep_Phase3Entities">
+    <EntitySetMapping Name="City">
+      <EntityTypeMapping TypeName="Sandeep_Phase3Model.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="Sandeep_Phase3Model.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gender">
+      <EntityTypeMapping TypeName="Sandeep_Phase3Model.Gender">
+        <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="GName" ColumnName="GName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hobbies">
+      <EntityTypeMapping TypeName="Sandeep_Phase3Model.Hobbies">
+        <MappingFragment StoreEntitySet="Hobbies">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Hobby" ColumnName="Hobby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registration">
+      <EntityTypeMapping TypeName="Sandeep_Phase3Model.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="AttachmentDoc" ColumnName="AttachmentDoc" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="State">
+      <EntityTypeMapping TypeName="Sandeep_Phase3Model.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="Cid" ColumnName="Cid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

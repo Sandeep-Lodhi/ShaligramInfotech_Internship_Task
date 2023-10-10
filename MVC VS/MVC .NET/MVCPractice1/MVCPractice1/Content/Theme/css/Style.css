@@ -1,0 +1,54 @@
+﻿body {
+}
+
+.bg-login-image {
+    background-image: url('../img/4957136.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-register-image {
+    background: url("../img/Register.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-password-image {
+    background: url("https://source.unsplash.com/oWTW-jNGl9I/600x800");
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-gradient-primary {
+    background-image: linear-gradient(180deg,#8a8ae1eb 10%,#000000);
+}
+
+.btn-primary {
+    background: #8a8ae1eb;
+    border-color: #5555adeb;
+}
+
+
+.btn-primary:hover {
+    background-image: linear-gradient(180deg,#8a8ae1eb 10%,#000000);
+}
+
+.dropdown2 {
+    width: 100%;
+    padding: 0.9rem 0.75rem !important;
+    color: #6e707e;
+    background-color: #fff;
+    border:1px solid #d1d3e2;
+}
+
+.dropdown2:focus {
+    border: 4px solid #bdc4f7d9 !important;
+}
+
+.btn-danger:hover {
+    background-image: linear-gradient(180deg,#e74a3b 10%,#000000);
+}
+
+.form-control {
+    color: #454545;
+}

@@ -1,0 +1,15 @@
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\bin\Debug\TesttaskQuizRepository.dll.config
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\bin\Debug\TesttaskQuizRepository.dll
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\bin\Debug\TesttaskQuizRepository.pdb
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\bin\Debug\EntityFramework.dll
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\bin\Debug\TesttaskQuizModel.dll
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\bin\Debug\TesttaskQuizModel.pdb
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\bin\Debug\TesttaskQuizModel.dll.config
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\bin\Debug\EntityFramework.xml
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\obj\Debug\TesttaskQuizRepository.csproj.AssemblyReference.cache
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\obj\Debug\TesttaskQuizRepository.csproj.CoreCompileInputs.cache
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\obj\Debug\TesttaskQuizRepository.csproj.CopyComplete
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\obj\Debug\TesttaskQuizRepository.dll
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizRepository\obj\Debug\TesttaskQuizRepository.pdb

@@ -1,0 +1,12 @@
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\bin\Debug\Models.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\bin\Debug\Models.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\bin\Debug\Models.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\bin\Debug\EntityFramework.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\bin\Debug\EntityFramework.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\obj\Debug\Models.csproj.AssemblyReference.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\obj\Debug\Models.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Models\obj\Debug\Models.pdb

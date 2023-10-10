@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SandeepMVCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Cityid" />
+          </Key>
+          <Property Name="Cityid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cityname" Type="varchar" MaxLength="100" />
+          <Property Name="Sid" Type="int" />
+        </EntityType>
+        <EntityType Name="country">
+          <Key>
+            <PropertyRef Name="Cid" />
+          </Key>
+          <Property Name="Cid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cname" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="Sid" />
+          </Key>
+          <Property Name="Sid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sname" Type="varchar" MaxLength="100" />
+          <Property Name="Cid" Type="int" />
+        </EntityType>
+        <EntityContainer Name="SandeepMVCModelStoreContainer">
+          <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="country" EntityType="Self.country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SandeepMVCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Cityid" />
+          </Key>
+          <Property Name="Cityid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cityname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Sid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="country">
+          <Key>
+            <PropertyRef Name="Cid" />
+          </Key>
+          <Property Name="Cid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="Sid" />
+          </Key>
+          <Property Name="Sid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Cid" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="SandeepMVCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cities" EntityType="Self.City" />
+          <EntitySet Name="countries" EntityType="Self.country" />
+          <EntitySet Name="States" EntityType="Self.State" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SandeepMVCModelStoreContainer" CdmEntityContainer="SandeepMVCEntities">
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="SandeepMVCModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="Cityid" ColumnName="Cityid" />
+                <ScalarProperty Name="Cityname" ColumnName="Cityname" />
+                <ScalarProperty Name="Sid" ColumnName="Sid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="countries">
+            <EntityTypeMapping TypeName="SandeepMVCModel.country">
+              <MappingFragment StoreEntitySet="country">
+                <ScalarProperty Name="Cid" ColumnName="Cid" />
+                <ScalarProperty Name="Cname" ColumnName="Cname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="SandeepMVCModel.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="Sid" ColumnName="Sid" />
+                <ScalarProperty Name="Sname" ColumnName="Sname" />
+                <ScalarProperty Name="Cid" ColumnName="Cid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

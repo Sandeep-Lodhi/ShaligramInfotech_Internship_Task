@@ -1,0 +1,42 @@
+﻿@model Exam.Models.Models.UserModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+<br>
+<form action="/Exam/Login" method="post">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">User Name</label>
+        <input type="text" class="form-control" name="UserName" id="UserName">
+        <div class="usernameValidation text-danger">
+            @Html.ValidationMessageFor(x => x.UserName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="Password" name="Password">
+        @Html.ValidationMessageFor(x => x.Password, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div class="text-danger">@ViewBag.Message</div><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+    $(document).ready(function () {
+        $("#UserName").blur(function () {
+            if ($("#UserName").val() !="") {
+                $.get("/Exam/GetUserName?username=" + $("#UserName").val(), function (data) {
+                    if (!data) {
+                        $(".usernameValidation").html("Invalid User Name Inserted")
+                    }
+                    else {
+                        $(".usernameValidation").html("")
+                    }
+                })
+            }
+        })
+    })
+</script>

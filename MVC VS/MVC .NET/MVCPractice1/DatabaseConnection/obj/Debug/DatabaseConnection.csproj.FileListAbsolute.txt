@@ -1,0 +1,15 @@
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\bin\Debug\DatabaseConnection.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\bin\Debug\DatabaseConnection.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\obj\Debug\DatabaseConnection.csproj.AssemblyReference.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\obj\Debug\DatabaseConnection.csproj.CoreCompileInputs.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\obj\Debug\DatabaseConnection.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\obj\Debug\DatabaseConnection.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\bin\Debug\DatabaseConnection.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\bin\Debug\EntityFramework.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\bin\Debug\EntityFramework.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\obj\Debug\DatabaseConnection.csproj.CopyComplete
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\bin\Debug\DBModels.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\bin\Debug\DBModels.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DatabaseConnection\bin\Debug\DBModels.dll.config

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c414c89989a643519db5048642f96b18" Name="Diagram1">
+        <EntityTypeShape EntityType="Kirtan_test_375Model.user" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Kirtan_test_375Model.order" Width="1.5" PointX="3" PointY="4.625" />
+        <AssociationConnector Association="Kirtan_test_375Model.FK__order__userid__2F10007B" />
+        <EntityTypeShape EntityType="Kirtan_test_375Model.Items" Width="1.5" PointX="3.375" PointY="0.875" />
+        <AssociationConnector Association="Kirtan_test_375Model.FK__order__productId__2E1BDC42" />
+        <EntityTypeShape EntityType="Kirtan_test_375Model.CouponCodeMaster" Width="1.5" PointX="5.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

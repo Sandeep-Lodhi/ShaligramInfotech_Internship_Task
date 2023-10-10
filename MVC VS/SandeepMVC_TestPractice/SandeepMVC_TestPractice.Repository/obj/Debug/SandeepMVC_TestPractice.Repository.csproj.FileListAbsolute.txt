@@ -1,0 +1,40 @@
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Repository.dll.config
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Repository.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Repository.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Helpers.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Models.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Helpers.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Helpers.dll.config
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Models.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Models.dll.config
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\obj\Debug\SandeepMVC_TestPractice.Repository.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\obj\Debug\SandeepMVC_TestPractice.Repository.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\obj\Debug\SandeepMVC_TestPractice.Repository.csproj.CopyComplete
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\obj\Debug\SandeepMVC_TestPractice.Repository.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\obj\Debug\SandeepMVC_TestPractice.Repository.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Repository.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Repository.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Repository.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Helpers.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Helpers.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Helpers.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Models.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\SandeepMVC_TestPractice.Models.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\obj\Debug\SandeepMVC_TestPractice.Repository.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\obj\Debug\SandeepMVC_TestPractice.Repository.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\obj\Debug\SandeepMVC_TestPractice.Repository.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\obj\Debug\SandeepMVC_TestPractice.Repository.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\obj\Debug\SandeepMVC_TestPractice.Repository.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\PagedList.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\PagedList.Mvc.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\PagedList.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Repository\bin\Debug\PagedList.Mvc.xml

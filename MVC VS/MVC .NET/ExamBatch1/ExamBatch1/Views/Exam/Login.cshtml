@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+@using (Html.BeginForm("Login","Exam")) { 
+<div>
+    <div class="form-outline mb-4">
+        <input type="email" id="Email" name="email" class="form-control" />
+        <label class="form-label" for="form2Example1">Email address</label>
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+        <input type="password" id="Password" name="pass" class="form-control" />
+        <label class="form-label" for="form2Example2">Password</label>
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+</div>
+}

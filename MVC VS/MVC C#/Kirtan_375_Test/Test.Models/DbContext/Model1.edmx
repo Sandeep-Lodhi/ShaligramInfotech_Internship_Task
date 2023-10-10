@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Kirtan_test_375Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CouponCodeMaster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code" Type="varchar" MaxLength="50" />
+          <Property Name="type" Type="int" />
+          <Property Name="ExpiryDate" Type="date" />
+          <Property Name="limit" Type="int" />
+          <Property Name="isActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="itemname" Type="varchar" MaxLength="100" />
+          <Property Name="itemprice" Type="int" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="productId" Type="int" />
+          <Property Name="quantity" Type="int" />
+          <Property Name="total" Type="int" />
+          <Property Name="userid" Type="int" />
+          <Property Name="price" Type="int" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
+          <Property Name="password" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK__order__productId__2E1BDC42">
+          <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+          <End Role="order" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order">
+              <PropertyRef Name="productId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__order__userid__2F10007B">
+          <End Role="user" Type="Self.user" Multiplicity="0..1" />
+          <End Role="order" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order">
+              <PropertyRef Name="userid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="sp_orderDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="Kirtan_test_375ModelStoreContainer">
+          <EntitySet Name="CouponCodeMaster" EntityType="Self.CouponCodeMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="order" EntityType="Self.order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__order__productId__2E1BDC42" Association="Self.FK__order__productId__2E1BDC42">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="order" EntitySet="order" />
+          </AssociationSet>
+          <AssociationSet Name="FK__order__userid__2F10007B" Association="Self.FK__order__userid__2F10007B">
+            <End Role="user" EntitySet="user" />
+            <End Role="order" EntitySet="order" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Kirtan_test_375Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Kirtan_test_375Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="user" EntityType="Kirtan_test_375Model.user" />
+          <FunctionImport Name="sp_orderDetails" ReturnType="Collection(Kirtan_test_375Model.sp_orderDetails_Result)" />
+          <EntitySet Name="order" EntityType="Kirtan_test_375Model.order" />
+          <AssociationSet Name="FK__order__userid__2F10007B" Association="Kirtan_test_375Model.FK__order__userid__2F10007B">
+            <End Role="user" EntitySet="user" />
+            <End Role="order" EntitySet="order" />
+          </AssociationSet>
+          <EntitySet Name="Items" EntityType="Kirtan_test_375Model.Items" />
+          <AssociationSet Name="FK__order__productId__2E1BDC42" Association="Kirtan_test_375Model.FK__order__productId__2E1BDC42">
+            <End Role="Items" EntitySet="Items" />
+            <End Role="order" EntitySet="order" />
+          </AssociationSet>
+          <EntitySet Name="CouponCodeMaster" EntityType="Kirtan_test_375Model.CouponCodeMaster" />
+        </EntityContainer>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="order" Relationship="Kirtan_test_375Model.FK__order__userid__2F10007B" FromRole="user" ToRole="order" />
+        </EntityType>
+        <ComplexType Name="sp_orderDetails_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="productId" Nullable="true" />
+          <Property Type="Int32" Name="quantity" Nullable="true" />
+          <Property Type="Int32" Name="total" Nullable="true" />
+          <Property Type="Int32" Name="userid" Nullable="true" />
+          <Property Type="String" Name="itemname" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="itemprice" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="productId" Type="Int32" />
+          <Property Name="quantity" Type="Int32" />
+          <Property Name="total" Type="Int32" />
+          <Property Name="userid" Type="Int32" />
+          <NavigationProperty Name="user" Relationship="Kirtan_test_375Model.FK__order__userid__2F10007B" FromRole="order" ToRole="user" />
+          <NavigationProperty Name="Items" Relationship="Kirtan_test_375Model.FK__order__productId__2E1BDC42" FromRole="order" ToRole="Items" />
+          <Property Name="price" Type="Int32" />
+        </EntityType>
+        <Association Name="FK__order__userid__2F10007B">
+          <End Type="Kirtan_test_375Model.user" Role="user" Multiplicity="0..1" />
+          <End Type="Kirtan_test_375Model.order" Role="order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order">
+              <PropertyRef Name="userid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Items">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="itemname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="itemprice" Type="Int32" />
+          <NavigationProperty Name="order" Relationship="Kirtan_test_375Model.FK__order__productId__2E1BDC42" FromRole="Items" ToRole="order" />
+        </EntityType>
+        <Association Name="FK__order__productId__2E1BDC42">
+          <End Type="Kirtan_test_375Model.Items" Role="Items" Multiplicity="0..1" />
+          <End Type="Kirtan_test_375Model.order" Role="order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Items">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="order">
+              <PropertyRef Name="productId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CouponCodeMaster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="type" Type="Int32" />
+          <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+          <Property Name="limit" Type="Int32" />
+          <Property Name="isActive" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Kirtan_test_375ModelStoreContainer" CdmEntityContainer="Kirtan_test_375Entities">
+          <EntitySetMapping Name="user">
+            <EntityTypeMapping TypeName="Kirtan_test_375Model.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_orderDetails" FunctionName="Kirtan_test_375Model.Store.sp_orderDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Kirtan_test_375Model.sp_orderDetails_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="productId" ColumnName="productId" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="itemname" ColumnName="itemname" />
+                <ScalarProperty Name="itemprice" ColumnName="itemprice" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="order">
+            <EntityTypeMapping TypeName="Kirtan_test_375Model.order">
+              <MappingFragment StoreEntitySet="order">
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="productId" ColumnName="productId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items">
+            <EntityTypeMapping TypeName="Kirtan_test_375Model.Items">
+              <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="itemprice" ColumnName="itemprice" />
+                <ScalarProperty Name="itemname" ColumnName="itemname" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CouponCodeMaster">
+            <EntityTypeMapping TypeName="Kirtan_test_375Model.CouponCodeMaster">
+              <MappingFragment StoreEntitySet="CouponCodeMaster">
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="limit" ColumnName="limit" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

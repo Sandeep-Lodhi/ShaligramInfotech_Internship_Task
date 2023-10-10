@@ -1,0 +1,211 @@
+﻿@{
+    ViewBag.Title = "Cart";
+
+}
+<div>
+    <br />
+    @Session["Username"]
+    <br />
+    <label for="Item">Item</label>
+    @Html.DropDownList("Item", new SelectList(""), "Select=Item", new { @class = "form-control form-control-lg" })
+</div>
+<br />
+<div>
+    <label for="quantity">Quantity</label>
+    <input class="form-control" type="number" id="quantity" name="quantity" min="1" value="1" required>
+</div>
+<br />
+<div>
+    <button type="button" id="AddItem" class="btn btn-primary">
+        Add Item
+    </button>
+</div>
+
+<br />
+<br />
+<div class="">
+    <h3 class="text-center">Cart</h3>
+    <table id="cartTable" class="table">
+        <thead>
+            <tr>
+                <th scope="col">Item Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Total</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody id="AddRow">
+        </tbody>
+        <tr>
+            <td class="text-center" colspan="3"><strong> Total <span id="TotalQty">0</span> Item</strong></td>
+            <td><strong id="totalAmt"> 0 </strong></td>
+            <td></td>
+        </tr>
+    </table>
+    <hr />
+    <div class="text-center row">
+        <div class="col-lg-4">SGST</div>
+        <div class="col-lg-4">5 %</div>
+        <div class="col-lg-4" id="sgst">0</div>
+    </div>
+    <br />
+    <div class="text-center row">
+        <div class="col-lg-4">CGST</div>
+        <div class="col-lg-4">5 %</div>
+        <div class="col-lg-4" id="cgst">0</div>
+    </div>
+    <br />
+    <div class="text-center row">
+        <div class="col-lg-6">Total Payble Amount</div>
+        <div class="col-lg-6" id="PaybleAmount">0</div>
+    </div>
+    <br />
+    <div class="text-center row">
+        <div class="col-lg-4 text-center">Apply Coupen</div>
+        <div class="col-lg-4 text-center text-capitalize"><input value="FLAT100" class="form-control" type="text" id="coupenCode" style='text-transform:uppercase'></div>
+        <div class="col-lg-4 text-center"><button type="button" id="ApplyCoupen" class="btn btn-primary">Apply</button></div>
+    </div>
+    <hr />
+    <div class="text-center row">
+        <div class="col-lg-6">Net Payble Amount</div>
+        <div class="col-lg-6" id="NetPaybleAmount">0</div>
+    </div>
+
+    <br />
+    <div class="text-center">
+        <button type="button" id="placeOrder" class="btn btn-success">
+            Place Order
+        </button>
+    </div>
+</div>
+<script>
+   // var Total, Quantity, CGST, SGST;
+
+    var Cart = []
+    var ItemArr = []
+    var Total = 0;
+    var TotalQty = 0;
+    var PaybleAmount = 0;
+    var NetAmount = 0;
+
+    var Coupen = [];
+    let promoCode = "";
+    let gst = 0;
+    $(document).ready(function(){
+        $.get("/Exam/GetItemsList", function (data) {
+            console.log(data)
+            $("#Item").empty();
+            ItemArr=data
+            $.each(data, function (key, value) {
+                $("#Item").append(`<option value="${value.ItemId}">${value.Item}</option>`)
+            })
+        })
+
+
+        $.get("/Exam/GetCoupenList", function (data) {
+            Coupen = data;
+        })
+
+
+        $("#AddItem").click(function () {
+            let id = $("#Item").val();
+            let qty = parseInt($("#quantity").val());
+            TotalQty+=qty
+            let totalAmt;
+            const index = Cart.findIndex(object => {
+                return object.ItemId == id;
+            });
+            if (index > -1) {
+                Total -= Cart[index].Quantity * Cart[index].Amount
+                Cart[index].Quantity += qty;
+                totalAmt = Cart[index].Quantity * Cart[index].Amount;
+            } else {
+                let item = ItemArr.find(x => x.ItemId == id)
+                let name = item.Item
+                let amt = item.Amount
+                totalAmt = qty * amt
+                var obj = { ItemId: id, Item: name, Quantity: qty, Amount: amt }
+                Cart.push(obj);
+            }
+
+            let Html="";
+            for (let i = 0; i < Cart.length; i++) {
+                    Html += `
+                        <tr>
+                            <td>${Cart[i].Item}</td>
+                            <td>${Cart[i].Quantity}</td>
+                            <td>${Cart[i].Amount}</td>
+                            <td>${Cart[i].Quantity * Cart[i].Amount}</td>
+                            <td></td>
+                        </tr>
+                    `
+            }
+            document.getElementById("AddRow").innerHTML= Html;
+            Total += totalAmt;
+            gst = (5 / 100) * Total;
+            PaybleAmount = Total + gst * 2;
+
+            $("#TotalQty").html(TotalQty)
+            $("#totalAmt").html(Total)
+            $("#sgst").html(gst)
+            $("#cgst").html(gst)
+            $("#PaybleAmount").html(PaybleAmount)
+            $("#NetPaybleAmount").html(PaybleAmount)
+        })
+
+        $("#ApplyCoupen").click(function () {
+            let code = $("#coupenCode").val().toUpperCase();
+            const check = Coupen.find(x => x.Code === code)
+            if (check != null) {
+                promoCode = check.Code;
+                const date = new Date();
+                const ExpDate = new Date(parseInt(check.Expiry.slice(6, -2)));
+                if (ExpDate > date && check.Limit > 0 && check.IsActive) {
+                    if (!check.Type) {
+                        NetAmount = PaybleAmount-check.FlatAmount
+                        $("#NetPaybleAmount").html(NetAmount)
+                    } else {
+                        NetAmount = PaybleAmount- (check.PercentageAmount / 100) * PaybleAmount;
+                        $("#NetPaybleAmount").html(NetAmount)
+                    }
+                    alert("Coupen Applied Successfully")
+                }
+                else {
+                    alert("Coupen Is Invalid")
+                }
+            } else {
+                alert("Coupen Is Invalid")
+            }
+        })
+
+        $("#placeOrder").click(function () {
+            var Order =
+                    {
+                        OrderDate: new Date(),
+                        Amount: Total,
+                        AfterGST: PaybleAmount,
+                        PromoCode: promoCode,
+                        PayingAmount: NetAmount,
+                        CGST: gst,
+                        SGST: gst,
+                        CustId:@ViewBag.Customer
+                    }
+            
+            $.ajax({
+                url: "@Url.Action("PlaceOrder","Exam")",
+                type: "POST",
+                data: JSON.stringify(Order),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                error: function (response) {
+                    alert("Order Unsuccessfull");
+                },
+                success: function (response) {
+                    alert(response)
+                    window.location.href = "/Exam/MyOrder/" + @ViewBag.Customer;
+                }
+            });
+        })
+    })
+</script>

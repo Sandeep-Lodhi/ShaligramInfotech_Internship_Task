@@ -1,0 +1,11 @@
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\DataBaseConnection\MyApp.Db\bin\Debug\MyApp.Db.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\DataBaseConnection\MyApp.Db\bin\Debug\MyApp.Db.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\DataBaseConnection\MyApp.Db\obj\Debug\MyApp.Db.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\DataBaseConnection\MyApp.Db\obj\Debug\MyApp.Db.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\DataBaseConnection\MyApp.Db\obj\Debug\MyApp.Db.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\DataBaseConnection\MyApp.Db\obj\Debug\MyApp.Db.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\DataBaseConnection\MyApp.Db\bin\Debug\MyApp.Db.dll.config
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\DataBaseConnection\MyApp.Db\obj\Debug\MyApp.Db.csproj.CopyComplete
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\DataBaseConnection\MyApp.Db\bin\Debug\MyApp.Models.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\DataBaseConnection\MyApp.Db\bin\Debug\MyApp.Models.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\DataBaseConnection\MyApp.Db\bin\Debug\MyApp.Models.dll.config

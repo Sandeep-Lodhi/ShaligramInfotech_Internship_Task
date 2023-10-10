@@ -1,0 +1,15 @@
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\bin\Debug\MVC_Test1_Practice.Helper.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\bin\Debug\MVC_Test1_Practice.Helper.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\bin\Debug\MVC_Test1_Practice.Helper.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\bin\Debug\MVC_Test1_Practice.Model.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\bin\Debug\MVC_Test1_Practice.Model.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\bin\Debug\MVC_Test1_Practice.Model.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\obj\Debug\MVC_Test1_Practice.Helper.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\obj\Debug\MVC_Test1_Practice.Helper.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\obj\Debug\MVC_Test1_Practice.Helper.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\obj\Debug\MVC_Test1_Practice.Helper.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Helper\obj\Debug\MVC_Test1_Practice.Helper.pdb

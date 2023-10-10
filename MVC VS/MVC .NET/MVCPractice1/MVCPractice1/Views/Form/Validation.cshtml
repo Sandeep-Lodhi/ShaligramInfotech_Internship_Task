@@ -1,0 +1,66 @@
+﻿@model MVCPractice1.Models.Form
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Validation</title>
+</head>
+<body>
+    <div>
+        <h4>Form</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.fname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.fname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.lname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.lname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.phone)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.phone)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.isChecked)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.isChecked)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Repositaries.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Repositaries.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\obj\Debug\Phase3.Repositaries.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\obj\Debug\Phase3.Repositaries.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\obj\Debug\Phase3.Repositaries.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\obj\Debug\Phase3.Repositaries.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Repositaries.dll.config
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Helpers.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Models.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Helpers.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Models.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Models.dll.config
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\obj\Debug\Phase3.Repositaries.csproj.CopyComplete
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Helpers.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Repositaries.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Repositaries.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Repositaries.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Helpers.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Helpers.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Helpers.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Models.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\Phase3.Models.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\obj\Debug\Phase3.Repositaries.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\obj\Debug\Phase3.Repositaries.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\obj\Debug\Phase3.Repositaries.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\obj\Debug\Phase3.Repositaries.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\Phase3\Phase3.Repositaries\obj\Debug\Phase3.Repositaries.pdb

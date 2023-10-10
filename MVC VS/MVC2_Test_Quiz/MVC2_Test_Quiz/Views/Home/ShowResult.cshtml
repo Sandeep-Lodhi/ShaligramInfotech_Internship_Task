@@ -1,0 +1,65 @@
+﻿@model MVC2_Test_Quiz.Models.Models.ResultModel
+
+@{
+    ViewBag.Title = "ShowResult";
+}
+
+<h2>ShowResult</h2>
+
+<div>
+    <h4>ResultModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalQuestion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalQuestion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attempt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attempt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Skip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RightAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RightAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WrongAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WrongAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.result)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.result)
+        </dd>
+
+    </dl>
+    <h4>1 right answer = 10 mark</h4>
+    <h4>1 wrong answer = -5 mark</h4>
+</div>
+

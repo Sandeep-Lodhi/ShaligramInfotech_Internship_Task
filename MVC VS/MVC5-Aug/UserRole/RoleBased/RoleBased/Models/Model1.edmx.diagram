@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d9b39849d9aa418486c419a99abb0461" Name="Diagram1">
+        <EntityTypeShape EntityType="Sit375_SandeepDBModel.Employee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sit375_SandeepDBModel.Users" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Sit375_SandeepDBModel.UserRole" Width="1.5" PointX="5.625" PointY="0.75" />
+        <AssociationConnector Association="Sit375_SandeepDBModel.FK__UserRole__id__3D5E1FD2" />
+        <AssociationConnector Association="Sit375_SandeepDBModel.FK__UserRole__UserId__403A8C7D" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

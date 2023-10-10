@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Jatin_dModel1StoreContainer" CdmEntityContainer="Jatin_dEntities1">
+    <EntitySetMapping Name="student">
+      <EntityTypeMapping TypeName="Jatin_dModel1.student">
+        <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="stu_id" ColumnName="stu_id" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Mobile_Number" ColumnName="Mobile_Number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Pass_word" ColumnName="Pass_word" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_login">
+      <EntityTypeMapping TypeName="Jatin_dModel1.User_login">
+        <MappingFragment StoreEntitySet="User_login">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

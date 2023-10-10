@@ -1,0 +1,15 @@
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\bin\Debug\OrderPlaceTest.Helpers.dll.config
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\bin\Debug\OrderPlaceTest.Helpers.dll
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\bin\Debug\OrderPlaceTest.Helpers.pdb
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\bin\Debug\OrderPlaceTest.Models.dll
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\bin\Debug\OrderPlaceTest.Models.pdb
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\bin\Debug\OrderPlaceTest.Models.dll.config
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\obj\Debug\OrderPlaceTest.Helpers.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\obj\Debug\OrderPlaceTest.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\obj\Debug\OrderPlaceTest.Helpers.csproj.CopyComplete
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\obj\Debug\OrderPlaceTest.Helpers.dll
+C:\Users\sit375\Desktop\MVC5-Aug\OrderPlaceTest\OrderPlaceTest.Helpers\obj\Debug\OrderPlaceTest.Helpers.pdb

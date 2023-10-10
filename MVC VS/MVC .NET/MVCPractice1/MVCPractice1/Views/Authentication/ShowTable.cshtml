@@ -1,0 +1,52 @@
+﻿@model IEnumerable<DBModels.CreateAccount>
+
+@{
+    ViewBag.Title = "ShowTable";
+    Layout = "~/Views/Shared/ThemeIntegration.cshtml";
+}
+
+<div class="table-responsive">
+    <table id="users" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>UserName</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.fname</td>
+                    <td>@item.lname</td>
+                    <td>@item.email</td>
+                    <td>@item.address</td>
+                    <td>@item.UserName</td>
+                    <td>@item.Country.Name</td>
+                    <td>@item.State.Name</td>
+                    <td>@item.City.Name</td>
+                    <td>
+                        <div class="d-flex">
+                            <a href="@Url.Action("EditUser","Authentication",new { id=item.id})" class="btn btn-primary m-1">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+                            <a href="@Url.Action("EditUser","Authentication",new { id=item.id})" class="btn btn-danger m-1">
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Create New", "CreateAccount")
+</p>

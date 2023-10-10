@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SandeepTestDBModelStoreContainer" CdmEntityContainer="SandeepTestDBEntities">
+    <EntitySetMapping Name="Answers">
+      <EntityTypeMapping TypeName="SandeepTestDBModel.Answers">
+        <MappingFragment StoreEntitySet="Answers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="questionId" ColumnName="questionId" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="isCorrect" ColumnName="isCorrect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="SandeepTestDBModel.Questions">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="SandeepTestDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserContact" ColumnName="UserContact" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_AddEditUser" FunctionName="SandeepTestDBModel.Store.SP_AddEditUser" />
+    <FunctionImportMapping FunctionImportName="SP_CreateItemDetail" FunctionName="SandeepTestDBModel.Store.SP_CreateItemDetail" />
+    <FunctionImportMapping FunctionImportName="SP_CreateOrder" FunctionName="SandeepTestDBModel.Store.SP_CreateOrder" />
+    <FunctionImportMapping FunctionImportName="SP_GetAllCoupons" FunctionName="SandeepTestDBModel.Store.SP_GetAllCoupons">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SandeepTestDBModel.SP_GetAllCoupons_Result">
+          <ScalarProperty Name="CouponId" ColumnName="CouponId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="FlatAmount" ColumnName="FlatAmount" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="Expirydate" ColumnName="Expirydate" />
+          <ScalarProperty Name="UsageLimit" ColumnName="UsageLimit" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetAllItems" FunctionName="SandeepTestDBModel.Store.SP_GetAllItems">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SandeepTestDBModel.SP_GetAllItems_Result">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetQuestionsAndAnswers" FunctionName="SandeepTestDBModel.Store.SP_GetQuestionsAndAnswers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SandeepTestDBModel.SP_GetQuestionsAndAnswers_Result">
+          <ScalarProperty Name="QId" ColumnName="QId" />
+          <ScalarProperty Name="QTitle" ColumnName="QTitle" />
+          <ScalarProperty Name="AId" ColumnName="AId" />
+          <ScalarProperty Name="AIsCorrect" ColumnName="AIsCorrect" />
+          <ScalarProperty Name="ATitle" ColumnName="ATitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

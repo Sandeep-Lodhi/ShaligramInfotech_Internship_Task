@@ -1,0 +1,36 @@
+API 
+SESSION
+HELPER
+ONION 
+Tight Cupling 
+Loose Cupling
+
+Serialization
+Desirialization
+
+Exeption Hendling
+
+DIPENDENCY INJECTION
+
+Action filter
+Async Await
+
+
+File Hending
+
+Ajax 
+
+Json
+
+pagination
+Local Storage
+Cookies
+
+------------------------
+create a repository pattern based project 
+1. login logout signin 
+2. action filter 
+3.CRUD 
+ --- add Pagination 
+4. CREATE a  tab --add
+ form country state city dropdown box

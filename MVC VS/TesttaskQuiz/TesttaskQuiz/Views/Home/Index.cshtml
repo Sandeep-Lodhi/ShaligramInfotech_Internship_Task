@@ -1,0 +1,187 @@
+﻿<div class="container" id="quiz">
+    <div id="Question"></div>
+    <div id="Answers"></div>
+    @*<button id="Start" onclick="StartQuiz()" class="btn-primary">Start</button>*@
+    <div id="next"></div>
+    <div id="next1"></div>
+    <div id="Skip"></div>
+</div>
+<div class="container-fluid">
+    <div id="Result">
+
+    </div>
+</div>
+
+<script>
+
+
+
+
+    $(document).ready(function () {
+        StartQuiz()
+    });
+    
+    var id = 0;
+    var marks = 0;
+    var arr = [];
+    var totalmarks = [];
+    function StartQuiz() {
+        /* alert(id);*/
+       
+        document.getElementById("Skip").innerHTML = `<button onclick="StartQuiz()" class="btn-primary">Skip</button>`;
+        document.getElementById("next").innerHTML = `<button onclick="StartQuiz1()" class="btn-primary">Next</button>`;
+        id++;
+        $("#Start").hide();
+        
+            $.ajax({
+                method: "POST",
+                url: "/Home/DbQuestionsList",
+                data: { id: id },
+                success: function (res) {
+                    var data = JSON.parse(res);
+                    var question = $("#Question");
+                    question.empty();
+                    $.each(data, function (index, val) {
+                        var row = `<p>${val.title}</p>`;
+                        question.append(row);
+                       /* console.log(val.title);*/
+                    });
+                },
+                error: function (error) {
+                    console.error("An error occurred during the AJAX request:", error);
+                }
+            });
+
+            $.ajax({
+                method: "POST",
+                url: "/Home/DbAnswerList",
+                data: { id: id },
+                success: function (res) {
+                    var data = JSON.parse(res);
+                    var Answers = $("#Answers");
+                    Answers.empty();
+                    $.each(data, function (index, val) {
+                        var row = `<p><input type="radio" id="q${val.Id}" name="hhh" value="${val.Id}">
+                    ${val.title}<p>`;
+
+                        Answers.append(row);
+                        //console.log(val.title);
+                        //console.log(index);
+                    });
+                },
+                error: function (error) {
+                    console.error("An error occurred during the AJAX request:", error);
+                }
+            });
+       
+    }
+    function StartQuiz1() {
+
+        /* alert(id);*/
+        var radios = $('input:radio[name=hhh]');
+        if (radios.is(':checked') === true) {
+            var Id = $('input:radio[name=hhh]:checked').val();
+            console.log(id);
+            console.log(Id);
+            var obj = {
+                Id: Id,
+            };
+            arr.push(obj);
+
+            $.ajax({
+                method: "GET",
+                url: "/Home/Resultlist",
+                data: { Id: Id },
+                success: function (res) {
+                    var mark = JSON.parse(res);
+                     marks +=mark;
+                    var obj2 = {
+                        mark: mark
+                    };
+                   console.log(marks);
+                   
+                    totalmarks.push(obj2);
+                },
+            });
+
+
+
+
+
+
+
+            /*console.log(obj);*/
+            document.getElementById("Skip").innerHTML = `<button onclick="StartQuiz()" class="btn-primary">Skip</button>`;
+            document.getElementById("next").innerHTML = `<button onclick="StartQuiz1()" class="btn-primary">Next</button>`;
+            id++;
+            $("#Start").hide();
+            $.ajax({
+                method: "POST",
+                url: "/Home/DbQuestionsList",
+                data: { id: id },
+                success: function (res) {
+                    var data = JSON.parse(res);
+                    var question = $("#Question");
+                    question.empty();
+                    $.each(data, function (index, val) {
+                        var row = `<p>${val.title}</p>`;
+                        question.append(row);
+                       /* console.log(val.title);*/
+                    });
+                },
+                error: function (error) {
+                    console.error("An error occurred during the AJAX request:", error);
+                }
+            });
+
+            $.ajax({
+                method: "POST",
+                url: "/Home/DbAnswerList",
+                data: { id: id },
+                success: function (res) {
+                    var data = JSON.parse(res);
+                    var Answers = $("#Answers");
+                    Answers.empty();
+                    $.each(data, function (index, val) {
+                        var row = `<p><input type="radio" id="q${val.Id}" name="hhh" value="${val.Id}">
+                    ${val.title}<p>`;
+                        Answers.append(row);
+                        //console.log(val.title);
+                        //console.log(index);
+                    });
+                },
+                error: function (error) {
+                    console.error("An error occurred during the AJAX request:", error);
+                }
+            });
+        }
+        else {
+            alert("please select one");
+        }
+        if (id == 10) {
+            $("#Skip").hide();
+            $("#next").hide();
+            document.getElementById("next1").innerHTML = `<button onclick="SubmitQuiz()" class="btn-primary">Submit</button>`;
+        }
+    }
+    function SubmitQuiz() {
+        alert("Do you want to submit the exam?");
+        $("#quiz").hide();
+        console.log(totalmarks);
+        console.log(marks)
+        if (marks >= 35) {
+            var result = $("#Result");
+            var row = `<p> ResultStatus:pass</p><br>
+                        <p>Totalmarks:${marks}`
+            result.append(row);
+        }
+        else {
+            var result = $("#Result");
+            var row = `<p> ResultStatus:Fail</p><br>
+                        <p>Totalmarks:${marks}`
+            result.append(row);
+        }
+    }
+
+    
+</script>

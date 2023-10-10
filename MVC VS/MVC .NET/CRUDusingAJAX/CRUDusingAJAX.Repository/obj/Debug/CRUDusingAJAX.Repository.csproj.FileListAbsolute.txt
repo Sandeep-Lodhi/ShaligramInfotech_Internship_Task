@@ -1,0 +1,17 @@
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\obj\Debug\CRUDusingAJAX.Repository.csproj.AssemblyReference.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\obj\Debug\CRUDusingAJAX.Repository.csproj.CoreCompileInputs.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\CRUDusingAJAX.Repository.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\CRUDusingAJAX.Repository.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\CRUDusingAJAX.Repository.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\CRUDusingAJAX.Helpers.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\CRUDusingAJAX.Models.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\EntityFramework.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\CRUDusingAJAX.Helpers.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\CRUDusingAJAX.Models.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\CRUDusingAJAX.Models.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\EntityFramework.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\obj\Debug\CRUDusingAJAX.Repository.csproj.CopyComplete
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\obj\Debug\CRUDusingAJAX.Repository.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Repository\obj\Debug\CRUDusingAJAX.Repository.pdb

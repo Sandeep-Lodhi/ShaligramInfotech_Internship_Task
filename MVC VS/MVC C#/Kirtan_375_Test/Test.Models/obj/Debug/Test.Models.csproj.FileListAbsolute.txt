@@ -1,0 +1,12 @@
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\bin\Debug\Test.Models.dll.config
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\bin\Debug\Test.Models.dll
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\bin\Debug\Test.Models.pdb
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\bin\Debug\EntityFramework.dll
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\bin\Debug\EntityFramework.xml
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\obj\Debug\Test.Models.csproj.AssemblyReference.cache
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\obj\Debug\Test.Models.csproj.CoreCompileInputs.cache
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\obj\Debug\Test.Models.csproj.CopyComplete
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\obj\Debug\Test.Models.dll
+C:\Users\sit306\source\repos\Kirtan_375_Test\Test.Models\obj\Debug\Test.Models.pdb

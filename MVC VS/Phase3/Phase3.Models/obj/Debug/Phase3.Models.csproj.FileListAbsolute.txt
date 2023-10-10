@@ -1,0 +1,12 @@
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\bin\Debug\Phase3.Models.dll.config
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\bin\Debug\Phase3.Models.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\bin\Debug\Phase3.Models.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\obj\Debug\Phase3.Models.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\obj\Debug\Phase3.Models.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\obj\Debug\Phase3.Models.csproj.CopyComplete
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\obj\Debug\Phase3.Models.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\obj\Debug\Phase3.Models.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\Phase3\Phase3.Models\bin\Debug\EntityFramework.SqlServer.xml

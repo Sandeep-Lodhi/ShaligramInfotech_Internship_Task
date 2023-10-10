@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KrunalDhote351Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Answers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="questionId" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="isactive" Type="Boolean" />
+    <Property Name="isCorrect" Type="Boolean" />
+    <NavigationProperty Name="Questions" Relationship="Self.FK__Answers__questio__6EC0713C" FromRole="Answers" ToRole="Questions" />
+  </EntityType>
+  <EntityType Name="Authentication">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Questions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="isactive" Type="Boolean" />
+    <NavigationProperty Name="Answers" Relationship="Self.FK__Answers__questio__6EC0713C" FromRole="Questions" ToRole="Answers" />
+  </EntityType>
+  <Association Name="FK__Answers__questio__6EC0713C">
+    <End Role="Questions" Type="Self.Questions" Multiplicity="0..1" />
+    <End Role="Answers" Type="Self.Answers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Questions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Answers">
+        <PropertyRef Name="questionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KrunalDhote351Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Answers" EntityType="Self.Answers" />
+    <EntitySet Name="Authentication" EntityType="Self.Authentication" />
+    <EntitySet Name="Questions" EntityType="Self.Questions" />
+    <AssociationSet Name="FK__Answers__questio__6EC0713C" Association="Self.FK__Answers__questio__6EC0713C">
+      <End Role="Questions" EntitySet="Questions" />
+      <End Role="Answers" EntitySet="Answers" />
+    </AssociationSet>
+    <FunctionImport Name="sp_GetQuistionById" ReturnType="Collection(KrunalDhote351Model.sp_GetQuistionById_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetQuistion" ReturnType="Collection(KrunalDhote351Model.sp_GetQuistion_Result)" />
+  </EntityContainer>
+  <ComplexType Name="sp_GetQuistionById_Result">
+    <Property Type="Int32" Name="QuestionId" Nullable="true" />
+    <Property Type="String" Name="Qustion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="OptionId" Nullable="false" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="isCorrect" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_GetQuistion_Result">
+    <Property Type="Int32" Name="QuestionId" Nullable="true" />
+    <Property Type="String" Name="Qustion" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="OptionId" Nullable="false" />
+    <Property Type="String" Name="Options" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="isCorrect" Nullable="true" />
+  </ComplexType>
+</Schema>

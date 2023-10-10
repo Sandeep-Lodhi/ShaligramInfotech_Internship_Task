@@ -1,0 +1,40 @@
+﻿@model StudentManagement.Models.Models.CountryModel
+
+@{
+    ViewBag.Title = "CreateCountry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="mdl-grid mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone mdl-cell--top">
+    <div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--7-col-tablet mdl-cell--4-col-phone">
+        <div class="mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h5 class="mdl-card__title-text text-color--white">Create New Country</h5>
+            </div>
+            <div class="mdl-card__supporting-text">
+                @using (Html.BeginForm())
+                {
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone form__article">
+                            <h3 class="text-color--smooth-gray">Enter Country Name</h3>
+                            <h6 class="text-danger">@ViewBag.error</h6>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+                                @Html.LabelFor(model => model.CountryName, htmlAttributes: new { @class = "mdl-textfield__label" })
+                                @Html.EditorFor(model => model.CountryName, new { htmlAttributes = new { @class = "mdl-textfield__input" } })
+                            </div>
+                            @Html.ValidationMessageFor(model => model.CountryName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone form__article">
+                            <input type="submit" id="submit_button" value="@ViewBag.Action" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

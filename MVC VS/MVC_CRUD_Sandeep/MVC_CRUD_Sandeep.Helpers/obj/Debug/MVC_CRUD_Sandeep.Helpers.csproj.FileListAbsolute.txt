@@ -1,0 +1,15 @@
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\bin\Debug\MVC_CRUD_Sandeep.Helpers.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\bin\Debug\MVC_CRUD_Sandeep.Helpers.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\bin\Debug\MVC_CRUD_Sandeep.Helpers.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\bin\Debug\MVC_CRUD_Sandeep.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\bin\Debug\MVC_CRUD_Sandeep.Models.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\bin\Debug\MVC_CRUD_Sandeep.Models.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\obj\Debug\MVC_CRUD_Sandeep.Helpers.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\obj\Debug\MVC_CRUD_Sandeep.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\obj\Debug\MVC_CRUD_Sandeep.Helpers.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\obj\Debug\MVC_CRUD_Sandeep.Helpers.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_CRUD_Sandeep\MVC_CRUD_Sandeep.Helpers\obj\Debug\MVC_CRUD_Sandeep.Helpers.pdb

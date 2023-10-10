@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aed9abc0050b4b27aecc9bc4e26618d6" Name="Diagram1">
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.City" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.Country" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.Role" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.Standard" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.State" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.Student" Width="1.5" PointX="7.5" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.StudentSubject" Width="1.5" PointX="12.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.StudentTeacher" Width="1.5" PointX="12.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.Subject" Width="1.5" PointX="10.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.Teacher" Width="1.5" PointX="10.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.TeacherSubject" Width="1.5" PointX="12.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.User" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.UserRole" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__City__CountryId__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__City__StateId__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__Student__Student__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__Teacher__Teacher__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__State__CountryId__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__Student__Student__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__Teacher__Teacher__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__UserRole__RoleId__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__Student__Student__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__Student__Student__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__Teacher__Teacher__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__StudentSu__Stude__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__StudentTe__Stude__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__StudentSu__Subje__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__StudentTe__Teach__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__TeacherSu__Subje__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__TeacherSu__Teach__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__UserRole__UserId__7C4F7684" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SP355SanjayPrajapatiModel.StandardSubject" Width="1.5" PointX="12.75" PointY="2.125" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__StandardS__Stand__29221CFB" />
+        <AssociationConnector Association="SP355SanjayPrajapatiModel.FK__StandardS__Subje__2A164134" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

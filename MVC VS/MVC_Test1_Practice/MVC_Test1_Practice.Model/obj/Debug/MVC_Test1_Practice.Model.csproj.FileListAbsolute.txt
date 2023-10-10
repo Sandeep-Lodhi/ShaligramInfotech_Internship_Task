@@ -1,0 +1,12 @@
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\bin\Debug\MVC_Test1_Practice.Model.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\bin\Debug\MVC_Test1_Practice.Model.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\bin\Debug\MVC_Test1_Practice.Model.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\obj\Debug\MVC_Test1_Practice.Model.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\obj\Debug\MVC_Test1_Practice.Model.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\obj\Debug\MVC_Test1_Practice.Model.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\obj\Debug\MVC_Test1_Practice.Model.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC_Test1_Practice\MVC_Test1_Practice.Model\obj\Debug\MVC_Test1_Practice.Model.pdb

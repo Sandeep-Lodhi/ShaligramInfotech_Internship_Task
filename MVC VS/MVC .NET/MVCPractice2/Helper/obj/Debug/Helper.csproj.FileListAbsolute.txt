@@ -1,0 +1,12 @@
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\bin\Debug\Helper.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\bin\Debug\Helper.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\bin\Debug\Models.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\bin\Debug\EntityFramework.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\bin\Debug\Models.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\bin\Debug\Models.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\bin\Debug\EntityFramework.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\obj\Debug\Helper.csproj.AssemblyReference.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\obj\Debug\Helper.csproj.CoreCompileInputs.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\obj\Debug\Helper.csproj.CopyComplete
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\obj\Debug\Helper.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice2\Helper\obj\Debug\Helper.pdb

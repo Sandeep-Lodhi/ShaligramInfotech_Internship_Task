@@ -1,0 +1,12 @@
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\bin\Debug\School.Helper.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\bin\Debug\School.Helper.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\obj\Debug\School.Helper.csproj.AssemblyReference.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\obj\Debug\School.Helper.csproj.CoreCompileInputs.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\obj\Debug\School.Helper.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\obj\Debug\School.Helper.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\bin\Debug\School.Models.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\bin\Debug\EntityFramework.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\bin\Debug\School.Models.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\bin\Debug\School.Models.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\bin\Debug\EntityFramework.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Helper\obj\Debug\School.Helper.csproj.CopyComplete

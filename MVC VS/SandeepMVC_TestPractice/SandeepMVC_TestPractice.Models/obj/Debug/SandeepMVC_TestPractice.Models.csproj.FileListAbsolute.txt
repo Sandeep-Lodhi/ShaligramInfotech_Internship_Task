@@ -1,0 +1,23 @@
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\SandeepMVC_TestPractice.Models.dll.config
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\SandeepMVC_TestPractice.Models.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\SandeepMVC_TestPractice.Models.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\obj\Debug\SandeepMVC_TestPractice.Models.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\obj\Debug\SandeepMVC_TestPractice.Models.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\obj\Debug\SandeepMVC_TestPractice.Models.csproj.CopyComplete
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\obj\Debug\SandeepMVC_TestPractice.Models.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\obj\Debug\SandeepMVC_TestPractice.Models.pdb
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\Sandeep Lodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\SandeepMVC_TestPractice.Models.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\SandeepMVC_TestPractice.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\SandeepMVC_TestPractice.Models.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\obj\Debug\SandeepMVC_TestPractice.Models.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\obj\Debug\SandeepMVC_TestPractice.Models.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\obj\Debug\SandeepMVC_TestPractice.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC_TestPractice\SandeepMVC_TestPractice.Models\obj\Debug\SandeepMVC_TestPractice.Models.pdb

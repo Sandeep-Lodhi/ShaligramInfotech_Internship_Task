@@ -1,0 +1,11 @@
+﻿@model RegistrationSessionMVC.State
+
+<option value="">-- Select states --</option>
+@if (ViewBag.Slist != null)
+{
+    foreach (var item in ViewBag.Slist)
+    {
+        <option value="@item.Value">@item.Text</option>
+    }
+}
+

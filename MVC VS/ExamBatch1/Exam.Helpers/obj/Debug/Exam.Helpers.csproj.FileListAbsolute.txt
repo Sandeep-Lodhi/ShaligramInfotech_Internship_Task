@@ -1,0 +1,12 @@
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\bin\Debug\Exam.Helpers.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\bin\Debug\Exam.Helpers.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\obj\Debug\Exam.Helpers.csproj.AssemblyReference.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\obj\Debug\Exam.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\obj\Debug\Exam.Helpers.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\obj\Debug\Exam.Helpers.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\bin\Debug\Exam.Models.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\bin\Debug\EntityFramework.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\bin\Debug\Exam.Models.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\bin\Debug\Exam.Models.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\bin\Debug\EntityFramework.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\ExamBatch1\Exam.Helpers\obj\Debug\Exam.Helpers.csproj.CopyComplete

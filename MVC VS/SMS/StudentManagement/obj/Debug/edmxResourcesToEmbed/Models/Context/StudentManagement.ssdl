@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SP355SanjayPrajapatiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityId" />
+    </Key>
+    <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="varchar" MaxLength="255" />
+    <Property Name="StateId" Type="int" />
+    <Property Name="CountryId" Type="int" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Standard">
+    <Key>
+      <PropertyRef Name="StandardId" />
+    </Key>
+    <Property Name="StandardId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StandardName" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="StateId" />
+    </Key>
+    <Property Name="StateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateName" Type="varchar" MaxLength="255" />
+    <Property Name="CountryId" Type="int" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentFirstName" Type="varchar" MaxLength="255" />
+    <Property Name="StudentLastName" Type="varchar" MaxLength="255" />
+    <Property Name="StudentAddress" Type="varchar(max)" />
+    <Property Name="StudentMobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="StudentEmail" Type="varchar" MaxLength="250" />
+    <Property Name="StudentGenderName" Type="varchar" MaxLength="255" />
+    <Property Name="StudentDOB" Type="date" />
+    <Property Name="StudentStandardId" Type="int" />
+    <Property Name="StudentCountryId" Type="int" />
+    <Property Name="StudentStateId" Type="int" />
+    <Property Name="StudentCityId" Type="int" />
+  </EntityType>
+  <EntityType Name="StudentSubject">
+    <Key>
+      <PropertyRef Name="StudentSubjectId" />
+    </Key>
+    <Property Name="StudentSubjectId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentId" Type="int" />
+    <Property Name="SubjectId" Type="int" />
+  </EntityType>
+  <EntityType Name="StudentTeacher">
+    <Key>
+      <PropertyRef Name="StudentTeacherId" />
+    </Key>
+    <Property Name="StudentTeacherId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentId" Type="int" />
+    <Property Name="TeacherId" Type="int" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="SubjectId" />
+    </Key>
+    <Property Name="SubjectId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubjectName" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="TeacherId" />
+    </Key>
+    <Property Name="TeacherId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeacherFirstName" Type="varchar" MaxLength="255" />
+    <Property Name="TeacherLastName" Type="varchar" MaxLength="255" />
+    <Property Name="TeacherAddress" Type="varchar(max)" />
+    <Property Name="TeacherMobileNo" Type="varchar" MaxLength="50" />
+    <Property Name="TeacherEmail" Type="varchar" MaxLength="250" />
+    <Property Name="TeacherGenderName" Type="varchar" MaxLength="255" />
+    <Property Name="TeacherDOB" Type="date" />
+    <Property Name="TeacherCountryId" Type="int" />
+    <Property Name="TeacherStateId" Type="int" />
+    <Property Name="TeacherCityId" Type="int" />
+  </EntityType>
+  <EntityType Name="TeacherSubject">
+    <Key>
+      <PropertyRef Name="TeacherSubjectId" />
+    </Key>
+    <Property Name="TeacherSubjectId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeacherId" Type="int" />
+    <Property Name="SubjectId" Type="int" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserFirstName" Type="varchar" MaxLength="250" />
+    <Property Name="UserLastName" Type="varchar" MaxLength="250" />
+    <Property Name="UserName" Type="varchar" MaxLength="250" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="250" />
+    <Property Name="UserPassWord" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="UserRoleId" />
+    </Key>
+    <Property Name="UserRoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="RoleId" Type="int" />
+  </EntityType>
+  <Association Name="FK__City__CountryId__36B12243">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__City__StateId__35BCFE0A">
+    <End Role="State" Type="Self.State" Multiplicity="0..1" />
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="StateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__State__CountryId__32E0915F">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="State" Type="Self.State" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="State">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__Student__398D8EEE">
+    <End Role="Standard" Type="Self.Standard" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Standard">
+        <PropertyRef Name="StandardId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="StudentStandardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__Student__3A81B327">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="StudentCountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__Student__3B75D760">
+    <End Role="State" Type="Self.State" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="StudentStateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student__Student__3C69FB99">
+    <End Role="City" Type="Self.City" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="StudentCityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentSu__Stude__03F0984C">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="StudentSubject" Type="Self.StudentSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentSubject">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentSu__Subje__04E4BC85">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="0..1" />
+    <End Role="StudentSubject" Type="Self.StudentSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="SubjectId" />
+      </Principal>
+      <Dependent Role="StudentSubject">
+        <PropertyRef Name="SubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentTe__Stude__00200768">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="StudentTeacher" Type="Self.StudentTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentTeacher">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StudentTe__Teach__01142BA1">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+    <End Role="StudentTeacher" Type="Self.StudentTeacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="StudentTeacher">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teacher__Teacher__3F466844">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="TeacherCountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teacher__Teacher__403A8C7D">
+    <End Role="State" Type="Self.State" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="State">
+        <PropertyRef Name="StateId" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="TeacherStateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Teacher__Teacher__412EB0B6">
+    <End Role="City" Type="Self.City" Multiplicity="0..1" />
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityId" />
+      </Principal>
+      <Dependent Role="Teacher">
+        <PropertyRef Name="TeacherCityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TeacherSu__Subje__08B54D69">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="0..1" />
+    <End Role="TeacherSubject" Type="Self.TeacherSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="SubjectId" />
+      </Principal>
+      <Dependent Role="TeacherSubject">
+        <PropertyRef Name="SubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TeacherSu__Teach__07C12930">
+    <End Role="Teacher" Type="Self.Teacher" Multiplicity="0..1" />
+    <End Role="TeacherSubject" Type="Self.TeacherSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teacher">
+        <PropertyRef Name="TeacherId" />
+      </Principal>
+      <Dependent Role="TeacherSubject">
+        <PropertyRef Name="TeacherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserRole__RoleId__7D439ABD">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="UserRole" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserRole__UserId__7C4F7684">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="UserRole" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserRole">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Sp_AddDeleteStudentSubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="action" Type="varchar" Mode="In" />
+    <Parameter Name="StudentId" Type="int" Mode="In" />
+    <Parameter Name="SubjectId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddDeleteStudentTeacher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="action" Type="varchar" Mode="In" />
+    <Parameter Name="StudentId" Type="int" Mode="In" />
+    <Parameter Name="TeacherId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddDeleteTeacherSubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="action" Type="varchar" Mode="In" />
+    <Parameter Name="TeacherId" Type="int" Mode="In" />
+    <Parameter Name="SubjectId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddDeleteUserRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="action" Type="varchar" Mode="In" />
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="RoleId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddEditCity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CityId" Type="int" Mode="In" />
+    <Parameter Name="CityName" Type="varchar" Mode="In" />
+    <Parameter Name="CountryId" Type="int" Mode="In" />
+    <Parameter Name="StateId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddEditCountry" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CountryId" Type="int" Mode="In" />
+    <Parameter Name="CountryName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddEditRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RoleId" Type="int" Mode="In" />
+    <Parameter Name="RoleName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddEditStandard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StandardId" Type="int" Mode="In" />
+    <Parameter Name="StandardName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddEditState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StateId" Type="int" Mode="In" />
+    <Parameter Name="StateName" Type="varchar" Mode="In" />
+    <Parameter Name="CountryId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddEditStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StudentId" Type="int" Mode="In" />
+    <Parameter Name="StudentFirstName" Type="varchar" Mode="In" />
+    <Parameter Name="StudentLastName" Type="varchar" Mode="In" />
+    <Parameter Name="StudentAddress" Type="varchar(max)" Mode="In" />
+    <Parameter Name="StudentMobileNo" Type="varchar" Mode="In" />
+    <Parameter Name="StudentEmail" Type="varchar" Mode="In" />
+    <Parameter Name="StudentGenderName" Type="varchar" Mode="In" />
+    <Parameter Name="StudentDOB" Type="date" Mode="In" />
+    <Parameter Name="StudentStandardId" Type="int" Mode="In" />
+    <Parameter Name="StudentCountryId" Type="int" Mode="In" />
+    <Parameter Name="StudentStateId" Type="int" Mode="In" />
+    <Parameter Name="StudentCityId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddEditSubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SubjectId" Type="int" Mode="In" />
+    <Parameter Name="SubjectName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddEditTeacher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TeacherId" Type="int" Mode="In" />
+    <Parameter Name="TeacherFirstName" Type="varchar" Mode="In" />
+    <Parameter Name="TeacherLastName" Type="varchar" Mode="In" />
+    <Parameter Name="TeacherAddress" Type="varchar(max)" Mode="In" />
+    <Parameter Name="TeacherMobileNo" Type="varchar" Mode="In" />
+    <Parameter Name="TeacherEmail" Type="varchar" Mode="In" />
+    <Parameter Name="TeacherGenderName" Type="varchar" Mode="In" />
+    <Parameter Name="TeacherDOB" Type="date" Mode="In" />
+    <Parameter Name="TeacherCountryId" Type="int" Mode="In" />
+    <Parameter Name="TeacherStateId" Type="int" Mode="In" />
+    <Parameter Name="TeacherCityId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_AddEditUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="UserFirstName" Type="varchar" Mode="In" />
+    <Parameter Name="UserLastName" Type="varchar" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="UserEmail" Type="varchar" Mode="In" />
+    <Parameter Name="UserPassWord" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="SP355SanjayPrajapatiModelStoreContainer">
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Standard" EntityType="Self.Standard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentSubject" EntityType="Self.StudentSubject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentTeacher" EntityType="Self.StudentTeacher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teacher" EntityType="Self.Teacher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TeacherSubject" EntityType="Self.TeacherSubject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__City__CountryId__36B12243" Association="Self.FK__City__CountryId__36B12243">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK__City__StateId__35BCFE0A" Association="Self.FK__City__StateId__35BCFE0A">
+      <End Role="State" EntitySet="State" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK__State__CountryId__32E0915F" Association="Self.FK__State__CountryId__32E0915F">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="State" EntitySet="State" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__Student__398D8EEE" Association="Self.FK__Student__Student__398D8EEE">
+      <End Role="Standard" EntitySet="Standard" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__Student__3A81B327" Association="Self.FK__Student__Student__3A81B327">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__Student__3B75D760" Association="Self.FK__Student__Student__3B75D760">
+      <End Role="State" EntitySet="State" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student__Student__3C69FB99" Association="Self.FK__Student__Student__3C69FB99">
+      <End Role="City" EntitySet="City" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentSu__Stude__03F0984C" Association="Self.FK__StudentSu__Stude__03F0984C">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="StudentSubject" EntitySet="StudentSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentSu__Subje__04E4BC85" Association="Self.FK__StudentSu__Subje__04E4BC85">
+      <End Role="Subject" EntitySet="Subject" />
+      <End Role="StudentSubject" EntitySet="StudentSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentTe__Stude__00200768" Association="Self.FK__StudentTe__Stude__00200768">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="StudentTeacher" EntitySet="StudentTeacher" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StudentTe__Teach__01142BA1" Association="Self.FK__StudentTe__Teach__01142BA1">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="StudentTeacher" EntitySet="StudentTeacher" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teacher__Teacher__3F466844" Association="Self.FK__Teacher__Teacher__3F466844">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teacher__Teacher__403A8C7D" Association="Self.FK__Teacher__Teacher__403A8C7D">
+      <End Role="State" EntitySet="State" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Teacher__Teacher__412EB0B6" Association="Self.FK__Teacher__Teacher__412EB0B6">
+      <End Role="City" EntitySet="City" />
+      <End Role="Teacher" EntitySet="Teacher" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TeacherSu__Subje__08B54D69" Association="Self.FK__TeacherSu__Subje__08B54D69">
+      <End Role="Subject" EntitySet="Subject" />
+      <End Role="TeacherSubject" EntitySet="TeacherSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TeacherSu__Teach__07C12930" Association="Self.FK__TeacherSu__Teach__07C12930">
+      <End Role="Teacher" EntitySet="Teacher" />
+      <End Role="TeacherSubject" EntitySet="TeacherSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserRole__RoleId__7D439ABD" Association="Self.FK__UserRole__RoleId__7D439ABD">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="UserRole" EntitySet="UserRole" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserRole__UserId__7C4F7684" Association="Self.FK__UserRole__UserId__7C4F7684">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserRole" EntitySet="UserRole" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

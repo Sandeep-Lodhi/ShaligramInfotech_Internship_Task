@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SP355SanjayPrajapatiModelStoreContainer" CdmEntityContainer="SP355SanjayPrajapatiEntities1">
+    <EntitySetMapping Name="City">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Standard">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.Standard">
+        <MappingFragment StoreEntitySet="Standard">
+          <ScalarProperty Name="StandardId" ColumnName="StandardId" />
+          <ScalarProperty Name="StandardName" ColumnName="StandardName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="State">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.State">
+        <MappingFragment StoreEntitySet="State">
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="StudentFirstName" ColumnName="StudentFirstName" />
+          <ScalarProperty Name="StudentLastName" ColumnName="StudentLastName" />
+          <ScalarProperty Name="StudentAddress" ColumnName="StudentAddress" />
+          <ScalarProperty Name="StudentMobileNo" ColumnName="StudentMobileNo" />
+          <ScalarProperty Name="StudentEmail" ColumnName="StudentEmail" />
+          <ScalarProperty Name="StudentGenderName" ColumnName="StudentGenderName" />
+          <ScalarProperty Name="StudentDOB" ColumnName="StudentDOB" />
+          <ScalarProperty Name="StudentStandardId" ColumnName="StudentStandardId" />
+          <ScalarProperty Name="StudentCountryId" ColumnName="StudentCountryId" />
+          <ScalarProperty Name="StudentStateId" ColumnName="StudentStateId" />
+          <ScalarProperty Name="StudentCityId" ColumnName="StudentCityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentSubject">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.StudentSubject">
+        <MappingFragment StoreEntitySet="StudentSubject">
+          <ScalarProperty Name="StudentSubjectId" ColumnName="StudentSubjectId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentTeacher">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.StudentTeacher">
+        <MappingFragment StoreEntitySet="StudentTeacher">
+          <ScalarProperty Name="StudentTeacherId" ColumnName="StudentTeacherId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subject">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.Subject">
+        <MappingFragment StoreEntitySet="Subject">
+          <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+          <ScalarProperty Name="SubjectName" ColumnName="SubjectName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teacher">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.Teacher">
+        <MappingFragment StoreEntitySet="Teacher">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="TeacherFirstName" ColumnName="TeacherFirstName" />
+          <ScalarProperty Name="TeacherLastName" ColumnName="TeacherLastName" />
+          <ScalarProperty Name="TeacherAddress" ColumnName="TeacherAddress" />
+          <ScalarProperty Name="TeacherMobileNo" ColumnName="TeacherMobileNo" />
+          <ScalarProperty Name="TeacherEmail" ColumnName="TeacherEmail" />
+          <ScalarProperty Name="TeacherGenderName" ColumnName="TeacherGenderName" />
+          <ScalarProperty Name="TeacherDOB" ColumnName="TeacherDOB" />
+          <ScalarProperty Name="TeacherCountryId" ColumnName="TeacherCountryId" />
+          <ScalarProperty Name="TeacherStateId" ColumnName="TeacherStateId" />
+          <ScalarProperty Name="TeacherCityId" ColumnName="TeacherCityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeacherSubject">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.TeacherSubject">
+        <MappingFragment StoreEntitySet="TeacherSubject">
+          <ScalarProperty Name="TeacherSubjectId" ColumnName="TeacherSubjectId" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+          <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserPassWord" ColumnName="UserPassWord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRole">
+      <EntityTypeMapping TypeName="SP355SanjayPrajapatiModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Sp_AddDeleteStudentSubject" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddDeleteStudentSubject" />
+    <FunctionImportMapping FunctionImportName="Sp_AddDeleteStudentTeacher" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddDeleteStudentTeacher" />
+    <FunctionImportMapping FunctionImportName="Sp_AddDeleteTeacherSubject" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddDeleteTeacherSubject" />
+    <FunctionImportMapping FunctionImportName="Sp_AddDeleteUserRole" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddDeleteUserRole" />
+    <FunctionImportMapping FunctionImportName="Sp_AddEditCity" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddEditCity" />
+    <FunctionImportMapping FunctionImportName="Sp_AddEditCountry" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddEditCountry" />
+    <FunctionImportMapping FunctionImportName="Sp_AddEditRole" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddEditRole" />
+    <FunctionImportMapping FunctionImportName="Sp_AddEditStandard" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddEditStandard" />
+    <FunctionImportMapping FunctionImportName="Sp_AddEditState" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddEditState" />
+    <FunctionImportMapping FunctionImportName="Sp_AddEditStudent" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddEditStudent" />
+    <FunctionImportMapping FunctionImportName="Sp_AddEditSubject" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddEditSubject" />
+    <FunctionImportMapping FunctionImportName="Sp_AddEditTeacher" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddEditTeacher" />
+    <FunctionImportMapping FunctionImportName="Sp_AddEditUser" FunctionName="SP355SanjayPrajapatiModel.Store.Sp_AddEditUser" />
+  </EntityContainerMapping>
+</Mapping>

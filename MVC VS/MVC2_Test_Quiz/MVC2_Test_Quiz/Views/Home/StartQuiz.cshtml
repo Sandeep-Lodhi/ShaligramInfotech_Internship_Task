@@ -1,0 +1,184 @@
+﻿
+@{
+    ViewBag.Title = "StartQuiz";
+}
+
+
+<div class="container">
+    <h4>UserId :- @Session["UserId"]</h4>
+    <h4>UserName :- @Session["UserName"]</h4>
+</div>
+<div class="container">
+    <h2>StartQuiz</h2>
+    <div class="section">
+        <div class="question">
+            <p id="QId" style="margin-inline:10px"></p>
+            <p id="QTitle"></p>
+        </div>
+        <div class="answer">
+        </div>
+        <div class="action">
+            <button class="skipBtn btn btn-primary" style="margin-right:10px">Skip</button>
+            <button class="nextBtn btn btn-danger" style="margin-right:10px">Next</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+
+    var QId = 1
+
+    var resultObj = {
+        TotalQuestion: 10,
+        Attempt: 0,
+        Skip: 0,
+        RightAnswer: 0,
+        WrongAnswer: 0,
+        result:""
+    };
+
+
+    $.get(`/Home/GetQuestionById?QId=${QId}`, (data) => {
+        $("#QId").text(data[0].QId+" )");
+        $("#QTitle").text(data[0].QTitle);
+        console.log(data);
+        data.forEach(x => {
+            if (x.AIsCorrect) {
+                $(".answer").append(`<div>
+            <input type="radio" class="${x.AId}" id="ansId" name="ansId" value="d" isCorrect=${true}>
+            <label for="html">${x.ATitle}</label></div>
+            `)
+            }
+            else {
+                $(".answer").append(`<div>
+            <input type="radio" class="${x.AId}" id="ansId" name="ansId" value="d" isCorrect=${false}>
+            <label for="html">${x.ATitle}</label></div>
+            `)
+            }
+        })
+    }).then(() => {
+        InputChange();
+    })
+
+
+    function disEnaBtn() {
+        if ($("#ansId").prop("checked")) {
+            $(".nextBtn").prop('disabled', false);
+        } else {
+            $(".nextBtn").prop('disabled', true);
+        }
+    }
+
+    function InputChange() {
+        $(document).find("input[name=ansId]").each((index, el) => {
+            $(el).change(() => {
+                $(".nextBtn").prop('disabled', false);
+            });
+        });
+    }
+
+
+
+    $(".nextBtn").click((event) => {
+        $(".nextBtn").prop('disabled', true);
+        QId++;
+        if (QId < 11) {
+
+            if ($(".answer").find("input[isCorrect=true]").prop("checked")) {
+                resultObj.RightAnswer++;
+            } else {
+                resultObj.WrongAnswer++;
+            }
+            $(".answer").find("input[isCorrect=true]").val();
+            $(".answer").empty();
+            $.get(`/Home/GetQuestionById?QId=${QId}`, (data) => {
+                resultObj.Attempt++;
+                $("#QId").text(data[0].QId);
+                $("#QTitle").text(data[0].QTitle);
+
+                data.forEach(x => {
+                    if (x.AIsCorrect) {
+                        $(".answer").append(`<div>
+            <input type="radio" class="${x.AId}" id="ansId" name="ansId" value="d" isCorrect=${true}>
+            <label for="html">${x.ATitle}</label></div>
+            `)
+                    }
+                    else {
+                        $(".answer").append(`<div>
+            <input type="radio" class="${x.AId}" id="ansId" name="ansId" value="d" isCorrect=${false}>
+            <label for="html">${x.ATitle}</label></div>
+            `)
+                    }
+                })
+            }).then(() => {
+                InputChange();
+                })
+            if (QId == 11) {
+                $(".action").append(`<button class="submit btn btn-danger">Submit</button>`);
+            }
+        }
+        else if (QId < 12) {
+            resultObj.Attempt++;
+        }
+    })
+
+    $(".skipBtn").click((event) => {
+        QId++;
+        $(".nextBtn").prop('disabled', true);
+        if (QId < 11) {
+            $(".answer").empty();
+            $.get(`/Home/GetQuestionById?QId=${QId}`, (data) => {
+                resultObj.Skip++;
+                $("#QId").text(data[0].QId);
+                $("#QTitle").text(data[0].QTitle);
+
+                data.forEach(x => {
+                    if (x.AIsCorrect) {
+                        $(".answer").append(`<div>
+            <input type="radio" class="${x.AId}" id="ansId" name="ansId" value="d" isCorrect=${true}>
+            <label for="html">${x.ATitle}</label></div>
+            `)
+                    }
+                    else {
+                        $(".answer").append(`<div>
+            <input type="radio" class="${x.AId}" id="ansId" name="ansId" value="d" isCorrect=${false}>
+            <label for="html">${x.ATitle}</label></div>
+            `)
+                    }
+
+                })
+            }).then(() => {
+                InputChange();
+            })
+        }
+
+        else if (QId < 12) {
+            resultObj.Skip++;
+        }
+        if (QId == 11) {
+            $(".action").append(`<button class="submit btn btn-danger">Submit</button>`);
+        }
+    })
+
+    $(document).on("click", ".submit", () => {
+        let totalMark = (resultObj.RightAnswer * 10) - (resultObj.WrongAnswer * 5);
+        if (totalMark > 40) {
+            resultObj.result = "Pass"
+        }
+        else {
+            resultObj.result = "Fail"
+        }
+        $.post(`/Home/GetResultData`,
+            {
+                resultModel: resultObj
+            },
+            (data) => {
+                alert(data);
+                window.location.href = "/Home/ShowResult";
+            }
+        )
+    })
+</script>
+

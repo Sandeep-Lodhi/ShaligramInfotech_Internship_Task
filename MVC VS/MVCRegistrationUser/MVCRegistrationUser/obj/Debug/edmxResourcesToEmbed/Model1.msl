@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Sandeep_Phase3ModelStoreContainer" CdmEntityContainer="Sandeep_Phase3Entities">
+    <EntitySetMapping Name="MVCregUser">
+      <EntityTypeMapping TypeName="Sandeep_Phase3Model.MVCregUser">
+        <MappingFragment StoreEntitySet="MVCregUser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="Uemail" ColumnName="Uemail" />
+          <ScalarProperty Name="Upwd" ColumnName="Upwd" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Uimg" ColumnName="Uimg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

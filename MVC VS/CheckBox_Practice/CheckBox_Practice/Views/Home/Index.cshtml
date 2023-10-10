@@ -1,0 +1,31 @@
+﻿@model CheckBox_Practice.Models.list_Hobbies
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Index</h2>
+<h2>bind the checkbox list</h2>
+
+@using(Html.BeginForm("index","Home",FormMethod.Post))
+            {
+                <div>
+
+                    @for(int i= 0;i< Model.listHobbies.Count; i++)
+                {
+                    <div>
+                        @Html.CheckBoxFor(x => Model.listHobbies[i].IsActive)
+                        @Model.listHobbies[i].Hobby
+                        @Html.HiddenFor(x => Model.listHobbies[i].id)
+                        @Html.HiddenFor(x=>Model.listHobbies[i].Hobby )
+                    </div>
+                }
+                    <input type="submit" value="Submit" />
+                    @{ 
+                        if (ViewBag.message != null)
+                {
+                         @ViewBag.message 
+                }
+                    }
+                    
+                </div>
+                        }

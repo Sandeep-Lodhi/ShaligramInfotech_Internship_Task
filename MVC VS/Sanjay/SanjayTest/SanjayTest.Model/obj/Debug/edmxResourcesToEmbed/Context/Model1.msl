@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SP355_SanjayMvcTestModelStoreContainer" CdmEntityContainer="SP355_SanjayMvcTestEntities">
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="SP355_SanjayMvcTestModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_GetQuestionsAndAnswers" FunctionName="SP355_SanjayMvcTestModel.Store.SP_GetQuestionsAndAnswers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SP355_SanjayMvcTestModel.SP_GetQuestionsAndAnswers_Result">
+          <ScalarProperty Name="QId" ColumnName="QId" />
+          <ScalarProperty Name="QTitle" ColumnName="QTitle" />
+          <ScalarProperty Name="AId" ColumnName="AId" />
+          <ScalarProperty Name="AIsCorrect" ColumnName="AIsCorrect" />
+          <ScalarProperty Name="ATitle" ColumnName="ATitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Answers">
+      <EntityTypeMapping TypeName="SP355_SanjayMvcTestModel.Answers">
+        <MappingFragment StoreEntitySet="Answers">
+          <ScalarProperty Name="isCorrect" ColumnName="isCorrect" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="questionId" ColumnName="questionId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="SP355_SanjayMvcTestModel.Questions">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

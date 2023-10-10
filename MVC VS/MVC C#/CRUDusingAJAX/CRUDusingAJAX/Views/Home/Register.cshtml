@@ -1,0 +1,105 @@
+﻿@model CRUDusingAJAX.Models.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+
+ <form id="myForm">   
+    <div class="form-horizontal">
+        <h4>RegisterModel</h4>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" id="submitButton" value="Create" class="btn btn-default" />
+                <input type="button" id="updateButton" value="Update" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div><div>
+    @Html.ActionLink("Already Have An Account?", "Login")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+<script>
+
+
+    $(document).ready(function () {
+        if (@Model.CustId> 0) {
+            $("#updateButton").show();
+            $("#submitButton").hide();
+        } else {
+            $("#updateButton").hide();
+            $("#submitButton").show();
+        }
+            $(".field-validation-error").hide();
+            $("#submitButton").click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/RegisterUser",
+                    data: $("#myForm").serialize(),
+                    dataType: "text",
+                    success: function (res) {
+                        if (res > 0) {
+                            alert("Save Complete");
+                            window.location.href="/Home/Login"
+                        } else {
+                            $(".field-validation-error").show();
+                        }
+                    }
+                });
+            })
+
+            $("#updateButton").click(function () {
+                var data = $("#myForm").serialize() + '&=CustId=' + @Model.CustId
+                    console.log(data)
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/RegisterUser",
+                    data: 'CustId=' + @Model.CustId + '&' + $("#myForm").serialize() ,
+                    dataType: "text",
+                    success: function (res) {
+                        if (res > 0) {
+                            alert("Save Complete");
+                            window.location.href="/Home/Login"
+                        } else {
+                            $(".field-validation-error").show();
+                        }
+                    }
+                });
+            })
+        })
+</script>
+}

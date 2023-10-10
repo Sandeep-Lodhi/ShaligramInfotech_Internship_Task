@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KrunalDhote351ModelStoreContainer" CdmEntityContainer="KrunalDhote351Entities">
+    <EntitySetMapping Name="Answers">
+      <EntityTypeMapping TypeName="KrunalDhote351Model.Answers">
+        <MappingFragment StoreEntitySet="Answers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="questionId" ColumnName="questionId" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="isCorrect" ColumnName="isCorrect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Authentication">
+      <EntityTypeMapping TypeName="KrunalDhote351Model.Authentication">
+        <MappingFragment StoreEntitySet="Authentication">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="KrunalDhote351Model.Questions">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetQuistionById" FunctionName="KrunalDhote351Model.Store.sp_GetQuistionById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KrunalDhote351Model.sp_GetQuistionById_Result">
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="Qustion" ColumnName="Qustion" />
+          <ScalarProperty Name="OptionId" ColumnName="OptionId" />
+          <ScalarProperty Name="Options" ColumnName="Options" />
+          <ScalarProperty Name="isCorrect" ColumnName="isCorrect" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetQuistion" FunctionName="KrunalDhote351Model.Store.sp_GetQuistion">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KrunalDhote351Model.sp_GetQuistion_Result">
+          <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+          <ScalarProperty Name="Qustion" ColumnName="Qustion" />
+          <ScalarProperty Name="OptionId" ColumnName="OptionId" />
+          <ScalarProperty Name="Options" ColumnName="Options" />
+          <ScalarProperty Name="isCorrect" ColumnName="isCorrect" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

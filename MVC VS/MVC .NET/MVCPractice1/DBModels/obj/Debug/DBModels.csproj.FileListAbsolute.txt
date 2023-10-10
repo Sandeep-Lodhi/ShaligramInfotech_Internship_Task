@@ -1,0 +1,12 @@
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\bin\Debug\DBModels.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\bin\Debug\DBModels.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\obj\Debug\DBModels.csproj.AssemblyReference.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\obj\Debug\DBModels.csproj.CoreCompileInputs.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\obj\Debug\DBModels.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\obj\Debug\DBModels.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\bin\Debug\DBModels.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\bin\Debug\EntityFramework.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\bin\Debug\EntityFramework.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\MVCPractice1\DBModels\obj\Debug\DBModels.csproj.CopyComplete

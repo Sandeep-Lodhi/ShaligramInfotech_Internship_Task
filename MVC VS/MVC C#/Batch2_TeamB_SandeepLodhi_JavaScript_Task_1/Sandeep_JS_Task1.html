@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeep_JS_Task1</title>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css"> <!--Bootstrap CSS  add here -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!--Remix Icons CDN add here -->
+    <link rel="stylesheet" href="CSS/Sandeep_JS_Task1.css"> <!-- CSS add here -->
+</head>
+
+<body>
+    <div class="container border-start border-end">
+        <div class="text-center mt-4 mb-3 ">
+            <h1>Customer Form</h1>
+        </div>
+        <form>
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="mb-3"> <!--This field create for inter First name. -->
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="FirstName" placeholder="Jon">
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mb-3"> <!--This field create for inter Last name. -->
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="LastName" placeholder="Doe">
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mb-3"> <!--This field create for input date of birth. -->
+                        <label class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="DateOfBirth">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="mb-3"> <!--This field create for Inter mobile No. -->
+                        <label class="form-label">Mobile</label>
+                        <input type="number" class="form-control" id="Mobile" placeholder="1100001100">
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mb-3"> <!--This field create for inter Email .. -->
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="Email" placeholder="sandeep@gmail.com">
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="mb-3"> <!--This field create for filling address. -->
+                        <label class="form-label">Address</label>
+                        <input type="text" class="form-control" id="Address"
+                            placeholder="building/Home No.,street,zip-code,post, district ,State">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+
+
+                <div class="d-flex justify-content-between mt-4">
+                    <div>
+                        <h3 class="">Product:</h3>
+                    </div>
+                    <div class="text-center"> <!--This button create for adding products fields. -->
+                        <button type="button" onclick="addrow()" class="btn btn-primary">Add🖇</button>
+                        <!-- Add Button -->
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="mb-3"> <!-- This field create for inter products name. -->
+                            <label class="form-label">Product Name</label>
+                            <input type="text" class=" productName form-control" id="ProductName" placeholder="mobile">
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3"> <!-- This field create for inter products Price. -->
+                            <label class="form-label">Price</label>
+                            <input type="text" class=" price form-control" id="Price" placeholder="150/-">
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3"> <!-- This field create for inter products Price. -->
+                            <label class="form-label">Discount</label>
+                            <input type="text" class="Discount form-control" id="discount" placeholder="18%">
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3"> <!-- This field create for inter Final Price. -->
+                            <label for="Final Price" class="form-label">Final Price</label>
+                            <input type="text" class="finalPrice form-control" id="FinalPrice" placeholder="125₹">
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3"> <!-- This field create for Select Product Type. -->
+                            <label for="choose Type" class="form-label">Product Type</label>
+                            <select class="form-select form-select-sm productType" id="ProductType">
+                                <option selected>Select Types</option>
+                                <option value="Vegitables">Vegitables</option>
+                                <option value="Cloths">Cloths</option>
+                                <option value="Electronics">Electronics</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3"> <!-- This field create for Select Payment Status -->
+                            <label for="payment" class="form-label">Payment Status</label>
+                            <select class="form-select form-select-sm paymentStatus" id="PaymentStatus">
+                                <option selected>Select Status</option>
+                                <option value="Paid">Paid</option>
+                                <option value="UnPaid">UnPaid</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+                <hr>
+                <!-- This is a second product field for adding product information. -->
+                <div class="row mt-4">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label"></label>
+                            <input type="text" class="form-control productName" id="ProductName" placeholder="BadaPao">
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label"></label>
+                            <input type="text" class="form-control price" id="Price" placeholder="70₹">
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label"></label>
+                            <input type="text" class="form-control discount" id="Discount" placeholder="0.00">
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label"></label>
+                            <input type="text" class="form-control finalPrice" id="FinalPrice" placeholder="70₹">
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label"></label>
+                            <select class="form-select form-select-sm productType" id="type">
+                                <option value="Vegitables">Vegitables</option>
+                                <option value="Cloths">Cloths</option>
+                                <option value="Electronics">Electronics</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="Selecting Status" class="form-label"></label>
+
+                            <select class="form-select form-select-sm paymentStatus" id="PaymentStatus">
+                                <option value="Paid">Paid</option>
+                                <option value="UnPaid">UnPaid</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+
+                    </div>
+
+                </div>
+                <hr>
+
+                <div id="field">
+
+
+                </div>
+                
+                <li class="text-center list-unstyled"><button type="button" onclick="Submit()"
+                        class="btn btn-success ">Submit</button>
+                </li> <!--Submit button-->
+
+
+
+            </div>
+    </div>
+
+    </form>
+    </div>
+    <script src="Bootstrap/js/bootstrap.js"></script> <!--Bootstrap JavaScript add here -->
+    <script src="JavaScript/Sandeep_JS_Task1.js"></script><!--JavaScript file add here -->
+</body>
+
+</html>

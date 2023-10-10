@@ -1,0 +1,12 @@
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\obj\Debug\SandeepMVC3_Test.Models.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\obj\Debug\SandeepMVC3_Test.Models.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\bin\Debug\SandeepMVC3_Test.Models.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\bin\Debug\SandeepMVC3_Test.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\bin\Debug\SandeepMVC3_Test.Models.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\obj\Debug\SandeepMVC3_Test.Models.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\obj\Debug\SandeepMVC3_Test.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\SandeepMVC3_Test\SandeepMVC3_Test.Models\obj\Debug\SandeepMVC3_Test.Models.pdb

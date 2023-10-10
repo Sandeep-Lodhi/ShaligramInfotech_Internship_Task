@@ -1,0 +1,15 @@
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\obj\Debug\MVC2_Test_Quiz.Helper.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\bin\Debug\MVC2_Test_Quiz.Helper.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\bin\Debug\MVC2_Test_Quiz.Helper.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\bin\Debug\MVC2_Test_Quiz.Helper.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\bin\Debug\MVC2_Test_Quiz.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\bin\Debug\MVC2_Test_Quiz.Models.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\bin\Debug\MVC2_Test_Quiz.Models.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\obj\Debug\MVC2_Test_Quiz.Helper.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\obj\Debug\MVC2_Test_Quiz.Helper.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\obj\Debug\MVC2_Test_Quiz.Helper.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MVC2_Test_Quiz\MVC2_Test_Quiz.Helper\obj\Debug\MVC2_Test_Quiz.Helper.pdb

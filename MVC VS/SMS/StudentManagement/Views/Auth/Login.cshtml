@@ -1,0 +1,53 @@
+﻿@model StudentManagement.Models.UserModel
+
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+}
+
+<h2>Login</h2>
+
+
+<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
+    <span class="mdl-card__title-text text-color--smooth-gray">DARKBOARD</span>
+</div>
+<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
+    <span class="login-name text-color--white">Sign up</span>
+</div>
+<h5 class="text-danger">@ViewBag.error</h5>
+@using (Html.BeginForm())
+{
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+            @Html.LabelFor(model => model.UserEmail, htmlAttributes: new { @class = "mdl-textfield__label" })
+            @Html.EditorFor(model => model.UserEmail, new { htmlAttributes = new { @class = "mdl-textfield__input" } })
+        </div>
+        @Html.ValidationMessageFor(model => model.UserEmail, "", new { @class = "text-danger" })
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+            @Html.LabelFor(model => model.UserPassWord, htmlAttributes: new { @class = "mdl-textfield__label" })
+            @Html.PasswordFor(model => model.UserPassWord, new { @class = "mdl-textfield__input" })
+        </div>
+        @Html.ValidationMessageFor(model => model.UserPassWord, "", new { @class = "text-danger" })
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label full-size">
+            @Html.LabelFor(model => model.UserRoleId, htmlAttributes: new { @class = "mdl-textfield__label" })
+        </div>
+        @Html.DropDownListFor(model => model.UserRoleId, new SelectList(@ViewBag.UserRoles, "RoleId", "RoleName"), new { @class = "mdl-textfield__input RoleDrop" })
+        @Html.ValidationMessageFor(model => model.UserRoleId, "", new { @class = "text-danger" })
+    </div>
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone submit-cell">
+        <a href="@Url.Action("SignUp","Auth")" class="login-link">
+            Don't have account?
+        </a>
+        <div class="mdl-layout-spacer"></div>
+        <input type="submit" class="mdl-button mdl-js-button mdl-button--raised color--light-blue" value="LOGIN">
+    </div>
+}
+
+
+<script>
+    $("#UserRoleId").select2({
+        placeholder: '-- Select User Role --',
+    });
+</script>
+

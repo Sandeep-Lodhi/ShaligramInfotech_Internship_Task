@@ -1,0 +1,58 @@
+﻿@model School_Management.Models.Model.StateCustomModel
+
+@{
+    ViewBag.Title = "EditState";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditState</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-control bg-info">
+    <h4>StateCustomModel</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.StateId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.StateId, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.StateId, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+    @Html.HiddenFor(x => x.StateId)
+    <div class="text-danger">@ViewBag.error </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CountryName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.CountryId, ViewBag.countrylist as SelectList, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.CountryId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.StateName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.StateName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.StateName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+        <div class="pt-3">
+            <button type="submit" value="" class="btn btn-success"> Save Changes</button>
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "DisplayState", "State")
+</div>

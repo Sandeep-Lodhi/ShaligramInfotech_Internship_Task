@@ -1,0 +1,17 @@
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\School.Repository.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\School.Repository.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\School.Repository.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\EntityFramework.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\EntityFramework.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\obj\Debug\School.Repository.csproj.AssemblyReference.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\obj\Debug\School.Repository.csproj.CoreCompileInputs.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\obj\Debug\School.Repository.csproj.CopyComplete
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\obj\Debug\School.Repository.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\obj\Debug\School.Repository.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\School.Models.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\School.Models.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\School.Models.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\School.Helper.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\SchoolManagement\School.Repository\bin\Debug\School.Helper.pdb

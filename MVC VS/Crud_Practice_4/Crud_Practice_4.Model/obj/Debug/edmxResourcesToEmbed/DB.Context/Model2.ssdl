@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Jatin_dModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="stu_id" />
+    </Key>
+    <Property Name="stu_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="255" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="255" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Mobile_Number" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Pass_word" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="User_login">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Password" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="Jatin_dModel1StoreContainer">
+    <EntitySet Name="student" EntityType="Self.student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_login" EntityType="Self.User_login" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

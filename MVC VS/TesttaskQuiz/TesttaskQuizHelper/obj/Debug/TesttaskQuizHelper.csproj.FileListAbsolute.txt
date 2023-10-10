@@ -1,0 +1,6 @@
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizHelper\bin\Debug\TesttaskQuizHelper.dll
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizHelper\bin\Debug\TesttaskQuizHelper.pdb
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizHelper\obj\Debug\TesttaskQuizHelper.csproj.AssemblyReference.cache
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizHelper\obj\Debug\TesttaskQuizHelper.csproj.CoreCompileInputs.cache
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizHelper\obj\Debug\TesttaskQuizHelper.dll
+C:\Users\sit353\source\repos\TesttaskQuiz\TesttaskQuizHelper\obj\Debug\TesttaskQuizHelper.pdb

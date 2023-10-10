@@ -1,0 +1,82 @@
+﻿@model Test.Models.Model.OrderModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        th, td {
+            padding: 5px 20px;
+        }
+
+        table, th, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    @*<h1>@ViewBag.ses</h1>*@
+    <div class="container">
+        <form action="/Dash/Order" method="post">
+            <div class="form-control">
+                @Html.LabelFor(x => x.ProductId)
+                @Html.DropDownListFor(x => x.ProductId, new SelectList(ViewBag.itemList, "id", "itemname"), "Select Item")
+            </div>
+            <div class="form-control">
+                @Html.LabelFor(x => x.Quantity)
+                @Html.TextBoxFor(x => x.Quantity)
+            </div>
+
+            <button class="btn btn-primary">Add</button>
+        </form>
+
+        <table class="my-5">
+            <thead>
+                <tr>
+                    <th class="px-5">Item Name</th>
+                    <th class="px-5">Quantity</th>
+                    <th class="px-5">Amount</th>
+                    <th class="px-5">Total</th>
+                    <th class="px-5">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var i in ViewBag.orderList)
+                {
+                    if (i.userid == ViewBag.ses)
+                    {
+
+                        <tr>
+                            <td class="px-5">@i.itemname</td>
+                            <td class="px-5">@i.quantity</td>
+                            <td class="px-5">@i.itemprice</td>
+                            <td class="px-5">@i.total</td>
+                            <td>
+                                <button id="edit">@Html.ActionLink("Edit", "UpdateOrder", new { @id = i.id })</button>
+                                <button>@Html.ActionLink("Delete", "DeleteOrder", new { @id = i.id })</button>
+                            </td>
+                        </tr>
+                    }
+                }
+
+            </tbody>
+            <tr><td>Total: @ViewBag.totalamount </td></tr>
+        </table>
+
+        <h4>SGST 5% @ViewBag.Gst</h4> 
+        <h4>CGST 5% @ViewBag.Gst</h4>
+
+        <h2>Net Amount @ViewBag.payable</h2>
+
+        <h3>Apply Coupon</h3>
+        <form action="/Dash/Coupon" method="post">
+            <input type="text" placeholder="Coupon">
+        </form>
+
+    </div>
+</body>
+
+<button>@Html.ActionLink("Logout", "Logout")</button>
+

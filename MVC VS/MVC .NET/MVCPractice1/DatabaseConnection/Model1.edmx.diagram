@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="109d35802e1845dc868c9e77f17013f1" Name="Diagram1">
+        <EntityTypeShape EntityType="KrunalDhote351Model.City" Width="1.5" PointX="10.625" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.Country" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.Diagnosi" Width="1.5" PointX="10.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.Medicine" Width="1.5" PointX="7.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.Menu" Width="1.5" PointX="4.5" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.Order" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.State" Width="1.5" PointX="8.375" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.Student" Width="1.5" PointX="1.875" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.TreatmentDetail" Width="1.5" PointX="10.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.User" Width="1.5" PointX="6.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.Users2" Width="1.5" PointX="10.375" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.UsersType2" Width="1.5" PointX="7.875" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.UserType" Width="1.5" PointX="4.5" PointY="4.625" IsExpanded="true" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__City__CountryId__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__City__StateId__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Users__CityId__5FB337D6" ManuallyRouted="true" >
+          <ConnectorPoint PointX="10.625" PointY="9.5211393229166656" />
+          <ConnectorPoint PointX="9.7395833333333339" PointY="9.5211393229166656" />
+          <ConnectorPoint PointX="9.5729166666666661" PointY="9.5211393229166656" />
+          <ConnectorPoint PointX="7.90625" PointY="9.5211393229166656" />
+          <ConnectorPoint PointX="7.90625" PointY="7.6148079427083326" />
+        </AssociationConnector>
+        <AssociationConnector Association="KrunalDhote351Model.FK__Users2__CityId__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__State__CountryId__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Users__CountryId__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Users2__CountryI__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Medicine__Dignos__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Treatment__Digno__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Treatment__Presc__403A8C7D" ManuallyRouted="true" >
+          <ConnectorPoint PointX="9.375" PointY="2.4791316121794873" />
+          <ConnectorPoint PointX="9.75" PointY="2.8541316121794873" />
+          <ConnectorPoint PointX="9.75" PointY="1.875" />
+          <ConnectorPoint PointX="9.875" PointY="1.875" />
+          <ConnectorPoint PointX="10.25" PointY="2.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="KrunalDhote351Model.FK__Orders__Customer__1BC821DD" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Orders__WaiterId__1CBC4616" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Users__StateId__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Users2__StateId__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Treatment__Docto__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Treatment__Nurse__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Treatment__Patie__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Users__UserTypeI__5EBF139D" ManuallyRouted="true" >
+          <ConnectorPoint PointX="6" PointY="6.22068359375" />
+          <ConnectorPoint PointX="6.375" PointY="12.661469270324705" />
+          <ConnectorPoint PointX="6.375" PointY="92.517092356618235" />
+          <ConnectorPoint PointX="6.75" PointY="7.230205078125" />
+        </AssociationConnector>
+        <AssociationConnector Association="KrunalDhote351Model.FK__Users2__UserType__160F4887" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="KrunalDhote351Model.Authentication" Width="1.5" PointX="0.75" PointY="4.75" />
+        <AssociationConnector Association="KrunalDhote351Model.FK__Users__UserName__2DE6D218" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

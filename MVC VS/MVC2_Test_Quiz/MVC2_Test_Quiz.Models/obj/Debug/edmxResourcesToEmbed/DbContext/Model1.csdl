@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SandeepTestDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Answers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="questionId" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="isactive" Type="Boolean" />
+    <Property Name="isCorrect" Type="Boolean" />
+    <NavigationProperty Name="Questions" Relationship="Self.FK__Answers__questio__398D8EEE" FromRole="Answers" ToRole="Questions" />
+  </EntityType>
+  <EntityType Name="Questions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="isactive" Type="Boolean" />
+    <NavigationProperty Name="Answers" Relationship="Self.FK__Answers__questio__398D8EEE" FromRole="Questions" ToRole="Answers" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UserContact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK__Answers__questio__398D8EEE">
+    <End Role="Questions" Type="Self.Questions" Multiplicity="0..1" />
+    <End Role="Answers" Type="Self.Answers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Questions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Answers">
+        <PropertyRef Name="questionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SandeepTestDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Answers" EntityType="Self.Answers" />
+    <EntitySet Name="Questions" EntityType="Self.Questions" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <AssociationSet Name="FK__Answers__questio__398D8EEE" Association="Self.FK__Answers__questio__398D8EEE">
+      <End Role="Questions" EntitySet="Questions" />
+      <End Role="Answers" EntitySet="Answers" />
+    </AssociationSet>
+    <FunctionImport Name="SP_AddEditUser">
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="UserEmail" Mode="In" Type="String" />
+      <Parameter Name="UserContact" Mode="In" Type="String" />
+      <Parameter Name="UserPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_CreateItemDetail">
+      <Parameter Name="ItemName" Mode="In" Type="String" />
+      <Parameter Name="ItemQty" Mode="In" Type="Int32" />
+      <Parameter Name="ItemAmount" Mode="In" Type="Decimal" />
+      <Parameter Name="OrderId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_CreateOrder" ReturnType="Collection(Int32)">
+      <Parameter Name="TotalItems" Mode="In" Type="Int32" />
+      <Parameter Name="TotalAmount" Mode="In" Type="Decimal" />
+      <Parameter Name="Cgst" Mode="In" Type="Decimal" />
+      <Parameter Name="Sgst" Mode="In" Type="Decimal" />
+      <Parameter Name="PaybleAmount" Mode="In" Type="Decimal" />
+      <Parameter Name="NetPaybleAmount" Mode="In" Type="Decimal" />
+      <Parameter Name="PromoCode" Mode="In" Type="String" />
+      <Parameter Name="UserId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_GetAllCoupons" ReturnType="Collection(SandeepTestDBModel.SP_GetAllCoupons_Result)" />
+    <FunctionImport Name="SP_GetAllItems" ReturnType="Collection(SandeepTestDBModel.SP_GetAllItems_Result)" />
+    <FunctionImport Name="SP_GetQuestionsAndAnswers" ReturnType="Collection(SandeepTestDBModel.SP_GetQuestionsAndAnswers_Result)" />
+  </EntityContainer>
+  <ComplexType Name="SP_GetAllCoupons_Result">
+    <Property Type="Int32" Name="CouponId" Nullable="false" />
+    <Property Type="String" Name="Code" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Type" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="FlatAmount" Nullable="true" />
+    <Property Type="Int32" Name="Percentage" Nullable="true" />
+    <Property Type="DateTime" Name="Expirydate" Nullable="true" />
+    <Property Type="Int32" Name="UsageLimit" Nullable="true" />
+    <Property Type="Boolean" Name="IsActive" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SP_GetAllItems_Result">
+    <Property Type="Int32" Name="ItemId" Nullable="false" />
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="250" />
+    <Property Type="Decimal" Name="ItemAmount" Nullable="true" Precision="10" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="SP_GetQuestionsAndAnswers_Result">
+    <Property Type="Int32" Name="QId" Nullable="false" />
+    <Property Type="String" Name="QTitle" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="AId" Nullable="false" />
+    <Property Type="Boolean" Name="AIsCorrect" Nullable="true" />
+    <Property Type="String" Name="ATitle" Nullable="true" MaxLength="500" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="86b6cb3a227445b582c9e2b2a5d12101" Name="Diagram1">
+        <EntityTypeShape EntityType="Sandeep_Phase3Model.City" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sandeep_Phase3Model.Country" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sandeep_Phase3Model.Registration" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sandeep_Phase3Model.State" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="Sandeep_Phase3Model.FK__City__Cid__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="Sandeep_Phase3Model.FK__City__Sid__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="Sandeep_Phase3Model.FK__Registrat__CityI__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="Sandeep_Phase3Model.FK__Registrat__Count__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="Sandeep_Phase3Model.FK__State__Cid__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="Sandeep_Phase3Model.FK__Registrat__State__3B75D760" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

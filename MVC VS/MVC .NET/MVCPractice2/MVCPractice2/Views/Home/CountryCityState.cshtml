@@ -1,0 +1,182 @@
+﻿@model Models.Models.CityModel
+@{
+    ViewBag.Title = "CountryCityState";
+}
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+    }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+                background-color: #ddd;
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+                background-color: #ccc;
+            }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+</style>
+<div class="container">
+    <h2>Country City State Form</h2>
+    <p>Click button to fill up the form and get details:</p>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Country')">Country</button>
+        <button class="tablinks" onclick="openCity(event, 'State')">State</button>
+        <button class="tablinks" onclick="openCity(event, 'City')">City</button>
+    </div>
+
+    <div id="Country" class="tabcontent">
+        <h3>Country Form</h3>
+        @Html.DropDownListFor(x => x.CountryId, new SelectList(ViewBag.Country, "id", "CountryName"), new { @class = "form-control form-control-lg" })<br />
+        <button class="btn btn-success" onclick="SubmitCountry()">Submit</button>
+
+        <br />
+
+    </div>
+
+    <div id="State" class="tabcontent">
+        <h3>State Form</h3>
+        @Html.DropDownListFor(x => x.CountryId, new SelectList(ViewBag.Country, "id", "CountryName"), new { @class = "form-control form-control-lg" })<br />
+        @Html.DropDownListFor(x => x.StateId, new SelectList(ViewBag.State, "id", "StateName"), new { @class = "form-control form-control-lg" })<br />
+        <button class="btn btn-success" onclick="SubmitState()">Submit</button>
+
+        <br />
+    </div>
+
+    <div id="City" class="tabcontent">
+        <h3>City Form</h3>
+        @Html.DropDownListFor(x => x.CountryId, new SelectList(ViewBag.Country, "id", "CountryName"), new { @class = "form-control form-control-lg" })<br />
+
+        @Html.DropDownListFor(x => x.StateId, new SelectList(ViewBag.State, "id", "StateName"), new { @class = "form-control form-control-lg" })<br />
+
+        @Html.DropDownListFor(x => x.id, new SelectList(ViewBag.City, "id", "CityName"), new { @class = "form-control  form-control-lg" })<br />
+        <button class="btn btn-success" onclick="SubmitCity()">Submit</button>
+
+        <br />
+    </div>
+
+    <div class="border border-1">
+        <table class="table table-borderless table-striped">
+            <tr>
+                <th>Country</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+            <tbody id="CSCTable">
+
+            </tbody>
+           
+        </table>
+    </div>
+</div>
+
+
+<script>
+
+    var state = [] 
+    $("#CountryId").change(function () {
+        $.get("/Home/GetState/" + $("#CountryId").val(), function (data) {
+            state = data; 
+        })
+    })
+    var city = []
+    $("#StateId").change(function () {
+        $.get("/Home/GetCity?id=" + $("#StateId").val(), function (data) {
+            city = data;
+        })
+    })
+
+
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+
+        if (cityName == "City") {
+            $("#CSCTable").html()
+            str=""
+            for (i = 0; i < city.length; i++) {
+                str += `
+                    <tr>
+                        <td>${city[i].CountryId}</td>
+                        <td>${city[i].StateId}</td>
+                        <td>${city[i].CityName}</td>
+                        <td></td>
+                    </tr>
+                `
+            }
+            $("#CSCTable").html(str)
+        }
+        if (cityName == "State") {
+            $("#CSCTable").html()
+            str=""
+            for (i = 0; i < state.length; i++) {
+                str += `
+                    <tr>
+                        <td>${city[i].CountryId}</td>
+                        <td>${city[i].StateName}</td>
+                        <td>${city[i].CityId}</td>
+                        <td></td>
+                    </tr>
+                `
+            }
+            $("#CSCTable").html(str)
+        }
+        if (cityName == "Country") {
+            $("#CSCTable").html()
+            str=""
+            for (i = 0; i < state.length; i++) {
+                str += `
+                    <tr>
+                        <td>${city[i].CountryName}</td>
+                        <td>${city[i].StateId}</td>
+                        <td>${city[i].CityId}</td>
+                        <td></td>
+                    </tr>
+                `
+            }
+            $("#CSCTable").html(str)
+        }
+       
+    }
+
+
+</script>

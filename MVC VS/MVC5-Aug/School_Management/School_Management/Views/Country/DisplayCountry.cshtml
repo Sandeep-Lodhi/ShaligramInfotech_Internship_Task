@@ -1,0 +1,44 @@
+﻿@model IEnumerable<School_Management.Models.Model.CountryCustomModel>
+
+@{
+    ViewBag.Title = "DisplayCountry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DisplayCountry</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Add_Country")
+</p>
+<div class="container-fluid">
+    <table class="table table-bordered table-active bg-gradient my-3  table-hover">
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.CountryId)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.CountryName)
+            </th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.CountryId)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.CountryName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditCountryRecord", new {  id=item.CountryId  }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CountryId }) |
+                    @Html.ActionLink("Delete", "DeleteCountryRecord", new { id = item.CountryId })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

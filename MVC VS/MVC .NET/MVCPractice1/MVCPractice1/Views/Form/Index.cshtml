@@ -1,0 +1,90 @@
+﻿@model MVCPractice1.Models.Form
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        .input-fiels{
+            color:black;
+            padding:10px;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <h1>Pass Data Using Parameters</h1>
+        @using (Html.BeginForm("PostUsingParameters", "Form"))
+        {
+
+            <input type="text" name="fname" /><br />
+            <input type="text" name="lname" /><br />
+            <input type="submit" value="Submit" /><br />
+        }
+    </div>
+    <div>
+
+        <h1>Pass Data Using Request</h1>
+        @using (Html.BeginForm("PostUsingRequest", "Form"))
+        {
+
+            <input type="text" name="fname" /><br />
+            <input type="text" name="lname" /><br />
+            <input type="submit" value="Submit" /><br />
+        }
+    </div>
+
+    <div>
+
+        <h1>Pass Data Using Form Collection</h1>
+        @using (Html.BeginForm("PostUsingFormCollection", "Form"))
+        {
+
+            <input type="text" name="fname" /><br />
+            <input type="text" name="lname" /><br />
+            <input type="submit" value="Submit" /><br />
+        }
+    </div>
+
+    <div>
+
+        <h1>Pass Data Using Binding</h1>
+        @using (Html.BeginForm("PostUsingBinding", "Form"))
+        {
+
+            @Html.TextBoxFor(x => x.fname)<br />
+            @Html.TextBoxFor(x => x.lname)<br />
+            <input type="submit" value="Submit" /><br />
+        }
+    </div>
+
+    <div>
+
+        <h1>Validate</h1>
+        @using (Html.BeginForm("Validation", "Form"))
+        {
+
+            @Html.TextBoxFor(x => x.fname)
+            @Html.ValidationMessageFor(x => x.fname)<br />
+            @Html.TextBoxFor(x => x.lname)
+            @Html.ValidationMessageFor(x => x.lname)<br />
+            @Html.TextBoxFor(x => x.email)
+            @Html.ValidationMessageFor(x => x.email)<br />
+            @Html.TextBoxFor(x => x.phone)
+            @Html.ValidationMessageFor(x => x.phone)<br />
+            @Html.CheckBoxFor(x => x.isChecked)
+            @Html.ValidationMessageFor(x => x.isChecked)<br />
+            <input type="submit" value="Submit" /><br />
+
+            @Html.ValidationSummary();
+        }
+    </div>
+</body>
+</html>

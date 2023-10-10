@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="lavan_386ModelStoreContainer" CdmEntityContainer="lavan_386Entities">
+    <EntitySetMapping Name="Answers">
+      <EntityTypeMapping TypeName="lavan_386Model.Answers">
+        <MappingFragment StoreEntitySet="Answers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="questionId" ColumnName="questionId" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="isCorrect" ColumnName="isCorrect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="lavan_386Model.Questions">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

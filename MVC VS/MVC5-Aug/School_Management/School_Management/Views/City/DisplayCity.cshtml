@@ -1,0 +1,93 @@
+﻿@model IEnumerable<School_Management.Models.Context.CityList_Result>
+
+@{
+    ViewBag.Title = "DisplayCity";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DisplayCity</h2>
+
+@*<style>
+        #getCityName{
+            border:2px solid white;
+        }
+    </style>
+    <input type="text" id="getCityName" class="form-control"/>
+    <button id="getCityNameBtn" class="btn btn-primary">GET AJAX</button>
+*@
+<p>
+    @Html.ActionLink("Create New", "AddCity")
+</p>
+
+<table class="table table-bordered bg-gradient">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CityId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CityName)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.StateId)
+            </th>*@
+
+        <th>
+            @Html.DisplayNameFor(model => model.StateName)
+        </th>
+
+        @*<th>
+                @Html.DisplayNameFor(model => model.CountryId)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.CountryName)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityName)
+            </td>
+            @*<td>
+                  @Html.DisplayFor(modelItem => item.StateId)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.StateName)
+            </td>
+            @*<td>
+                  @Html.DisplayFor(modelItem => item.CountryId)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryName)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "EditCity", new { id = item.CityId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CityId }) |
+                @Html.ActionLink("Delete", "DeleteCityRecord", new { id = item.CityId })
+            </td>
+        </tr>
+    }
+
+</table>
+@*<script>
+        $(document).ready(function () {
+            $("#getCityName").click(function (e) {
+                let cityName = $("#getCityName").val();
+                $.ajax({
+                    type: "GET",
+                    url: "/url",
+                    data: "name=John&location=Boston",
+                    dataType: "json",
+                    success: function (response) {
+                    }
+                });
+            });
+        });
+    </script>*@

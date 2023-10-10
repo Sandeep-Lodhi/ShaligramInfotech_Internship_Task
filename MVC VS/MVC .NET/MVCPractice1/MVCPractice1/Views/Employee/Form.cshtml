@@ -1,0 +1,156 @@
+﻿
+@using MVCPractice1.Models;
+@model Employee
+
+@{
+    Layout = "~/Views/Shared/EmployeeLayout.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+    <style>
+        .myClass {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .display-label, .editor-label {
+            width: 300px;
+            padding: 5px;
+            background: grey;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .display-field, .editor-field {
+            width: 300px;
+            padding: 5px;
+            background: gold;
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .display {
+            width: 50%;
+        }
+
+        .img {
+            width: 500px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("myForm"))
+        {
+            <h1>Standerd Helper</h1>
+            <ul>
+                <li>
+                    @Html.ActionLink("Index", "Index", "Employee")
+                </li>
+                <li>
+                    @Html.ActionLink("Home", "Index", "Home", new { @class = "myClass", style = "background:red; border: yellow solid 2px;" })
+                </li>
+            </ul>
+
+            <div>
+                @Html.TextBox("textbox", "Krunal Dhote", new { id = "customId", @class = "myClass" })
+
+                @Html.CheckBox("check1", true)
+
+                @Html.Password("myPass")
+            </div>
+        }
+    </div>
+
+    <div>
+        <h1>Stongly Helper</h1>
+
+        @using (Html.BeginForm("myForm2"))
+        {
+
+            @Html.TextBoxFor(x => x.Name) @* first attribute become the ID of html element by default *@
+            @Html.TextBoxFor(x => x.Address)
+            @Html.CheckBoxFor(x => x.IsEmployee)
+
+            <input type="submit" value="Submit" />
+
+        }
+    </div>
+    <h1>Templated Html Helper</h1>
+    <div class="main">
+        <div class="display">
+
+            <h3>Dispay</h3>
+            <ul>
+                <li>
+                    @Html.DisplayName("Name") :
+                    @Html.DisplayText("Name")
+                </li>
+                <li>
+                    @Html.DisplayNameFor(x => x.Name) :
+                    @Html.DisplayTextFor(x => x.Name)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(x => x.DOB) : @Html.DisplayTextFor(x => x.DOB)
+                </li>
+                <li>
+                    @Html.DisplayFor(x => x.email)
+                </li>
+                <li>
+                    text And Value Both
+                    @Html.DisplayForModel()
+                </li>
+            </ul>
+        </div>
+        <br />
+        <div class="editor">
+            <h3>Editor</h3>
+            <ul>
+                <li>
+                    @Html.DisplayName("Id") : @Html.Editor("Id")
+                </li>
+                <li>
+                    @Html.DisplayName("Name") : @Html.Editor("Name")
+                </li>
+                <li>
+                    @Html.DisplayNameFor(x => x.DOB) : @Html.EditorFor(x => x.DOB)
+                </li>
+                <li>
+                    @Html.DisplayName("Is Employee") : @Html.Editor("IsEmployee")
+                </li>
+                <li>
+                    @Html.DisplayName("Address") : @Html.Editor("Address")
+                </li>
+                <li>
+                    @Html.EditorForModel()
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h1>Custom Helper</h1>
+    <div class="main" style="height:700px; width:1000px">
+        <div style="height:700px; width:700px">
+            @CustomHelper.Image("https://hrms.shaligraminfotech.com/img/Profiles/363_Krunal%20Dhote/Krunal%20Dhote_ProfilePicture.jpeg", "This is Image")
+        </div>
+        <div style="height:200px; width:700px;">
+            @Html.Img("https://hrms.shaligraminfotech.com/img/Profiles/363_Krunal%20Dhote/Krunal%20Dhote_ProfilePicture.jpeg", "This is Image")
+        </div>
+        <div style="height:200px; width:700px;">
+            @Html.ImgTag("https://hrms.shaligraminfotech.com/img/Profiles/363_Krunal%20Dhote/Krunal%20Dhote_ProfilePicture.jpeg", "This is Image")
+        </div>
+    </div>
+
+    <div>
+        @RenderPage("Index.cshtml","WeCanPasAnyParameterAlso",9)
+    </div>
+</body>
+</html>

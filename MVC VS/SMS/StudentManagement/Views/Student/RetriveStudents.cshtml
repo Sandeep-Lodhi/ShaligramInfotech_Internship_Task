@@ -1,0 +1,94 @@
+﻿@model List<StudentManagement.Models.StudentModel>
+@using StudentManagement.Models
+
+
+@{
+    ViewBag.Title = "ShowAllStudents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="mdl-grid ui-tables">
+    <div class="mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--4-col-phone">
+        <div class="mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h1 class="mdl-card__title-text">All Students</h1>
+            </div>
+            <div class="mdl-card__supporting-text no-padding">
+                <table class="mdl-data-table mdl-js-data-table bordered-table stripped-table" data-upgraded=",MaterialDataTable">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric">Id</th>
+                            <th class="mdl-data-table__cell--non-numeric">FirstName</th>
+                            <th class="mdl-data-table__cell--non-numeric">LastName</th>
+                            <th class="mdl-data-table__cell--non-numeric">StandardName</th>
+                            <th class="mdl-data-table__cell--non-numeric">Address</th>
+                            <th class="mdl-data-table__cell--non-numeric">MobileNo</th>
+                            <th class="mdl-data-table__cell--non-numeric">Email</th>
+                            <th class="mdl-data-table__cell--non-numeric">GenderName</th>
+                            <th class="mdl-data-table__cell--non-numeric">DOB</th>
+                            <th class="mdl-data-table__cell--non-numeric">StandardName</th>
+                            <th class="mdl-data-table__cell--non-numeric">Subjects</th>
+                            <th class="mdl-data-table__cell--non-numeric">Teachers</th>
+                            <th class="mdl-data-table__cell--non-numeric">CountryName</th>
+                            <th class="mdl-data-table__cell--non-numeric">StateName</th>
+                            <th class="mdl-data-table__cell--non-numeric">CityName</th>
+                            <th class="mdl-data-table__cell--non-numeric">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (StudentModel student in Model)
+                        {
+                        <tr>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentId</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentFirstName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentLastName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentStandardName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentAddress</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentMobileNo</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentEmail</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentGenderName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentDOB</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentStandardName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@foreach (string x in student.StudentSubjectName) { 
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-orange" data-upgraded=",MaterialButton,MaterialRipple">
+                                    @x
+                                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                </button>
+                            }</td>
+                            <td class="mdl-data-table__cell--non-numeric">@foreach (string x in student.StudentTeacherName) { 
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-teal" data-upgraded=",MaterialButton,MaterialRipple">
+                                    @x
+                                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                                </button>
+                            }</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentCountryName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentStateName</td>
+                            <td class="mdl-data-table__cell--non-numeric">@student.StudentCityName</td>
+                            <td class="mdl-data-table__cell--non-numeric">
+                                @Html.ActionLink("Edit",
+                                         "CreateStudent",
+                                         "Student",
+                                         new { StudentId = @student.StudentId },
+                                         new { @class = "label label--mini color--purple navLinkStyle" }
+                                        )
+                                @Html.ActionLink("Detail",
+                                         "StudentDetail",
+                                         "Student",
+                                         new { StudentId = @student.StudentId },
+                                         new { @class = "label label--mini background-color--primary navLinkStyle" }
+                                        )
+
+                                @Html.ActionLink("Delete",
+                                         "DeleteStudent",
+                                         "Student",
+                                         new { studentId = @student.StudentId },
+                                         new { @class = "label label--mini background-color--secondary navLinkStyle" }
+                                        )
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

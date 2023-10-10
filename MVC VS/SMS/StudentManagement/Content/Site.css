@@ -1,0 +1,44 @@
+﻿
+.navLinkStyle{
+    text-decoration : none;
+}
+.navLinkStyle:hover{
+    color : white;
+}
+
+.text-danger{
+    color:red;
+}
+
+#select2-UserRoleId-results {
+    background-color: #333;
+}
+
+.select2-selection, .select2-selection--multiple {
+    background: black;
+}
+.select2-selection__choice__display{
+    color:black;
+}
+
+.select2-selection {
+    background-color: #333 !important;
+    
+    border: 1px solid white !important;
+}
+.select2-selection__rendered {
+    color: white !important;
+}
+
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fbc2eb;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1))
+}
+
+.w_100 option{
+    background:black;
+}

@@ -1,0 +1,30 @@
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Repository.dll.config
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Repository.dll
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Repository.pdb
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\bin\Debug\EntityFramework.dll
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\bin\Debug\EntityFramework.xml
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\obj\Debug\MvcTest.Repositories.csproj.AssemblyReference.cache
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\obj\Debug\MvcTest.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\obj\Debug\MvcTest.Repositories.csproj.CopyComplete
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\obj\Debug\MvcTest.Repository.dll
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\obj\Debug\MvcTest.Repository.pdb
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Models.dll
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Models.pdb
+C:\Users\sit323\Documents\internship new\sanjay-prajapati-dotnet\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Models.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Repository.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Repository.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Repository.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Models.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\bin\Debug\MvcTest.Models.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\obj\Debug\MvcTest.Repositories.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\obj\Debug\MvcTest.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\obj\Debug\MvcTest.Repositories.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\obj\Debug\MvcTest.Repository.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\MvcTest\MvcTest.Repository\obj\Debug\MvcTest.Repository.pdb

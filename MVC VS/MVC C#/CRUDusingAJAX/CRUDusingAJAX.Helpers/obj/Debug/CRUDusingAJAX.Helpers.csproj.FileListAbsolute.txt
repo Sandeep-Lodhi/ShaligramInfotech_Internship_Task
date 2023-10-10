@@ -1,0 +1,24 @@
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\CRUDusingAJAX.Helpers.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\CRUDusingAJAX.Helpers.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\obj\Debug\CRUDusingAJAX.Helpers.csproj.AssemblyReference.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\obj\Debug\CRUDusingAJAX.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\obj\Debug\CRUDusingAJAX.Helpers.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\obj\Debug\CRUDusingAJAX.Helpers.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\CRUDusingAJAX.Models.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\EntityFramework.dll
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\CRUDusingAJAX.Models.pdb
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\CRUDusingAJAX.Models.dll.config
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\EntityFramework.xml
+C:\Users\sit351\Desktop\Exam Practice\MVC .NET\CRUDusingAJAX\CRUDusingAJAX.Helpers\obj\Debug\CRUDusingAJAX.Helpers.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\CRUDusingAJAX.Helpers.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\CRUDusingAJAX.Helpers.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\CRUDusingAJAX.Models.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\EntityFramework.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\CRUDusingAJAX.Models.pdb
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\CRUDusingAJAX.Models.dll.config
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\bin\Debug\EntityFramework.xml
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\obj\Debug\CRUDusingAJAX.Helpers.csproj.AssemblyReference.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\obj\Debug\CRUDusingAJAX.Helpers.csproj.CoreCompileInputs.cache
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\obj\Debug\CRUDusingAJAX.Helpers.csproj.CopyComplete
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\obj\Debug\CRUDusingAJAX.Helpers.dll
+C:\Users\sit375\Desktop\SandeepLodhi_CSarp_MVC\CRUDusingAJAX\CRUDusingAJAX.Helpers\obj\Debug\CRUDusingAJAX.Helpers.pdb

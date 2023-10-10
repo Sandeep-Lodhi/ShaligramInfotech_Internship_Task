@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KrunalDhote351Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CoupenCodeMaster">
+    <Key>
+      <PropertyRef Name="CoupenId" />
+    </Key>
+    <Property Name="CoupenId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="bit" Nullable="false" />
+    <Property Name="FlatAmount" Type="int" />
+    <Property Name="PercentageAmount" Type="int" />
+    <Property Name="Expiry" Type="date" Nullable="false" />
+    <Property Name="Limit" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerMaster">
+    <Key>
+      <PropertyRef Name="CustId" />
+    </Key>
+    <Property Name="CustId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ItemMaster">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Item" Type="varchar" MaxLength="100" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdersMaster">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderDate" Type="date" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="AfterGST" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PromoCode" Type="varchar" MaxLength="20" />
+    <Property Name="PayingAmount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CGST" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="SGST" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CustId" Type="int" />
+  </EntityType>
+  <Association Name="FK__OrdersMas__CustI__690797E6">
+    <End Role="CustomerMaster" Type="Self.CustomerMaster" Multiplicity="0..1" />
+    <End Role="OrdersMaster" Type="Self.OrdersMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerMaster">
+        <PropertyRef Name="CustId" />
+      </Principal>
+      <Dependent Role="OrdersMaster">
+        <PropertyRef Name="CustId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="sp_GetOrdersByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="from" Type="date" Mode="In" />
+    <Parameter Name="to" Type="date" Mode="In" />
+  </Function>
+  <EntityContainer Name="KrunalDhote351ModelStoreContainer">
+    <EntitySet Name="CoupenCodeMaster" EntityType="Self.CoupenCodeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomerMaster" EntityType="Self.CustomerMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemMaster" EntityType="Self.ItemMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrdersMaster" EntityType="Self.OrdersMaster" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__OrdersMas__CustI__690797E6" Association="Self.FK__OrdersMas__CustI__690797E6">
+      <End Role="CustomerMaster" EntitySet="CustomerMaster" />
+      <End Role="OrdersMaster" EntitySet="OrdersMaster" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
